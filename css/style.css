@@ -214,7 +214,7 @@ article header h1 a {
     text-shadow: none;
 }
 
-.article-link:active {
+.article-link:visited {
     border-bottom: none;
     text-shadow: none;
     color: sandybrown;

@@ -49,7 +49,7 @@
 &lt;li&gt;It has a wide variety of themes which make it easy to create a static website, you dont have to start from scatch.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;So far the only cons I came across when using Hugo were that to fully harness its power you have to know Go. Knowing a little bit of Go gives you so much power in twerking up themes, which is rather important if you want to give a unique feel to your site despite it being created from a theme. I also would love to express the fact that it took me time to warp my head around how Hugo works despite coming from a solid background in front-end development. So the learning curve of learning how to use static site generators is steep.&lt;/p&gt;
+&lt;p&gt;So far the only cons I came across when using Hugo were that to fully harness its power you have to know Go. Knowing a little bit of Go gives you so much power in tweaking up themes, which is rather important if you want to give a unique feel to your site despite it being created from a theme. I also would love to express the fact that it took me time to warp my head around how Hugo works despite coming from a solid background in front-end development. So the learning curve of learning how to use static site generators is steep.&lt;/p&gt;
 
 &lt;h2 id=&#34;my-expiriences-using-hugo&#34;&gt;My expiriences using Hugo&lt;/h2&gt;
 
@@ -62,7 +62,7 @@ So for an intro to using Hugo for my personal blog I found the following video t
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3&#34; class=&#34;article-link&#34;&gt;Hugo - Static Site Generator | Tutorial&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;After going through the tutorials I followed the Hugo official &lt;a href=&#34;https://gohugo.io/getting-started/&#34; class=&#34;article-link&#34;&gt;documentation&lt;/a&gt; on getting started. My theme of choice was &lt;a href=&#34;https://themes.gohugo.io/hugo-theme-anubis/&#34; class=&#34;article-link&#34;&gt;Anubis&lt;/a&gt;, I chose it because its styling is minimalist and clean and most importantly the styling wasn&amp;rsquo;t too opinionated I had lots of room to play around and twerk the styling without having to change a lot of the original styling.&lt;/p&gt;
+&lt;p&gt;After going through the tutorials I followed the Hugo official &lt;a href=&#34;https://gohugo.io/getting-started/&#34; class=&#34;article-link&#34;&gt;documentation&lt;/a&gt; on getting started. My theme of choice was &lt;a href=&#34;https://themes.gohugo.io/hugo-theme-anubis/&#34; class=&#34;article-link&#34;&gt;Anubis&lt;/a&gt;, I chose it because its styling is minimalist and clean and most importantly the styling wasn&amp;rsquo;t too opinionated I had lots of room to play around and tweak the styling without having to change a lot of the original styling.&lt;/p&gt;
 
 &lt;h2 id=&#34;other-technologies-used-in-creating-my-blog&#34;&gt;Other Technologies used in creating my blog&lt;/h2&gt;
 

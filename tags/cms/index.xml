@@ -19,7 +19,7 @@
       <guid>https://jackiebinya.github.io/posts/using-hugo/</guid>
       <description>
 
-&lt;p&gt;I recently started contributing to free and open source, but that&amp;rsquo;s a story for another day. So well I stumbled upon a bunch of projects with issues open which required help in either completely writing new documentation using &lt;a href=&#34;https://discourse.gohugo.io/&#34; target=&#34;_blank&#34; class=&#34;article-link&#34;&gt;Hugo &lt;/a&gt; or migrating the existing documentation to Hugo. I was naturally curious why so many organizations were willing to make that shift. So I started my research and this is what I learnt about Hugo.&lt;/p&gt;
+&lt;p&gt;I recently started contributing to free and open source, but that&amp;rsquo;s a story for another day. So well I stumbled upon a bunch of projects with issues open which required help in either completely writing new documentation using &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34; class=&#34;article-link&#34;&gt;Hugo &lt;/a&gt; or migrating the existing documentation to Hugo. I was naturally curious why so many organizations were willing to make that shift. So I started my research and this is what I learnt about Hugo.&lt;/p&gt;
 
 &lt;h2 id=&#34;why-hugo&#34;&gt;Why Hugo ?&lt;/h2&gt;
 

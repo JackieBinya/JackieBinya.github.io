@@ -214,7 +214,7 @@ article header h1 a {
     text-shadow: none;
 }
 
-.article-link:visited {
+.article-link:active {
     border-bottom: none;
     text-shadow: none;
     color: sandybrown;
@@ -503,14 +503,5 @@ footer {
 }
 
 .project-desc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (min-width: 425px) {
-    .project-desc h2 {
-        display: block;
-        margin-right: 2em;
-    }
+    text-align: center;
 }

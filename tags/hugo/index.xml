@@ -19,7 +19,7 @@
       <guid>https://jackiebinya.github.io/posts/using-hugo/</guid>
       <description>
 
-&lt;p&gt;I recently started contributing to free and open-source, but that&amp;rsquo;s a story for another day. So well I stumbled upon a bunch of projects with issues open which required help in either completely writing new documentation using &lt;a href=&#34;https://gohugo.io/&#34; class=&#34;article-link&#34;&gt;Hugo &lt;/a&gt; or migrating the existing documentation to Hugo. I was naturally curious why so many organizations were willing to make that shift. So I started my research and this is what I learned about Hugo.&lt;/p&gt;
+&lt;p&gt;I recently started contributing to free and open-source software, but that&amp;rsquo;s a story for another day. So well I stumbled upon a bunch of projects with issues open which required help in either completely writing new documentation using &lt;a href=&#34;https://gohugo.io/&#34; class=&#34;article-link&#34;&gt;Hugo &lt;/a&gt; or migrating the existing documentation to Hugo. I was naturally curious why so many organizations were willing to make that shift. So I started my research and this is what I learned about Hugo.&lt;/p&gt;
 
 &lt;h2 id=&#34;why-hugo&#34;&gt;Why Hugo ?&lt;/h2&gt;
 
@@ -73,7 +73,7 @@ So for an intro to using Hugo for my personal blog I found the following video t
 
 &lt;h2 id=&#34;making-it-even-better-for-non-techies-integrating-hugo-with-cmses&#34;&gt;Making it even better for non-techies | Integrating Hugo with CMSes&lt;/h2&gt;
 
-&lt;p&gt;Hugo can be bundled with headless content management systems like &lt;a href=&#34;https://www.datocms.com/&#34; class=&#34;article-link&#34;&gt;DatoCMS&lt;/a&gt; to enable it to be used by users from a non-technical background. Read DatoCMS official &lt;a href=&#34;https://www.datocms.com/docs/hugo&#34; class=&#34;article-link&#34;&gt;documentation&lt;/a&gt; to find out about how that can be achieved.&lt;/p&gt;
+&lt;p&gt;Hugo can be bundled with headless content management systems like &lt;a href=&#34;https://www.datocms.com/&#34; class=&#34;article-link&#34;&gt;DatoCMS&lt;/a&gt; to enable it to be harnessed for use by users from non-technical background. Read DatoCMS official &lt;a href=&#34;https://www.datocms.com/docs/hugo&#34; class=&#34;article-link&#34;&gt;documentation&lt;/a&gt; to find out about how that can be achieved.&lt;/p&gt;
 </description>
     </item>
     

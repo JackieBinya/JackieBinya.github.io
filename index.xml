@@ -19,7 +19,7 @@
       <guid>https://jackiebinya.github.io/posts/using-hugo/</guid>
       <description>
 
-&lt;p&gt;I recently started contributing to free and open-source, but that&amp;rsquo;s a story for another day. So well I stumbled upon a bunch of projects with issues open which required help in either completely writing new documentation using &lt;a href=&#34;https://gohugo.io/&#34; class=&#34;article-link&#34;&gt;Hugo &lt;/a&gt; or migrating the existing documentation to Hugo. I was naturally curious why so many organizations were willing to make that shift. So I started my research and this is what I learned about Hugo.&lt;/p&gt;
+&lt;p&gt;I recently started contributing to free and open-source software, but that&amp;rsquo;s a story for another day. So well I stumbled upon a bunch of projects with issues open which required help in either completely writing new documentation using &lt;a href=&#34;https://gohugo.io/&#34; class=&#34;article-link&#34;&gt;Hugo &lt;/a&gt; or migrating the existing documentation to Hugo. I was naturally curious why so many organizations were willing to make that shift. So I started my research and this is what I learned about Hugo.&lt;/p&gt;
 
 &lt;h2 id=&#34;why-hugo&#34;&gt;Why Hugo ?&lt;/h2&gt;
 
@@ -73,7 +73,7 @@ So for an intro to using Hugo for my personal blog I found the following video t
 
 &lt;h2 id=&#34;making-it-even-better-for-non-techies-integrating-hugo-with-cmses&#34;&gt;Making it even better for non-techies | Integrating Hugo with CMSes&lt;/h2&gt;
 
-&lt;p&gt;Hugo can be bundled with headless content management systems like &lt;a href=&#34;https://www.datocms.com/&#34; class=&#34;article-link&#34;&gt;DatoCMS&lt;/a&gt; to enable it to be used by users from a non-technical background. Read DatoCMS official &lt;a href=&#34;https://www.datocms.com/docs/hugo&#34; class=&#34;article-link&#34;&gt;documentation&lt;/a&gt; to find out about how that can be achieved.&lt;/p&gt;
+&lt;p&gt;Hugo can be bundled with headless content management systems like &lt;a href=&#34;https://www.datocms.com/&#34; class=&#34;article-link&#34;&gt;DatoCMS&lt;/a&gt; to enable it to be harnessed for use by users from non-technical background. Read DatoCMS official &lt;a href=&#34;https://www.datocms.com/docs/hugo&#34; class=&#34;article-link&#34;&gt;documentation&lt;/a&gt; to find out about how that can be achieved.&lt;/p&gt;
 </description>
     </item>
     
@@ -88,12 +88,12 @@ So for an intro to using Hugo for my personal blog I found the following video t
 &lt;p&gt;🙋🏽 Hello I am Jacqueline Binya. I am a software developer and blogger
 I created this blog to document all things Javascript and also to geek off about tech (Yipee! 💃🏽).&lt;/p&gt;
 
-&lt;p&gt;👩🏾‍💻 I am mainly a frontend developer, I code in Vue and React. I am fascinated by the sheer power of these frameworks in enabling developers to write clean, resuable code and how they make is so easy to test and mantain code. Yes I love testing 💪🏾&lt;/p&gt;
+&lt;p&gt;👩🏾‍💻 I am mainly a frontend developer, I code in Vue and React. I am fascinated by the sheer power of these frameworks in enabling developers to write clean, reusable code and how they make is so easy to test and maintain code. Yes I love testing 💪🏾&lt;/p&gt;
 
-&lt;p&gt;🦄 I am a self-taught developer and BootCamp Graduate. I was fortunate to attend one of the few coding BootCamps in Africa!! I graduated from a 2 week Andela BootCamp in Kigali, Rwanda in September 2019 where I specialized in full stack web development.&lt;/p&gt;
+&lt;p&gt;🦄 I am a self-taught developer and BootCamp Graduate. I was fortunate to attend one of the few coding BootCamps in Africa!! I graduated from a 2 week Andela BootCamp in Kigali, Rwanda in September 2019 where I specialized in full-stack web development.&lt;/p&gt;
 
-&lt;p&gt;🦋 I was introduced to community events way back in 2019 by a fellow developer and friend, after I had finished my BootCamp. I was so eager to continue the culture of meeting up with other developers so as to share information and to network in general. So I went on the organize the first Hackctoberfest Event ever in my city Bulawayo, Zimbabwe. From then onward I have become quite the tech butterfly I make it a point to attend all community events as I possible can. I also volunteer to speak at tech events and I am especially passionate about helping &amp;amp; encouraging newbie developers to harness their skills and in addition to that I am also zealous about advocating for web accessibility.
-I also recently started contributing to free and open source, I am hoping to also share my experiences in that regard.&lt;/p&gt;
+&lt;p&gt;🦋 I was introduced to community events way back in 2019 by a fellow developer and friend after I had finished my BootCamp. I was so eager to continue the culture of meeting up with other developers so as to share information and to network in general. So I went on the organize the first Hackctoberfest Event ever in my city Bulawayo, Zimbabwe. From then onward I have become quite the tech butterfly I make it a point to attend all community events as I possible can. I also volunteer to speak at tech events and I am especially passionate about helping &amp;amp; encouraging newbie developers to grow and develop their skills.In addition to that I am also zealous about advocating for web accessibility.
+I also recently started contributing to free and open-source software, I am hoping to also share my experiences in that regard.&lt;/p&gt;
 
 &lt;p&gt;🧘🏾‍♀️ During weekends you will most likely find me spending time with my son, taking nature walks or baking treats in the kitchen.&lt;/p&gt;
 

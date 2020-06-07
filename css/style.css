@@ -266,8 +266,8 @@ article header h1 a {
 }
 
 .article-tags li {
-    display: inline;
-    margin-right: 1em;
+    display: inline-block;
+    margin:  0 0.25em 0.4em 0;
 }
 
 article img {
@@ -304,6 +304,7 @@ article img {
     height:250px;
     border-radius: 50%;
     display: block;
+    box-shadow: 5px 4px #1d1b1b;
 }
 
 @media (min-width: 786px) {
@@ -504,4 +505,71 @@ footer {
 
 .project-desc {
     text-align: center;
+}
+ .tag{
+    cursor: pointer;
+    text-shadow: none;
+    border-bottom: 0;
+    box-shadow: 2px 3px #272222;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0.2em;
+    margin: 0.25em;
+    color: black;
+    transition: all 0ms ease-in-out
+ }
+
+ .tag:focus,
+ .tag:hover {
+     text-shadow: none;
+    box-shadow: none;
+}
+
+.tag:active {
+    text-shadow: none;
+}
+
+a[href^="/tags/hugo"]{
+    background-color: #cd5c5c;
+}
+a[href^="/tags/static-site-generator"]{
+    background-color: #bb839de8; ;
+}
+
+a[href^="/tags/react"]{
+    background-color:#49c3f2 ;
+}
+
+a[href^="/tags/vue"]{
+    background-color:#ff69b4 ;
+}
+
+a[href^="/tags/cms"]{
+    background-color: pink ;
+}
+
+a[href^="/tags/git"]{
+    background-color: whitesmoke ;
+}
+
+.article-tags a[href^="/tags/open-source"]{
+    background-color:rgb(212, 235, 135);
+}
+
+.article-tags a[href^="/tags/javascript"]{
+    background-color: #c6d861;
+}
+
+.article-tags a[href^="/tags/github"]{
+    background-color: bisque;
+}
+
+.article-tags a[href^="/tags/react-hooks"]{
+    background-color: #87DCC0
+
+}
+
+.tag-container {
+    display: flex;
+    align-items: center;
 }

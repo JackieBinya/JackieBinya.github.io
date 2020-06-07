@@ -230,8 +230,9 @@ article header h1 a {
     color: grey;
 }
 
-.article-info a:hover {
-    color: #a31d1d;
+.article-info a:hover, a:focus {
+    color: sandybrown;
+    text-shadow: none;
 }
 
 .post-short-list .article-info {

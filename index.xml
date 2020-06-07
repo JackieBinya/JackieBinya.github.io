@@ -279,7 +279,7 @@ d2c5e0f (origin/master, origin/HEAD, master) Merge pull request #1 from JackieBi
 &lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;This post was originally published on &lt;a class=&#34;article-link&#34; href=&#34;https://dev.to/jacqueline/another-conflict-resolving-conflicts-in-git-that-occur-when-using-rebase-3dho&#34;&gt;dev.to&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This post was originally published on &lt;a class=&#34;article-link&#34; href=&#34;https://dev.to/jacqueline/another-conflict-resolving-conflicts-in-git-that-occur-when-using-rebase-3dho&#34;&gt;dev.to&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;em&gt;Thank you for reading my article.&lt;/em&gt;&lt;/p&gt;
@@ -401,7 +401,7 @@ To add changes to the staging area, then proceed to commit them by running the c
 
 
 &lt;blockquote&gt;
-&lt;p&gt;_This post was originally published on &lt;a class=&#34;article-link&#34; href=&#34;https://dev.to/jacqueline/and-then-a-conflict-2eli&#34;&gt;dev.to&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This post was originally published on &lt;a class=&#34;article-link&#34; href=&#34;https://dev.to/jacqueline/and-then-a-conflict-2eli&#34;&gt;dev.to&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
     </item>

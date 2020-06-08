@@ -553,21 +553,28 @@ a[href^="/tags/git"]{
     background-color: whitesmoke ;
 }
 
-.article-tags a[href^="/tags/open-source"]{
+a[href^="/tags/open-source"]{
     background-color:rgb(212, 235, 135);
 }
 
-.article-tags a[href^="/tags/javascript"]{
+a[href^="/tags/javascript"]{
     background-color: #c6d861;
 }
 
-.article-tags a[href^="/tags/github"]{
+a[href^="/tags/github"]{
     background-color: bisque;
 }
 
-.article-tags a[href^="/tags/react-hooks"]{
+a[href^="/tags/react-hooks"]{
     background-color: #87DCC0
+}
 
+a[href^="/tags/hapi-joi"]{
+    background-color: #96c7d5;
+}
+
+a[href^="/tags/validations"]{
+    background-color: #4093b7
 }
 
 .tag-container {

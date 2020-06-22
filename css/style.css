@@ -277,6 +277,9 @@ article img {
     height: auto;
     margin: 0 auto .5em;
 }
+figcaption {
+    text-align: center;
+}
 
 .read-more {
     font-size: 0.85em;
@@ -575,6 +578,19 @@ a[href^="/tags/hapi-joi"]{
 
 a[href^="/tags/validations"]{
     background-color: #4093b7
+}
+
+a[href^="/tags/foss"]{
+    background-color: #8d4e85 ;
+}
+
+a[href^="/tags/life"]{
+    background-color: #FDFD96;
+}
+
+/* unused tag color */
+a[href^="/tags/chaoss"]{
+    background-color: #ffb347 ;
 }
 
 .tag-container {

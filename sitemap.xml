@@ -3,22 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jackiebinya.github.io/posts/be-the-change/</loc>
+    <lastmod>2020-06-22T09:35:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/tags/chaoss/</loc>
+    <lastmod>2020-06-22T09:35:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/tags/foss/</loc>
+    <lastmod>2020-06-22T09:35:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/tags/life/</loc>
+    <lastmod>2020-06-22T09:35:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/posts/</loc>
+    <lastmod>2020-06-22T09:35:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/tags/</loc>
+    <lastmod>2020-06-22T09:35:46+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jackiebinya.github.io/tags/hapi-joi/</loc>
     <lastmod>2020-06-08T08:47:42+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://jackiebinya.github.io/posts/validations/validating-with-hapi-joi/</loc>
-    <lastmod>2020-06-08T08:47:42+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jackiebinya.github.io/posts/</loc>
-    <lastmod>2020-06-08T08:47:42+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jackiebinya.github.io/tags/</loc>
     <lastmod>2020-06-08T08:47:42+02:00</lastmod>
   </url>
   

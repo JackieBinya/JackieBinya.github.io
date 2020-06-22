@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>life on Jacqueline Binya</title>
+    <link>https://jackiebinya.github.io/tags/life/</link>
+    <description>Jacqueline Binya (life)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Jun 2020 09:35:46 +0200</lastBuildDate>
+    
+    <atom:link href="https://jackiebinya.github.io/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Be the Change</title>
+      <link>https://jackiebinya.github.io/posts/be-the-change/</link>
+      <pubDate>Mon, 22 Jun 2020 09:35:46 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/be-the-change/</guid>
+      <description>&lt;p&gt;The calamity and threat brought by the pandemic had us locked away in our homes for months.
+As we came out of the lockdown we were forced to introspect and confront systematic and institutionalized prejudices(be it racism, ableism, ageism, sexism, homophobia, xenophobia, religious prejudice or any form of prejudice that exists thereof) which act as barriers to social and economic inclusion.&lt;/p&gt;
+&lt;p&gt;The catalyst to this awareness and movement was the untimely death of Gorge Floyd, a victim of police brutality and racism in Minneapolis, Minnesota USA. He has since become a global symbol for dismantling all forms of racial discrimination and inequality.&lt;/p&gt;
+&lt;p&gt;Now at the aftermath of global protests against inequality and racism the question in everyone else&amp;rsquo;s mind is: &amp;lsquo;How do we translate activism into long term meaningful and impactful change?&#39;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&#34;https://media.giphy.com/media/fYfh8DBB6JxcqXK5Cr/giphy.gif&#34; alt=&#34;Gif inscribed with the words everybidy love everybody&#34;&gt;
+&lt;figcaption&gt;If only it were that simple 🤦🏾&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Well I have been a techie for a little over a year. I come from a small country in Southern Africa called Zimbabwe. A decade ago someone like me would had never been able to break into tech.  Because of barriers to entry like poverty(computers don&amp;rsquo;t come cheap eey!), lack of access to the internet, and the worst in my books was the fact that ten years ago I would have had to read and comprehend ancient documention of age old technologies written in Old English or maybe it&amp;rsquo;s Latin 🤔 .&lt;/p&gt;
+&lt;p&gt;I love you &lt;a href=&#34;https://backbonejs.org/&#34; class=&#34;article-link&#34;&gt;Backbonejs&lt;/a&gt;  😘!!!&lt;/p&gt;
+&lt;p&gt;Today in comparison we have infinite high quality free resources on the internet ei. tutorials made by contributors of diverse backgrounds.&lt;/p&gt;
+&lt;p&gt;Technical writers are doing the most! Tech documentation of mordern tools, frameworks and technologies is now more intuitive.&lt;/p&gt;
+&lt;p&gt;Organizations like VueSchool although not free provide a discount for users from marginalised backgrounds.&lt;/p&gt;
+&lt;p&gt;Online developer communities on Dev.to and Twitter. I would love to salute all people who go out of their way to help others in the form of offering mentorships, general advice etc.&lt;/p&gt;
+&lt;p&gt;Inclusive internship opportunities GSOD Outreachy.&lt;/p&gt;
+&lt;p&gt;Tech has indeed been democratized but there is still more to be done.&lt;/p&gt;
+&lt;p&gt;I have been a FOSS enthusiast for sometime now. My expiriences in FOSS have been great. I have met awesome people who willing share and go out to their way to ensure that my expirience is memorable. In turn I always try to make meaningful contributions and practise kindness. Despite my posetive expiriences, I have always had fears and doubts lurking at the bottom of my mind about contributing in FOSS and pursing a career in tech in general but in light of recent events those fears have been amplified. These are some of the anxieties I have :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As a black woman from Africa are my contributions taken seriously and valued?&lt;/li&gt;
+&lt;li&gt;Is the playing field even? Do I have equal opportunity to participate and complete ?&lt;/li&gt;
+&lt;li&gt;Will my value as a techie diminish as I grow older? I transitioned into tech in my thirties and this something I plan to be doing for the longest time possible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This winter I was fortunate to get involved with the &lt;a href=&#34;https://chaoss.community/&#34; class=&#34;article-link&#34;&gt;Community Health Analytics Open Source Software(CHAOSS)&lt;/a&gt; Community and be part of the amazing work they are doing to change the future of tech. The work being done at CHAOSS gives me hope about the future and for me it&amp;rsquo;s been an opportunity to be part of the change.
+I am contributing to the awesome &lt;a href=&#34;https://github.com/badging&#34; class=&#34;article-link&#34;&gt;CHAOSS Badging&lt;/a&gt; project. My participation in the CHAOSS Badging project has been part of my application for Google Summer of Docs 2020.&lt;/p&gt;
+&lt;p&gt;The problem that led to starting the CHAOSS Project was the need and demand to measure the health of open source projects.&lt;/p&gt;
+&lt;p&gt;The simple way to solve this problem, was to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define metrics&lt;/li&gt;
+&lt;li&gt;Develop tools to measure the health of open-source projects&lt;/li&gt;
+&lt;li&gt;Collect data and analyse it to determine open-source project health.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CHAOSS is a Linux Foundation project focused on creating analytics and metrics to help define community health (CHAOSS official website).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The metrics to measure open source health defined by CHAOSS are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Common Metrics&lt;/li&gt;
+&lt;li&gt;Diversity and Inclusion(D&amp;amp;I)&lt;/li&gt;
+&lt;li&gt;Evolution&lt;/li&gt;
+&lt;li&gt;Risk&lt;/li&gt;
+&lt;li&gt;Value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The CHAOSS Community is then divided into different Working Groups. The aims of the Working Groups is to refine the metrics and to work with software implementation.&lt;/p&gt;
+&lt;p&gt;CHAOSS D&amp;amp;I Badging Project falls under the CHAOSS D&amp;amp;I Workgroup.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s recap before we proceed. Well in the beginning the big problem was coming up with a means to measure open source health. The CHAOSS Project then defined the metrics. But the metrics were still big and ambigous and there was still no means to measure the metrics.The CHAOSS Project then formed different Working Groups for the defined metrics.The responsibility of each Working Group is to refine the metrics and come up with tools to measure the metrics.&lt;/p&gt;
+&lt;p&gt;The D&amp;amp;I Working Group formulated focus areas(these are sub-metrics of D&amp;amp;I):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Communication Inclusivity&lt;/li&gt;
+&lt;li&gt;Contributor Community Dirvesity&lt;/li&gt;
+&lt;li&gt;Event Diversity&lt;/li&gt;
+&lt;li&gt;Governance&lt;/li&gt;
+&lt;li&gt;Leadership&lt;/li&gt;
+&lt;li&gt;Project and Community&lt;/li&gt;
+&lt;li&gt;Recognition of Good Work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The D&amp;amp;I Badging Project is implementation software, its purpose is to determine if open source projects and events are diverse and inclusive.&lt;/p&gt;
+&lt;p&gt;The D&amp;amp;I Workflow takes place in the open and in the public on GitHub. The CHAOSS D&amp;amp;I Badging workgroup created two repos &lt;a href=&#34;&#34; class=&#34;article-link&#34;&gt;Project Badging&lt;/a&gt; and &lt;a href=&#34;&#34; src=&#34;article-link&#34;&gt; Event Bagding&lt;/a&gt;. All the documentation pertaining to the the D&amp;amp;I Badging workflow and D&amp;amp;I metrics for the above mentioned focus areas is also found in these repos.&lt;/p&gt;
+&lt;p&gt;In the documentation the prospective applicants are provided with information on how to apply for a badge. This is a two-step process which starts with appending either an event or project in a events or projects table in the corresponding repos of the entities. The table is used to showcase the badging status and/or outcome of either events or projects for which badging applications were made. Because of the underlining git workflow once the applicants append their entities to the tables i.e make changes, they can open pull requests so as to submit their changes. The PRs opened have an embedded template which is a form the applicants are expected to fill out in Markdown. The questions asked in the form are used for D&amp;amp;I assessment.
+So far review guides or specifications are yet to be advised.&lt;/p&gt;
+&lt;p&gt;To learn more about CHAOSS D&amp;amp;I Badging Project, check out this &lt;a href=&#34;https://chaoss.community/participate/&#34; class=&#34;article-link&#34;&gt;link&lt;/a&gt; or get in touch with me on &lt;a href=&#34;https://twitter.com/jacquelinebinya&#34; class=&#34;article-link&#34;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&#34;https://media.giphy.com/media/2t9y9b5AH4ljV0S7fu/giphy.gif&#34; alt=&#34;Together&#34;&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

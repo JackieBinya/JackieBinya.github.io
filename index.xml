@@ -27,7 +27,7 @@ As we came out of the lockdown we were forced to introspect and confront systema
 &lt;/figure&gt;
 &lt;p&gt;Well I have been a techie for a little over a year. I come from a small country in Southern Africa called Zimbabwe. A decade ago someone like me would had never been able to break into tech. Because of barriers to entry like poverty(computers don&amp;rsquo;t come cheap eey!), lack of access to the internet, and the worst by my books as a non native English speaker, was the fact that ten years ago I would have had to read and comprehend ancient documention of age old technologies written in a complex hard to understand manner with excessive use of technical jargon.&lt;/p&gt;
 &lt;p&gt;Today in comparison we have infinite high quality free resources on the internet i.e. tutorials made by contributors of diverse backgrounds.&lt;/p&gt;
-&lt;p&gt;The price of PCs has been on a steady descrease in the recent years so has  that of the internet.&lt;/p&gt;
+&lt;p&gt;The price of PCs has been on a steady descrease in the recent years so has that of the internet.&lt;/p&gt;
 &lt;p&gt;Technical writers are doing the most! Tech documentation of mordern tools, frameworks and technologies is now more intuitive.&lt;/p&gt;
 &lt;p&gt;Organizations like VueSchool although not free provide a discount for users from marginalised backgrounds.&lt;/p&gt;
 &lt;p&gt;Online developer communities on Dev.to and Twitter. I would love to salute all people who go out of their way to help others in the form of offering mentorships, general advice etc.&lt;/p&gt;
@@ -44,7 +44,7 @@ I am contributing to the awesome &lt;a href=&#34;https://github.com/badging&#34;
 &lt;p&gt;CHAOSS Project was created to meet the demand and satisfy the need to measure the health of open source projects&amp;amp;/communities.&lt;/p&gt;
 &lt;p&gt;The simple way to solve this problem, was to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Define metrics to measure ipon source health&lt;/li&gt;
+&lt;li&gt;Define metrics to measure open source health&lt;/li&gt;
 &lt;li&gt;Develop tools to measure those metrics&lt;/li&gt;
 &lt;li&gt;And then finally collect data and analyse it to determine open-source project health.&lt;/li&gt;
 &lt;/ul&gt;
@@ -62,7 +62,8 @@ I am contributing to the awesome &lt;a href=&#34;https://github.com/badging&#34;
 &lt;/ul&gt;
 &lt;p&gt;The CHAOSS Community is then divided into different Working Groups. The aims of the Working Groups is to refine the metrics and to work with software implementation.&lt;/p&gt;
 &lt;p&gt;CHAOSS D&amp;amp;I Badging Project falls under the CHAOSS D&amp;amp;I Workgroup.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s recap before we proceed. Well in the beginning the big problem was coming up with a means to measure open source health. The CHAOSS Project then defined the metrics. But the metrics were still big and ambigous and there was still no means to measure the metrics.The CHAOSS Project then formed different Working Groups for the defined metrics.The responsibility of each Working Group is to refine the metrics and come up with tools to measure the metrics.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s recap before we proceed:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;💡Well in the beginning the big problem was coming up with a means to measure open source health. The CHAOSS Project then defined the metrics. But the metrics were still big and ambigous and there was still no means to measure the metrics.The CHAOSS Project then formed different Working Groups for the defined metrics.The responsibility of each Working Group is to refine the metrics and come up with tools to measure the metrics.&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;The D&amp;amp;I Working Group formulated focus areas(these are sub-metrics of D&amp;amp;I):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Communication Inclusivity&lt;/li&gt;
@@ -78,7 +79,6 @@ I am contributing to the awesome &lt;a href=&#34;https://github.com/badging&#34;
 &lt;p&gt;In the documentation the prospective applicants are provided with information on how to apply for a badge. This is a two-step process which starts with appending either an event or project in a events or projects table in the corresponding repos of the entities. The table is used to showcase the badging status and/or outcome of either events or projects for which badging applications were made. Because of the underlining git workflow once the applicants append their entities to the tables i.e make changes, they can open pull requests so as to submit their changes. The PRs opened have an embedded template which is a form the applicants are expected to fill out in Markdown. The questions asked in the form are used for D&amp;amp;I assessment.
 So far review guides or specifications are yet to be advised.&lt;/p&gt;
 &lt;p&gt;To participate in the CHAOSS D&amp;amp;I Badging Project, check out this &lt;a href=&#34;https://chaoss.community/participate/&#34; class=&#34;article-link&#34;&gt;link&lt;/a&gt; or get in touch with me on &lt;a href=&#34;https://twitter.com/jacquelinebinya&#34; class=&#34;article-link&#34;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&#34;https://media.giphy.com/media/2t9y9b5AH4ljV0S7fu/giphy.gif&#34; alt=&#34;Together&#34;&gt;
 </description>
     </item>
     

@@ -507,6 +507,13 @@ footer {
     transition: 2;
 }
 
+.highlight-content{
+    font-style: italic;
+    padding: 0.5em;
+    color: black;
+    background-color: lightblue;
+}
+
 .project-desc {
     text-align: center;
 }
@@ -521,7 +528,7 @@ footer {
     margin: 0.25em;
     color: black;
     transition: all 0ms ease-in-out
- }
+ 
 
  .tag:focus,
  .tag:hover {

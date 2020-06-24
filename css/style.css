@@ -518,7 +518,8 @@ footer {
 .project-desc {
     text-align: center;
 }
- .tag{
+
+ .tag {
     cursor: pointer;
     text-shadow: none;
     border-bottom: 0;
@@ -528,9 +529,9 @@ footer {
     padding: 0.2em;
     margin: 0.25em;
     color: black;
-    transition: all 0ms ease-in-out
+    transition: all 0ms ease-in-out;
+ }
  
-
  .tag:focus,
  .tag:hover {
      text-shadow: none;

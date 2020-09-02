@@ -13,7 +13,8 @@ html {
 body {
     margin: 0;
     background: #121212;
-    color: rgba(255, 255, 255, 0.87);
+    /* color: rgba(255, 255, 255, 0.87); */
+    color:rgb(204, 214, 246);
     font-family: 'Zilla Slab', serif;
     font-size: 18px;
     line-height: 1.5;
@@ -295,37 +296,73 @@ figcaption {
 }
 
 .profile-container {
-    margin: 1em 0;
+    margin-top: 3em;
 }
 
-.homepage-profile {
-    display: flex;
-    justify-content: center;
+.profile-headliner{
+    font-size: 2em;
+    font-weight: 500;
 }
 
-#profile-picture {
-    width: 250px;
-    height:250px;
-    border-radius: 50%;
-    display: block;
-    box-shadow: 5px 4px #1d1b1b;
+.animate-hello-world{
+    animation-duration: 330ms;
+    animation-name: slidein;
 }
 
-@media (min-width: 786px) {
-    .homepage-profile {
-        justify-content: left;
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
     }
-
-    .profile-container {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
     }
+  } 
 
-    .profile-container > p {
-        margin-left: 1em;
-    }
+  .animate-desc{
+    animation-duration: 500ms;
+    animation-name: slideup;
 }
+
+@keyframes slideup {
+    from {
+      margin-top: 100%;
+      height: 300%; 
+    }
+  
+    to {
+      margin-top: 0%;
+      width: 100%;
+    }
+  } 
+ 
+
+ .animate-wave{
+     display: inline-block;
+     margin-right: 3px;
+    animation-duration: 500ms;
+   animation-name: wave;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+    from {
+      margin-left: 1%;
+    }
+  
+   
+
+    50%{
+        margin-right: 0%;
+      }
+    
+      to {
+        margin-right: 1%;
+      }
+  } 
+ 
 /* Other pages */
 .terms {
     list-style-type: none;

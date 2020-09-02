@@ -573,13 +573,41 @@ I also recently started contributing to free and open-source software, I am hopi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jackiebinya.github.io/projects/</guid>
-      <description>&lt;a href=&#34;https://jackiebinya.github.io/free-mentors-challenge-final/UI/&#34; target=&#34;_blank&#34; class=&#34;social-link&#34;&gt;
+      <description>&lt;!-- &lt;a href=&#34;https://jackiebinya.github.io/free-mentors-challenge-final/UI/&#34; target=&#34;_blank&#34; class=&#34;social-link&#34;&gt;
       &lt;image src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1588093965/Jacqueline%20Binya%20Website%20Assets/Free_Mentors_wwcsfx.png&#34; width = &#34;500px&#34; height = &#34;300px&#34; alt=&#34;Image Preveiw of Freementors project&#34;&gt; 
 &lt;/a&gt;
 &lt;div class=&#34;project-desc&#34;&gt;
     &lt;h2&gt;Free Mentors&lt;/h2&gt;
     &lt;p&gt;HTML5, Javascript E6, CSS3&lt;/p&gt;
-&lt;/div&gt; 
+&lt;/div&gt;  --&gt;
+&lt;div class=&#34;project-container&gt;
+&lt;div class=&#34;project-wrapper&gt;
+&lt;div class=&#34;project-headliner&#34;&gt;
+&lt;div&gt; 
+&lt;span class=&#34;project-title&#34;&gt;Mushaa&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&#34;project-external-links&#34;&gt;
+&lt;div class=&#34;project-github&#34;&gt;
+&lt;a class=&#34;project-link&#34; style=&#34;color:white;&#34;&gt;
+test link
+  &lt;i class=&#34;fab fa-github&#34; style=&#34;width:10px; height:10px;&#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;project-url&#34;&gt;
+&lt;a class=&#34;project-link&#34;&gt; link &lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&#34;project-description&#34;&gt;
+A property market place where users can find and post residential properties for free.
+I built this app using Reactjs, React Hooks and Firebase/Firestore.
+&lt;/p&gt;
+&lt;div class=&#34;project-stack&gt;
+&lt;p&gt;Vue &lt;/p&gt;
+&lt;p&gt;Firebase&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     

@@ -535,7 +535,7 @@ I also recently started contributing to free and open-source software, I am hopi
         &lt;/form&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;button class=&#34;contact-btn&#34;&gt;Say hello on email 🙋🏾&lt;/button&gt;&lt;/p&gt;
-&lt;p&gt;I am also availaible on the following platforms,&lt;/p&gt;
+&lt;p&gt;I am also available on the following platforms,&lt;/p&gt;
 &lt;div  class=&#34;socials&#34;&gt;
     &lt;a href=&#34;https://github.com/JackieBinya&#34; class=&#34;social-link&#34;&gt;
             &lt;img src=&#34;https://jackiebinya.github.io/images/github.png&#34; alt=&#34;A link to Github profile&#34; class=&#34;socials-logo&#34;&gt;
@@ -552,18 +552,16 @@ I also recently started contributing to free and open-source software, I am hopi
 &lt;/div&gt;
 &lt;p&gt;Cheers 🌻&lt;/p&gt;
 &lt;script&gt;
-        const formElement = document.querySelector(&#39;.contact-form&#39;)
+        const formElement = document.querySelector(&#39;.contact-form&#39;);
 
         document.querySelector(&#39;.close-btn&#39;).addEventListener(&#39;click&#39;, (e) =&gt; {
-                formElement.style.display = &#39;none&#39;
-        })
+                formElement.style.display = &#39;none&#39;;
+        });
 
         document.querySelector(&#39;.contact-btn&#39;).addEventListener(&#39;click&#39;, (e) =&gt; {
-                formElement.style.display = &#39;block&#39;
-
-        })
-&lt;/script&gt;&lt;blockquote&gt;
-&lt;/blockquote&gt;
+                formElement.style.display = &#39;block&#39;;
+        });
+&lt;/script&gt;
 </description>
     </item>
     

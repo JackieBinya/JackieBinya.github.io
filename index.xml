@@ -580,33 +580,80 @@ I also recently started contributing to free and open-source software, I am hopi
     &lt;h2&gt;Free Mentors&lt;/h2&gt;
     &lt;p&gt;HTML5, Javascript E6, CSS3&lt;/p&gt;
 &lt;/div&gt;  --&gt;
-&lt;div class=&#34;project-container&gt;
-&lt;div class=&#34;project-wrapper&gt;
-&lt;div class=&#34;project-headliner&#34;&gt;
-&lt;div&gt; 
-&lt;span class=&#34;project-title&#34;&gt;Mushaa&lt;/span&gt;
-&lt;/div&gt;
-&lt;div class=&#34;project-external-links&#34;&gt;
-&lt;div class=&#34;project-github&#34;&gt;
-&lt;a class=&#34;project-link&#34; style=&#34;color:white;&#34;&gt;
-test link
-  &lt;i class=&#34;fab fa-github&#34; style=&#34;width:10px; height:10px;&#34;&gt;&lt;/i&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&#34;project-url&#34;&gt;
-&lt;a class=&#34;project-link&#34;&gt; link &lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p class=&#34;project-description&#34;&gt;
-A property market place where users can find and post residential properties for free.
-I built this app using Reactjs, React Hooks and Firebase/Firestore.
-&lt;/p&gt;
-&lt;div class=&#34;project-stack&gt;
-&lt;p&gt;Vue &lt;/p&gt;
-&lt;p&gt;Firebase&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;div class=&#34;project-container&#34;&gt;
+  &lt;div class=&#34;project-wrapper&#34;&gt;
+    &lt;div class=&#34;project-headliner&#34;&gt;
+      &lt;div&gt; 
+      &lt;span class=&#34;project-title&#34;&gt;Free Mentors&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;project-external-links&#34;&gt;
+        &lt;div class=&#34;project-github&#34;&gt;
+          &lt;a class=&#34;article-link&#34;&gt;github&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;project-url&#34;&gt;
+        &lt;a class=&#34;article-link&#34;&gt;url&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&#34;project-description&#34;&gt;
+   A property market place where users can find and post residential properties for free.
+  I built this app using Reactjs, React Hooks and Firebase/Firestore.
+  &lt;/p&gt;
+  &lt;hr&gt;
+  &lt;div class=&#34;project-stack&#34;&gt;
+    &lt;p&gt;HTML5 &lt;/p&gt;
+    &lt;p&gt;CSS3&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;project-wrapper&#34;&gt;
+    &lt;div class=&#34;project-headliner&#34;&gt;
+      &lt;div&gt; 
+      &lt;span class=&#34;project-title&#34;&gt;Mushaa&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;project-external-links&#34;&gt;
+        &lt;div class=&#34;project-github&#34;&gt;
+          &lt;a class=&#34;article-link&#34;&gt;github&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;project-url&#34;&gt;
+        &lt;a class=&#34;article-link&#34;&gt;url&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&#34;project-description&#34;&gt;
+  A property market place where users can find and post residential properties for free.
+  I built this app using Reactjs, React Hooks and Firebase/Firestore.
+  &lt;/p&gt;
+  &lt;hr&gt;
+  &lt;div class=&#34;project-stack&#34;&gt;
+    &lt;p&gt;React &lt;/p&gt;
+    &lt;p&gt;Firebase&lt;/p&gt;
+    &lt;p&gt;GitHub Actions&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;project-wrapper&#34;&gt;
+    &lt;div class=&#34;project-headliner&#34;&gt;
+      &lt;div&gt; 
+      &lt;span class=&#34;project-title&#34;&gt;Mushaa&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;project-external-links&#34;&gt;
+        &lt;div class=&#34;project-github&#34;&gt;
+          &lt;a class=&#34;article-link&#34;&gt;github&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;project-url&#34;&gt;
+          &lt;a class=&#34;article-link&#34;&gt;url&lt;/a&gt;
+        &lt;/div&gt;
+     &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&#34;project-description&#34;&gt;
+  A property market place where users can find and post residential properties for free.
+  I built this app using Reactjs, React Hooks and Firebase/Firestore.
+  &lt;/p&gt;
+  &lt;hr&gt;
+  &lt;div class=&#34;project-stack&#34;&gt;
+    &lt;p&gt;Vue &lt;/p&gt;
+    &lt;p&gt;Firebase&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

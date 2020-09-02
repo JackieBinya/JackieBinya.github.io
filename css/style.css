@@ -648,3 +648,42 @@ a[href^="/tags/chaoss"]{
 .page-seperator {
     width: 250px;
 }
+
+/*Projects*/
+
+.project-container{
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+   
+}
+
+.project-wrapper{
+    box-shadow:0 1px 5px rgba(250, 232, 232, 0.2);
+    background-color: rgb(24, 22, 22);
+    padding: 1em;
+    margin: 2em;
+    transition: transform 1s;
+    cursor: pointer;
+}
+
+.project-wrapper:hover {
+    transform: translateY(-10px);
+}
+
+.project-headliner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-stack{
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-title{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+

@@ -566,7 +566,7 @@ I also recently started contributing to free and open-source software, I am hopi
     </item>
     
     <item>
-      <title>Projects</title>
+      <title>Featured Projects</title>
       <link>https://jackiebinya.github.io/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -582,48 +582,24 @@ I also recently started contributing to free and open-source software, I am hopi
   &lt;div class=&#34;project-wrapper&#34;&gt;
     &lt;div class=&#34;project-headliner&#34;&gt;
       &lt;div&gt; 
-      &lt;span class=&#34;project-title&#34;&gt;Free Mentors&lt;/span&gt;
+      &lt;span class=&#34;project-title&#34;&gt;Mushaa&lt;/span&gt;
       &lt;/div&gt;
       &lt;div class=&#34;project-external-links&#34;&gt;
         &lt;div class=&#34;project-github&#34;&gt;
-          &lt;a class=&#34;article-link&#34;&gt;github&lt;/a&gt;
+          &lt;a class=&#34;article-link&#34; href=&#34;https://github.com/JackieBinya/musha&#34;  target=&#34;_blank&#34; &gt;github&lt;/a&gt;
         &lt;/div&gt;
         &lt;div class=&#34;project-url&#34;&gt;
-        &lt;a class=&#34;article-link&#34;&gt;url&lt;/a&gt;
+        &lt;a class=&#34;article-link&#34; href=&#34;https://musha-000.firebaseapp.com/&#34;  target=&#34;_blank&#34;&gt;url&lt;/a&gt;
         &lt;/div&gt;
       &lt;/div&gt;
   &lt;/div&gt;
   &lt;p class=&#34;project-description&#34;&gt;
    A property market place where users can find and post residential properties for free.
-  I built this app using Reactjs, React Hooks and Firebase/Firestore.
+  I built this app using Reactjs, React Hooks, Fusejs, and Firebase/Firestore.Registered users are able to post, update and delete property ads.All users can read the resources from the server.
   &lt;/p&gt;
   &lt;hr&gt;
   &lt;div class=&#34;project-stack&#34;&gt;
-    &lt;p&gt;HTML5 &lt;/p&gt;
-    &lt;p&gt;CSS3&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;project-wrapper&#34;&gt;
-    &lt;div class=&#34;project-headliner&#34;&gt;
-      &lt;div&gt; 
-      &lt;span class=&#34;project-title&#34;&gt;Mushaa&lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div class=&#34;project-external-links&#34;&gt;
-        &lt;div class=&#34;project-github&#34;&gt;
-          &lt;a class=&#34;article-link&#34;&gt;github&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;project-url&#34;&gt;
-        &lt;a class=&#34;article-link&#34;&gt;url&lt;/a&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;p class=&#34;project-description&#34;&gt;
-  A property market place where users can find and post residential properties for free.
-  I built this app using Reactjs, React Hooks and Firebase/Firestore.
-  &lt;/p&gt;
-  &lt;hr&gt;
-  &lt;div class=&#34;project-stack&#34;&gt;
-    &lt;p&gt;React &lt;/p&gt;
+    &lt;p&gt;React&lt;/p&gt;
     &lt;p&gt;Firebase&lt;/p&gt;
     &lt;p&gt;GitHub Actions&lt;/p&gt;
   &lt;/div&gt;
@@ -631,25 +607,74 @@ I also recently started contributing to free and open-source software, I am hopi
   &lt;div class=&#34;project-wrapper&#34;&gt;
     &lt;div class=&#34;project-headliner&#34;&gt;
       &lt;div&gt; 
-      &lt;span class=&#34;project-title&#34;&gt;Mushaa&lt;/span&gt;
+      &lt;span class=&#34;project-title&#34;&gt;Free Mentors&lt;/span&gt;
       &lt;/div&gt;
       &lt;div class=&#34;project-external-links&#34;&gt;
         &lt;div class=&#34;project-github&#34;&gt;
-          &lt;a class=&#34;article-link&#34;&gt;github&lt;/a&gt;
+          &lt;a class=&#34;article-link&#34; href=&#34;https://github.com/JackieBinya/free-mentors-challenge-final&#34;  target=&#34;_blank&#34;&gt;github&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;project-url&#34; href=&#34;https://jackiebinya.github.io/free-mentors-challenge-final/UI/&#34;  target=&#34;_blank&#34;&gt;
+        &lt;a class=&#34;article-link&#34;&gt;url&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&#34;project-description&#34;&gt;
+ I created this project as part of Andela BootCamp. It&#39;s an interactive prototype of an app that is a social platform for mentorship.The project is hosted on GitHub pages. Whilst its backend was deployed separately on Heroku.Please find more detail on the github link.
+  &lt;/p&gt;
+  &lt;hr&gt;
+  &lt;div class=&#34;project-stack&#34;&gt;
+    &lt;p&gt;HTML5&lt;/p&gt;
+    &lt;p&gt;CSS3&lt;/p&gt;
+    &lt;p&gt;GitHub Pages&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;project-wrapper&#34;&gt;
+    &lt;div class=&#34;project-headliner&#34;&gt;
+      &lt;div&gt; 
+      &lt;span class=&#34;project-title&#34;&gt;Portfolio site&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;project-external-links&#34;&gt;
+        &lt;div class=&#34;project-github&#34;&gt;
+          &lt;a class=&#34;article-link&#34; href=&#34;https://github.com/JackieBinya/jacqueline-binya-website&#34;  target=&#34;_blank&#34;&gt;github&lt;/a&gt;
         &lt;/div&gt;
         &lt;div class=&#34;project-url&#34;&gt;
-          &lt;a class=&#34;article-link&#34;&gt;url&lt;/a&gt;
+          &lt;a class=&#34;article-link&#34; href=&#34;https://jackiebinya.github.io/&#34;  target=&#34;_blank&#34;&gt;url&lt;/a&gt;
         &lt;/div&gt;
      &lt;/div&gt;
   &lt;/div&gt;
   &lt;p class=&#34;project-description&#34;&gt;
-  A property market place where users can find and post residential properties for free.
-  I built this app using Reactjs, React Hooks and Firebase/Firestore.
+ My portfolio website was built using Hugo Static Generator. The UI design is a mix of the 90s fun vibe and modern minimalist web design patterns.
+ It&#39;s a project that I am continuously working on and I derive so much pleasure from tweaking it every now and then.
   &lt;/p&gt;
   &lt;hr&gt;
   &lt;div class=&#34;project-stack&#34;&gt;
-    &lt;p&gt;Vue &lt;/p&gt;
-    &lt;p&gt;Firebase&lt;/p&gt;
+    &lt;p&gt;Hugo &lt;/p&gt;
+    &lt;p&gt;Anubis&lt;/p&gt;
+    &lt;p&gt;Go&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;project-wrapper&#34;&gt;
+    &lt;div class=&#34;project-headliner&#34;&gt;
+      &lt;div&gt; 
+      &lt;span class=&#34;project-title&#34;&gt;Shopping List App&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;project-external-links&#34;&gt;
+        &lt;div class=&#34;project-github&#34;&gt;
+          &lt;a class=&#34;article-link&#34; href=&#34;https://github.com/JackieBinya/jacqueline-binya-website&#34;  target=&#34;_blank&#34;&gt;github&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;project-url&#34;&gt;
+          &lt;a class=&#34;article-link&#34; href=&#34;https://jackiebinya.github.io/&#34;  target=&#34;_blank&#34;&gt;url&lt;/a&gt;
+        &lt;/div&gt;
+     &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&#34;project-description&#34;&gt;
+ My portfolio website was built using Hugo Static Generator. The UI design is a mix of the 90s fun vibe and modern minimalist web design patterns.
+ It&#39;s a project that I am continuously working and I derive so much pleasure from tweaking it every now and then.
+  &lt;/p&gt;
+  &lt;hr&gt;
+  &lt;div class=&#34;project-stack&#34;&gt;
+    &lt;p&gt;Vuejs&lt;/p&gt;
+    &lt;p&gt;Netlify&lt;/p&gt;
   &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;

@@ -306,7 +306,7 @@ figcaption {
 }
 
 .animate-hello-world{
-    animation-duration: 330ms;
+    animation-duration: 500ms;
     animation-name: slidein;
 }
 
@@ -323,7 +323,7 @@ figcaption {
   } 
 
   .animate-desc{
-    animation-duration: 500ms;
+    animation-duration: 850ms;
     animation-name: slideup;
 }
 

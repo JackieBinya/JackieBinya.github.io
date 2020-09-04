@@ -612,8 +612,8 @@ I also recently started contributing to free and open-source software, I am hopi
         &lt;div class=&#34;project-github&#34;&gt;
           &lt;a class=&#34;article-link&#34; href=&#34;https://github.com/JackieBinya/free-mentors-challenge-final&#34;  target=&#34;_blank&#34;&gt;github&lt;/a&gt;
         &lt;/div&gt;
-        &lt;div class=&#34;project-url&#34; href=&#34;https://jackiebinya.github.io/free-mentors-challenge-final/UI/&#34;  target=&#34;_blank&#34;&gt;
-        &lt;a class=&#34;article-link&#34;&gt;url&lt;/a&gt;
+        &lt;div class=&#34;project-url&#34;&gt;
+        &lt;a class=&#34;article-link&#34;  href=&#34;https://jackiebinya.github.io/free-mentors-challenge-final/UI/&#34;  target=&#34;_blank&#34;&gt;url&lt;/a&gt;
         &lt;/div&gt;
       &lt;/div&gt;
   &lt;/div&gt;
@@ -658,15 +658,15 @@ I also recently started contributing to free and open-source software, I am hopi
       &lt;/div&gt;
       &lt;div class=&#34;project-external-links&#34;&gt;
         &lt;div class=&#34;project-github&#34;&gt;
-          &lt;a class=&#34;article-link&#34; href=&#34;https://github.com/JackieBinya/jacqueline-binya-website&#34;  target=&#34;_blank&#34;&gt;github&lt;/a&gt;
+          &lt;a class=&#34;article-link&#34; href=&#34;https://github.com/JackieBinya/shopping-list-app&#34;  target=&#34;_blank&#34;&gt;github&lt;/a&gt;
         &lt;/div&gt;
         &lt;div class=&#34;project-url&#34;&gt;
-          &lt;a class=&#34;article-link&#34; href=&#34;https://jackiebinya.github.io/&#34;  target=&#34;_blank&#34;&gt;url&lt;/a&gt;
+          &lt;a class=&#34;article-link&#34; href=&#34;https://youthful-wescoff-90f50a.netlify.app/&#34;  target=&#34;_blank&#34;&gt;url&lt;/a&gt;
         &lt;/div&gt;
      &lt;/div&gt;
   &lt;/div&gt;
   &lt;p class=&#34;project-description&#34;&gt;
- My portfolio website was built using Hugo Static Generator. The UI design is a mix of the 90s fun vibe and modern minimalist web design patterns. It&#39;s a project that I am continuously working and I derive so much pleasure from tweaking it every now and then.
+ I created this project last year as I was learning Vuejs. It a simple app where users can perform basic CRUD operations as they plan and do their shopping. I especially enjoyed building this project because although simple as it may seem, it got me started on building apps using the Vuejs ecosystem.
   &lt;/p&gt;
   &lt;hr&gt;
   &lt;div class=&#34;project-stack&#34;&gt;
@@ -683,7 +683,7 @@ I also recently started contributing to free and open-source software, I am hopi
     &lt;p&gt;
      If you have an interesting job opportunity that might be a good fit for me, please definitely get in touch. You may download my resume below to learn a little bit more about my background and work experience. My contact information is also listed in the resume.
     &lt;/p&gt;
-    &lt;a  class=&#34;job-marketing_resume&#34; href=&#34;https://jackiebinya.github.io/resume/JacquelineBinya-CV.pdf&#34; download=&#34;Jacqueline-Binya-Resume&#34;&gt;Resume&lt;/a&gt;
+    &lt;a  class=&#34;article-link&#34; href=&#34;https://jackiebinya.github.io/resume/JacquelineBinya-CV.pdf&#34; download=&#34;Jacqueline-Binya-Resume&#34;&gt;Resume&lt;/a&gt;
   &lt;/div&gt;
 &lt;/section&gt;</description>
     </item>

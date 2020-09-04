@@ -698,12 +698,6 @@ a[href^="/tags/chaoss"]{
     padding: 1em;
 }
 
-.job-marketing_resume{
-    padding: 0.25em 1em;
-    border: 1px solid teal;
-    margin-bottom: 0.5em;
-}
-
 @media (min-width: 768px){
     .job-marketing{
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;

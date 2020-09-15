@@ -16,12 +16,11 @@
 <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 <link rel="apple-touch-icon-precomposed" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 
-<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1600146866" />
+<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1600148367" />
 
 <meta property="og:title" content="Closures, Scope and All the Good Stuff About Javascript" />
-<meta property="og:description" content="This blog post is a draft
-Objectives This article was written to help explain a topic which is an interview staple for Javascript developers. Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.
-Prerequisites  Nodejs installed locally." />
+<meta property="og:description" content="Objectives This article was written to help explain a topic which is an interview staple for Javascript developers. Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.
+Prerequisites  Nodejs installed locally. Text editor of your choice." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jackiebinya.github.io/posts/javascript/closures-scope-and-all-the-good-stuff-about-js/" />
 <meta property="article:published_time" content="2020-09-05T21:05:11+02:00" />
@@ -29,9 +28,8 @@ Prerequisites  Nodejs installed locally." />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Closures, Scope and All the Good Stuff About Javascript"/>
-<meta name="twitter:description" content="This blog post is a draft
-Objectives This article was written to help explain a topic which is an interview staple for Javascript developers. Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.
-Prerequisites  Nodejs installed locally."/>
+<meta name="twitter:description" content="Objectives This article was written to help explain a topic which is an interview staple for Javascript developers. Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.
+Prerequisites  Nodejs installed locally. Text editor of your choice."/>
 
 
 
@@ -71,8 +69,7 @@ Prerequisites  Nodejs installed locally."/>
             <h1>Closures, Scope and All the Good Stuff About Javascript</h1>
         </header>
         <div class="content">
-            <p><em>This blog post is a draft</em></p>
-<h2 id="objectives">Objectives</h2>
+            <h2 id="objectives">Objectives</h2>
 <p>This article was written to help explain a topic which is an interview staple for Javascript developers.
 Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.</p>
 <h2 id="prerequisites">Prerequisites</h2>
@@ -89,7 +86,7 @@ Based on the assumption that the reader is a total newbie to the topic, we will 
 <img src="https://res.cloudinary.com/di70zcupa/image/upload/v1599461896/js-closures-tut/Block-Syntax_1_waqhf3.png" alt="Block Syntax">
 <p>On that basis of the given definition of a block, it follows that <em>functions</em>, <em>if statements</em>, <em>loops</em> all have block statements.</p>
 <h3 id="local-and-global-variables">Local and Global Variables</h3>
-<p>One thing thats important to mention is that whenever variables are defined in Javascript its either they are are defined inside a block or independent of a block.When a variable is defined inside a block it is <em>local</em> in reference to that block. A global variable is one whose scope is global.</p>
+<p>In Javascript variables are either declared inside a block or independent of a block. When a variable is declared inside a block it is <em>local</em> in reference to that block. A global variable is one whose scope is global.</p>
 <h2 id="what-then-is-scope-">What then is scope ?</h2>
 <p>In Javascript scope denotes the reach or range or accessibility of Javascript variables. So, whenever a javascript variable is declared it automatically has scope associated with it.</p>
 <p>The scope of a variable is determined by:</p>
@@ -100,22 +97,20 @@ Based on the assumption that the reader is a total newbie to the topic, we will 
 <h3 id="types-of-scope">Types of scope</h3>
 <ol>
 <li>
-<p>Global scope: These are the variables which are accessible throughout the window object or globally within your script.</p>
+<p>Global scope: globally scoped variables are accessible throughout the window object or globally within your script.</p>
 </li>
 <li>
-<p>Block scope: block scoped variables are variables that when declared inside of a block are only accessible within that block. The block referenced too being a <em>generic block</em> or a block which is part of a <em>loop</em> or an <em>if statement</em> or a <em>function</em>. So essentially <em>const</em> and <em>let</em> variables can either be <em>globally scoped</em> if declared outside of a block or <em>block scoped</em> when declared inside of a block. When <em>var</em> variables are declared in blocks which aren&rsquo;t functions they their scope is global.</p>
+<p>Block scope: block scoped variables are variables that when declared inside of a block are only accessible within that block. The block referenced to, being a <em>generic block</em> or a block which is part of a <em>loop</em> or an <em>if statement</em> or a <em>function</em>. So essentially <em>const</em> and <em>let</em> variables can either be <em>globally scoped</em> if declared outside of a block or <em>block scoped</em> when declared inside of a block. When <em>var</em> variables are declared in blocks which aren&rsquo;t functions, their scope is global.</p>
 </li>
 </ol>
-<p>In the screenshot below I declared a couple of variables, I suggest you go to your text editor and create a <em>main.js</em> file and copy the contents of the screenshot and modify them to your liking.</p>
+<p>In the screenshot below I declared a couple of variables, I suggest you go to your text editor and create a <em>main.js</em> file and copy the contents of the screenshot and modify them to your liking.
 <img src="https://res.cloudinary.com/di70zcupa/image/upload/v1599466095/js-closures-tut/scope-example_ghtmaq.png" alt="Illustrating scope in Javascript">
-<p>Now to execute <em>main.js</em> file, type the command below in your terminal:</p>
+Now to execute <em>main.js</em> file, type the command below in your terminal:</p>
 <pre><code>node main.js
-
-
-</code></pre><p>The expected results are shown in the screenshot below:</p>
+</code></pre><p>The expected results are shown in the screenshot below:
 <img src="https://res.cloudinary.com/di70zcupa/image/upload/v1599467585/js-closures-tut/scope-terminal_result_o3dz6n.png" alt="Results on the terminal">
-<p>The variables <em>name</em>, <em>lastName</em> and <em>isSoftwareDeveloper</em> are declared independent of a block. These are known as global variables and they have global scope.</p>
-<p>Variables <em>hobbies</em> and <em>countryOfResidence</em> are local to a block in which they were declared but, although <em>hobbies</em> has global scope  <em>countryOfResidence</em> is block scoped.</p>
+The variables <em>name</em>, <em>lastName</em> and <em>isSoftwareDeveloper</em> are declared independent of a block. These are known as global variables and they have global scope.
+Variables <em>hobbies</em> and <em>countryOfResidence</em> are local to a block in which they were declared but, although <em>hobbies</em> has global scope  <em>countryOfResidence</em> is block scoped.</p>
 <ol start="3">
 <li>Functional Scope: functionally scoped variables are variables that when declared inside of a function they are only accessible within that function, if the same variable was declared in any other block e.g. an <em>if statement</em> and it was accessible only within that block as well. Its scope is then described as being block scoped. So essentially <em>functional scope</em> is a special type of <em>block scope</em> used to describe the scope of <em>var</em> variables declared inside functions. A <em>var</em> variable is always globally scoped otherwise it is <em>functionally scoped</em> if declared inside of a function.</li>
 </ol>
@@ -127,10 +122,11 @@ Based on the assumption that the reader is a total newbie to the topic, we will 
 <h2 id="finally-what-then-are-closures-">Finally what then are closures ?</h2>
 <p>To truly understand closures we need to have a basic understanding of how the Javascript engine executes functions. So, whenever a function is invoked an execution context associated with the function is created. An execution context contains meta data about the function and all its associated variables. Upon execution of the function all the meta data associated with the function is then removed from the memory, what is often refereed to as garbage collection.</p>
 <p>Closures are functions which have references to variables in their lexical environment.</p>
-<p>Lets reconsider the screenshot provided above, when the file is executed internally what happens is that the javascript engine parses <em>main.js</em> line by line. When it reaches the point in the script where the <em>outer</em> function is invoked it creates a context associated with it. When it eventually executes the <em>inner</em> function is creates an execution context associated with it as well. Now as it was verified about the variables of the <em>outer</em> function are always accessible inside the <em>inner</em> function, even when the outer function&rsquo;s execution context has been removed from memory. Let&rsquo;s see how that is possible:</p>
+<p>Lets reconsider the screenshot provided above, when the file is executed internally what happens is that the javascript engine parses <em>main.js</em> line by line. When it reaches the point in the script where the <em>outer</em> function is invoked it creates a context associated with it. When the javascript engine eventually executes the <em>inner</em> function is creates an execution context associated with it as well. Now as it was verified above, the variables of the <em>outer</em> function are always accessible inside the <em>inner</em> function, even when the outer function&rsquo;s execution context has been removed from memory. Let&rsquo;s see how that is possible:</p>
 <img src="https://res.cloudinary.com/di70zcupa/image/upload/v1600121543/js-closures-tut/closures_bdxhjn.png" alt="Closures example">
-<p>So, essentially we have seen that the <em>inner</em> function (which is a closure ) is invoked its execution context&rsquo;s contains a reference to the <em>outer</em> function&rsquo;s variables.</p>
-<p><em>Happy Coding !!!</em></p>
+<p>So, we have seen that when the <em>inner</em> function (which is a closure ) is invoked its execution context&rsquo;s contains a reference to the <em>outer</em> function&rsquo;s variables which has already been returned.</p>
+<p><em>It is my hope that this article has helped you understand closures in javascript.</em></p>
+<p><em>Happy Coding  😉!!!</em></p>
 
         </div>
         <div class="article-info">

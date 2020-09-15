@@ -17,8 +17,7 @@
       <pubDate>Sat, 05 Sep 2020 21:05:11 +0200</pubDate>
       
       <guid>https://jackiebinya.github.io/posts/javascript/closures-scope-and-all-the-good-stuff-about-js/</guid>
-      <description>&lt;p&gt;&lt;em&gt;This blog post is a draft&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
 &lt;p&gt;This article was written to help explain a topic which is an interview staple for Javascript developers.
 Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
@@ -35,7 +34,7 @@ Based on the assumption that the reader is a total newbie to the topic, we will 
 &lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1599461896/js-closures-tut/Block-Syntax_1_waqhf3.png&#34; alt=&#34;Block Syntax&#34;&gt;
 &lt;p&gt;On that basis of the given definition of a block, it follows that &lt;em&gt;functions&lt;/em&gt;, &lt;em&gt;if statements&lt;/em&gt;, &lt;em&gt;loops&lt;/em&gt; all have block statements.&lt;/p&gt;
 &lt;h3 id=&#34;local-and-global-variables&#34;&gt;Local and Global Variables&lt;/h3&gt;
-&lt;p&gt;One thing thats important to mention is that whenever variables are defined in Javascript its either they are are defined inside a block or independent of a block.When a variable is defined inside a block it is &lt;em&gt;local&lt;/em&gt; in reference to that block. A global variable is one whose scope is global.&lt;/p&gt;
+&lt;p&gt;In Javascript variables are either declared inside a block or independent of a block. When a variable is declared inside a block it is &lt;em&gt;local&lt;/em&gt; in reference to that block. A global variable is one whose scope is global.&lt;/p&gt;
 &lt;h2 id=&#34;what-then-is-scope-&#34;&gt;What then is scope ?&lt;/h2&gt;
 &lt;p&gt;In Javascript scope denotes the reach or range or accessibility of Javascript variables. So, whenever a javascript variable is declared it automatically has scope associated with it.&lt;/p&gt;
 &lt;p&gt;The scope of a variable is determined by:&lt;/p&gt;
@@ -46,22 +45,20 @@ Based on the assumption that the reader is a total newbie to the topic, we will 
 &lt;h3 id=&#34;types-of-scope&#34;&gt;Types of scope&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Global scope: These are the variables which are accessible throughout the window object or globally within your script.&lt;/p&gt;
+&lt;p&gt;Global scope: globally scoped variables are accessible throughout the window object or globally within your script.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Block scope: block scoped variables are variables that when declared inside of a block are only accessible within that block. The block referenced too being a &lt;em&gt;generic block&lt;/em&gt; or a block which is part of a &lt;em&gt;loop&lt;/em&gt; or an &lt;em&gt;if statement&lt;/em&gt; or a &lt;em&gt;function&lt;/em&gt;. So essentially &lt;em&gt;const&lt;/em&gt; and &lt;em&gt;let&lt;/em&gt; variables can either be &lt;em&gt;globally scoped&lt;/em&gt; if declared outside of a block or &lt;em&gt;block scoped&lt;/em&gt; when declared inside of a block. When &lt;em&gt;var&lt;/em&gt; variables are declared in blocks which aren&amp;rsquo;t functions they their scope is global.&lt;/p&gt;
+&lt;p&gt;Block scope: block scoped variables are variables that when declared inside of a block are only accessible within that block. The block referenced to, being a &lt;em&gt;generic block&lt;/em&gt; or a block which is part of a &lt;em&gt;loop&lt;/em&gt; or an &lt;em&gt;if statement&lt;/em&gt; or a &lt;em&gt;function&lt;/em&gt;. So essentially &lt;em&gt;const&lt;/em&gt; and &lt;em&gt;let&lt;/em&gt; variables can either be &lt;em&gt;globally scoped&lt;/em&gt; if declared outside of a block or &lt;em&gt;block scoped&lt;/em&gt; when declared inside of a block. When &lt;em&gt;var&lt;/em&gt; variables are declared in blocks which aren&amp;rsquo;t functions, their scope is global.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;In the screenshot below I declared a couple of variables, I suggest you go to your text editor and create a &lt;em&gt;main.js&lt;/em&gt; file and copy the contents of the screenshot and modify them to your liking.&lt;/p&gt;
+&lt;p&gt;In the screenshot below I declared a couple of variables, I suggest you go to your text editor and create a &lt;em&gt;main.js&lt;/em&gt; file and copy the contents of the screenshot and modify them to your liking.
 &lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1599466095/js-closures-tut/scope-example_ghtmaq.png&#34; alt=&#34;Illustrating scope in Javascript&#34;&gt;
-&lt;p&gt;Now to execute &lt;em&gt;main.js&lt;/em&gt; file, type the command below in your terminal:&lt;/p&gt;
+Now to execute &lt;em&gt;main.js&lt;/em&gt; file, type the command below in your terminal:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;node main.js
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The expected results are shown in the screenshot below:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The expected results are shown in the screenshot below:
 &lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1599467585/js-closures-tut/scope-terminal_result_o3dz6n.png&#34; alt=&#34;Results on the terminal&#34;&gt;
-&lt;p&gt;The variables &lt;em&gt;name&lt;/em&gt;, &lt;em&gt;lastName&lt;/em&gt; and &lt;em&gt;isSoftwareDeveloper&lt;/em&gt; are declared independent of a block. These are known as global variables and they have global scope.&lt;/p&gt;
-&lt;p&gt;Variables &lt;em&gt;hobbies&lt;/em&gt; and &lt;em&gt;countryOfResidence&lt;/em&gt; are local to a block in which they were declared but, although &lt;em&gt;hobbies&lt;/em&gt; has global scope  &lt;em&gt;countryOfResidence&lt;/em&gt; is block scoped.&lt;/p&gt;
+The variables &lt;em&gt;name&lt;/em&gt;, &lt;em&gt;lastName&lt;/em&gt; and &lt;em&gt;isSoftwareDeveloper&lt;/em&gt; are declared independent of a block. These are known as global variables and they have global scope.
+Variables &lt;em&gt;hobbies&lt;/em&gt; and &lt;em&gt;countryOfResidence&lt;/em&gt; are local to a block in which they were declared but, although &lt;em&gt;hobbies&lt;/em&gt; has global scope  &lt;em&gt;countryOfResidence&lt;/em&gt; is block scoped.&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;Functional Scope: functionally scoped variables are variables that when declared inside of a function they are only accessible within that function, if the same variable was declared in any other block e.g. an &lt;em&gt;if statement&lt;/em&gt; and it was accessible only within that block as well. Its scope is then described as being block scoped. So essentially &lt;em&gt;functional scope&lt;/em&gt; is a special type of &lt;em&gt;block scope&lt;/em&gt; used to describe the scope of &lt;em&gt;var&lt;/em&gt; variables declared inside functions. A &lt;em&gt;var&lt;/em&gt; variable is always globally scoped otherwise it is &lt;em&gt;functionally scoped&lt;/em&gt; if declared inside of a function.&lt;/li&gt;
 &lt;/ol&gt;
@@ -73,10 +70,11 @@ Based on the assumption that the reader is a total newbie to the topic, we will 
 &lt;h2 id=&#34;finally-what-then-are-closures-&#34;&gt;Finally what then are closures ?&lt;/h2&gt;
 &lt;p&gt;To truly understand closures we need to have a basic understanding of how the Javascript engine executes functions. So, whenever a function is invoked an execution context associated with the function is created. An execution context contains meta data about the function and all its associated variables. Upon execution of the function all the meta data associated with the function is then removed from the memory, what is often refereed to as garbage collection.&lt;/p&gt;
 &lt;p&gt;Closures are functions which have references to variables in their lexical environment.&lt;/p&gt;
-&lt;p&gt;Lets reconsider the screenshot provided above, when the file is executed internally what happens is that the javascript engine parses &lt;em&gt;main.js&lt;/em&gt; line by line. When it reaches the point in the script where the &lt;em&gt;outer&lt;/em&gt; function is invoked it creates a context associated with it. When it eventually executes the &lt;em&gt;inner&lt;/em&gt; function is creates an execution context associated with it as well. Now as it was verified about the variables of the &lt;em&gt;outer&lt;/em&gt; function are always accessible inside the &lt;em&gt;inner&lt;/em&gt; function, even when the outer function&amp;rsquo;s execution context has been removed from memory. Let&amp;rsquo;s see how that is possible:&lt;/p&gt;
+&lt;p&gt;Lets reconsider the screenshot provided above, when the file is executed internally what happens is that the javascript engine parses &lt;em&gt;main.js&lt;/em&gt; line by line. When it reaches the point in the script where the &lt;em&gt;outer&lt;/em&gt; function is invoked it creates a context associated with it. When the javascript engine eventually executes the &lt;em&gt;inner&lt;/em&gt; function is creates an execution context associated with it as well. Now as it was verified above, the variables of the &lt;em&gt;outer&lt;/em&gt; function are always accessible inside the &lt;em&gt;inner&lt;/em&gt; function, even when the outer function&amp;rsquo;s execution context has been removed from memory. Let&amp;rsquo;s see how that is possible:&lt;/p&gt;
 &lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1600121543/js-closures-tut/closures_bdxhjn.png&#34; alt=&#34;Closures example&#34;&gt;
-&lt;p&gt;So, essentially we have seen that the &lt;em&gt;inner&lt;/em&gt; function (which is a closure ) is invoked its execution context&amp;rsquo;s contains a reference to the &lt;em&gt;outer&lt;/em&gt; function&amp;rsquo;s variables.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Happy Coding !!!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;So, we have seen that when the &lt;em&gt;inner&lt;/em&gt; function (which is a closure ) is invoked its execution context&amp;rsquo;s contains a reference to the &lt;em&gt;outer&lt;/em&gt; function&amp;rsquo;s variables which has already been returned.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;It is my hope that this article has helped you understand closures in javascript.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Happy Coding  😉!!!&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     

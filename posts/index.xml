@@ -17,7 +17,8 @@
       <pubDate>Sat, 05 Sep 2020 21:05:11 +0200</pubDate>
       
       <guid>https://jackiebinya.github.io/posts/javascript/closures-scope-and-all-the-good-stuff-about-js/</guid>
-      <description>&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+      <description>&lt;p&gt;&lt;em&gt;This blog post is a draft&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
 &lt;p&gt;This article was written to help explain a topic which is an interview staple for Javascript developers.
 Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;

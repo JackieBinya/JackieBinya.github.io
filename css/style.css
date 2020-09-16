@@ -635,6 +635,16 @@ a[href^="/tags/life"]{
     background-color: #FDFD96;
 }
 
+a[href^="/tags/interview-prep"]{
+    background-color: #CAE7C1;
+}
+
+a[href^="/tags/javascript"]{
+    background-color: #F0725C;
+}
+
+
+
 /* unused tag color */
 a[href^="/tags/chaoss"]{
     background-color: #ffb347 ;

@@ -16,7 +16,7 @@
 <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 <link rel="apple-touch-icon-precomposed" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 
-<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1600274534" />
+<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1600323875" />
 
 <meta property="og:title" content="Closures, Scope and All the Good Stuff About Javascript" />
 <meta property="og:description" content="Objectives This article was written to help explain a topic which is an interview staple for Javascript developers. Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.
@@ -117,7 +117,7 @@ Variables <em>hobbies</em> and <em>countryOfResidence</em> are local to a block 
 </ol>
 <img src="https://res.cloudinary.com/di70zcupa/image/upload/v1600108316/js-closures-tut/functional_scope_wflflh.png" alt="Functional scope examples">
 <ol start="4">
-<li>Lexical Scope: given a scenario where we have a group of nested function, lexical scope means that the inner functions have access to the variables and/or resources of the outer function even after the outer function is returned.</li>
+<li>Lexical Scope: given a scenario where we have a group of nested functions, lexical scope means that the inner functions have access to the variables and/or resources of the outer function even after the outer function is returned.</li>
 </ol>
 <img src="https://res.cloudinary.com/di70zcupa/image/upload/v1600118955/js-closures-tut/lexical_scope_c8rcm4.png" alt="Lexical scope example">
 <h2 id="finally-what-then-are-closures-">Finally, what then are closures ?</h2>
@@ -125,7 +125,7 @@ Variables <em>hobbies</em> and <em>countryOfResidence</em> are local to a block 
 <blockquote>
 <p>Closures are functions which have references to variables in their lexical environment.</p>
 </blockquote>
-<p>Let&rsquo;s reconsider the screenshot provided above, when the file is executed internally what happens is that the javascript engine parses <em>main.js</em> line by line. When it reaches the point in the script where the <em>outer</em> function is invoked it creates a context associated with it. When the javascript engine eventually executes the <em>inner</em> function is creates an execution context associated with it as well. Now as it was verified above, the variables of the <em>outer</em> function are always accessible inside the <em>inner</em> function, even when the outer function&rsquo;s execution context has been removed from memory. Let&rsquo;s see how that is possible:</p>
+<p>Let&rsquo;s reconsider the screenshot provided above, when the file is executed internally what happens is that, the javascript engine parses <em>main.js</em> line by line. When it reaches the point in the script where the <em>outer</em> function is invoked it creates a context associated with it. When the javascript engine eventually executes the <em>inner</em> function is creates an execution context associated with it as well. Now as it was verified above, the variables of the <em>outer</em> function are always accessible inside the <em>inner</em> function, even when the outer function&rsquo;s execution context has been removed from memory. Let&rsquo;s see how that is possible:</p>
 <img src="https://res.cloudinary.com/di70zcupa/image/upload/v1600121543/js-closures-tut/closures_bdxhjn.png" alt="Closures example">
 <p>So, we have seen that when the <em>inner</em> function (which is a closure) is invoked its execution context&rsquo;s contains a reference to the <em>outer</em> function&rsquo;s variables, despite the fact that the <em>outer</em> function has already been returned.</p>
 <p><em>It is my hope that this article has helped you understand closures in javascript.</em></p>

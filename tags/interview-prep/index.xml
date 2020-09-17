@@ -65,7 +65,7 @@ Variables &lt;em&gt;hobbies&lt;/em&gt; and &lt;em&gt;countryOfResidence&lt;/em&g
 &lt;/ol&gt;
 &lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1600108316/js-closures-tut/functional_scope_wflflh.png&#34; alt=&#34;Functional scope examples&#34;&gt;
 &lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;Lexical Scope: given a scenario where we have a group of nested function, lexical scope means that the inner functions have access to the variables and/or resources of the outer function even after the outer function is returned.&lt;/li&gt;
+&lt;li&gt;Lexical Scope: given a scenario where we have a group of nested functions, lexical scope means that the inner functions have access to the variables and/or resources of the outer function even after the outer function is returned.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1600118955/js-closures-tut/lexical_scope_c8rcm4.png&#34; alt=&#34;Lexical scope example&#34;&gt;
 &lt;h2 id=&#34;finally-what-then-are-closures-&#34;&gt;Finally, what then are closures ?&lt;/h2&gt;
@@ -73,7 +73,7 @@ Variables &lt;em&gt;hobbies&lt;/em&gt; and &lt;em&gt;countryOfResidence&lt;/em&g
 &lt;blockquote&gt;
 &lt;p&gt;Closures are functions which have references to variables in their lexical environment.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Let&amp;rsquo;s reconsider the screenshot provided above, when the file is executed internally what happens is that the javascript engine parses &lt;em&gt;main.js&lt;/em&gt; line by line. When it reaches the point in the script where the &lt;em&gt;outer&lt;/em&gt; function is invoked it creates a context associated with it. When the javascript engine eventually executes the &lt;em&gt;inner&lt;/em&gt; function is creates an execution context associated with it as well. Now as it was verified above, the variables of the &lt;em&gt;outer&lt;/em&gt; function are always accessible inside the &lt;em&gt;inner&lt;/em&gt; function, even when the outer function&amp;rsquo;s execution context has been removed from memory. Let&amp;rsquo;s see how that is possible:&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s reconsider the screenshot provided above, when the file is executed internally what happens is that, the javascript engine parses &lt;em&gt;main.js&lt;/em&gt; line by line. When it reaches the point in the script where the &lt;em&gt;outer&lt;/em&gt; function is invoked it creates a context associated with it. When the javascript engine eventually executes the &lt;em&gt;inner&lt;/em&gt; function is creates an execution context associated with it as well. Now as it was verified above, the variables of the &lt;em&gt;outer&lt;/em&gt; function are always accessible inside the &lt;em&gt;inner&lt;/em&gt; function, even when the outer function&amp;rsquo;s execution context has been removed from memory. Let&amp;rsquo;s see how that is possible:&lt;/p&gt;
 &lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1600121543/js-closures-tut/closures_bdxhjn.png&#34; alt=&#34;Closures example&#34;&gt;
 &lt;p&gt;So, we have seen that when the &lt;em&gt;inner&lt;/em&gt; function (which is a closure) is invoked its execution context&amp;rsquo;s contains a reference to the &lt;em&gt;outer&lt;/em&gt; function&amp;rsquo;s variables, despite the fact that the &lt;em&gt;outer&lt;/em&gt; function has already been returned.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;It is my hope that this article has helped you understand closures in javascript.&lt;/em&gt;&lt;/p&gt;

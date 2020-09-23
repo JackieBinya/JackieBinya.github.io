@@ -639,6 +639,10 @@ a[href^="/tags/interview-prep"]{
     background-color: #CAE7C1;
 }
 
+a[href^="/tags/graphql"]{
+    background-color: #A9BA9D;
+}
+
 a[href^="/tags/javascript"]{
     background-color: #F0725C;
 }

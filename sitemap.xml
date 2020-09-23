@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jackiebinya.github.io/tags/graphql/</loc>
+    <lastmod>2020-09-23T16:32:17+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/posts/lets-learn-graphql/lesson-1/</loc>
+    <lastmod>2020-09-23T16:32:17+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/tags/life/</loc>
+    <lastmod>2020-09-23T16:32:17+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/posts/</loc>
+    <lastmod>2020-09-23T16:32:17+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/tags/</loc>
+    <lastmod>2020-09-23T16:32:17+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jackiebinya.github.io/posts/javascript/closures-scope-and-all-the-good-stuff-about-js/</loc>
     <lastmod>2020-09-05T21:05:11+02:00</lastmod>
   </url>
@@ -18,27 +43,12 @@
   </url>
   
   <url>
-    <loc>https://jackiebinya.github.io/posts/</loc>
-    <lastmod>2020-09-05T21:05:11+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jackiebinya.github.io/tags/</loc>
-    <lastmod>2020-09-05T21:05:11+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jackiebinya.github.io/posts/be-the-change/</loc>
     <lastmod>2020-06-22T09:35:46+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://jackiebinya.github.io/tags/foss/</loc>
-    <lastmod>2020-06-22T09:35:46+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jackiebinya.github.io/tags/life/</loc>
     <lastmod>2020-06-22T09:35:46+02:00</lastmod>
   </url>
   

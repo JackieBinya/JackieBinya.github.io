@@ -12,6 +12,39 @@
     
     
     <item>
+      <title>Launch🚀</title>
+      <link>https://jackiebinya.github.io/posts/gsod-2020/launch/</link>
+      <pubDate>Tue, 29 Sep 2020 18:50:55 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/gsod-2020/launch/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This is a draft silly&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;My name is Jacqueline Binya. I am a software developer and technical writer from Zimbabwe. I am going to write a series of blog posts documenting my experience and lessons as I  contribute to the &lt;a class=&#34;article-link&#34; href=&#34;&#34;&gt; Creative Commons WordPress Base Theme &lt;/a&gt; during the  &lt;a class=&#34;article-link&#34; href=&#34;&#34;&gt;Google Season of Docs&lt;/a&gt; 2020 (GSOD-2020) as a technical writer.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-google-season-of-docs&#34;&gt;What is Google Season of Docs?&lt;/h2&gt;
+&lt;p&gt;The Google Season of the Docs initiative was born out of a need to improve the quality of open-source documentation as well as to advocate for open source, documentation, and technical writing. Annually during the GSOD, technical writers are invited to contribute to  OS projects through a highly intensive process at geared ensuring that technical writers and the projects they contribute too during GSOD are a good fit after that has been determined GSOD then resumes.&lt;/p&gt;
+&lt;h2 id=&#34;my-intentions-and-thought-process-applying-for-gsod-2020&#34;&gt;My intentions and thought process applying for GSOD 2020&lt;/h2&gt;
+&lt;p&gt;I learned about GSOD through tech Twitter and my reasons for applying to GSOD were mainly influenced by the reasons listed below:&lt;/p&gt;
+&lt;h3 id=&#34;the-power-of-good-documentation&#34;&gt;The power of good documentation&lt;/h3&gt;
+&lt;p&gt;that having been a techie fro a reasonable amount of time I have used various software, programming languages and frameworks and one thing you learn to appreciate is the power  of good documentation, Good documentation  makes software usable that also warranties inclusivity. I would like to believe that I am a champion of inclusivity.&lt;/p&gt;
+&lt;h3 id=&#34;growth&#34;&gt;Growth&lt;/h3&gt;
+&lt;p&gt;my skill as a technical writer I have been blogging
+Pick up a new skill
+Improve my communication skills as a techie - written communication is as valid as verbal communication especially now when most people are working remotely.&lt;/p&gt;
+&lt;h2 id=&#34;learning-about-creative-commons-engineering-workflow&#34;&gt;Learning about Creative Commons Engineering Workflow&lt;/h2&gt;
+&lt;h2 id=&#34;building-the-docs&#34;&gt;Building the docs&lt;/h2&gt;
+&lt;p&gt;Creating a WordPress usage guide
+The CC WP base theme is a WordPress theme used to creates for front-facing CC websites. My goal was to create futuristic docs….&lt;/p&gt;
+&lt;p&gt;The CC Commons onboarding process
+Mock daily standups
+Weekly sync calls with a mentor
+Participating in all CC meetings
+Tools they use in the workflow Asana, Slack.&lt;/p&gt;
+&lt;p&gt;Technical stack of the project
+Gridsome What is Gridsome
+Jamedocs why jamdocs&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Intro to GraphQL</title>
       <link>https://jackiebinya.github.io/posts/lets-learn-graphql/lesson-1/</link>
       <pubDate>Wed, 23 Sep 2020 16:32:17 +0200</pubDate>

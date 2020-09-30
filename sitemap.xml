@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jackiebinya.github.io/posts/gsod-2020/launch/</loc>
+    <loc>https://jackiebinya.github.io/posts/gsod-2020/cc-wp-batse-theme-hello-world/</loc>
+    <lastmod>2020-09-29T18:50:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/tags/gsod/</loc>
     <lastmod>2020-09-29T18:50:55+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://jackiebinya.github.io/posts/</loc>
+    <lastmod>2020-09-29T18:50:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/tags/</loc>
     <lastmod>2020-09-29T18:50:55+02:00</lastmod>
   </url>
   
@@ -24,11 +34,6 @@
   
   <url>
     <loc>https://jackiebinya.github.io/tags/life/</loc>
-    <lastmod>2020-09-23T16:32:17+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jackiebinya.github.io/tags/</loc>
     <lastmod>2020-09-23T16:32:17+02:00</lastmod>
   </url>
   

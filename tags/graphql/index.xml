@@ -62,11 +62,11 @@
 &lt;p&gt;&lt;strong&gt;Differences between Rest and GraphQL&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Eliminate the problem of Overfetching and Underfetching
-&lt;em&gt;Overfetching:&lt;/em&gt;
-Describes a scenario that happens when querying a Restful server and we end up downloading unnecessary data into our app.
-&lt;em&gt;Underfetching:&lt;/em&gt;
-The response to the query made to a specific endpoint returns insufficient data that the client has to make  (n+1) requests just to get sufficient data.&lt;/p&gt;
+&lt;p&gt;Eliminate the problem of Overfetching and Underfetching:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Overfetching&lt;/em&gt;: Describes a scenario that happens when querying a Restful server and we end up downloading unnecessary data into our app.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Underfetching&lt;/em&gt;: The response to the query made to a specific endpoint returns insufficient data that the client has to make  (n+1) requests just to get sufficient data.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Graphql allows for low-level monitoring of the requests made to the server. It uses resolver functions to resolve queries made by the client. These can be monitored so as to analyze the application.&lt;/p&gt;

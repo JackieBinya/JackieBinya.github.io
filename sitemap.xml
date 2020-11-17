@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jackiebinya.github.io/posts/gsod-2020/cc-wp-theme-base/content-creation/</loc>
+    <lastmod>2020-11-18T01:24:54+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/tags/gsod/</loc>
+    <lastmod>2020-11-18T01:24:54+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/posts/</loc>
+    <lastmod>2020-11-18T01:24:54+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/tags/</loc>
+    <lastmod>2020-11-18T01:24:54+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jackiebinya.github.io/tags/graphql/</loc>
     <lastmod>2020-10-03T17:50:45+02:00</lastmod>
   </url>
@@ -13,22 +33,7 @@
   </url>
   
   <url>
-    <loc>https://jackiebinya.github.io/posts/</loc>
-    <lastmod>2020-10-03T17:50:45+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jackiebinya.github.io/tags/</loc>
-    <lastmod>2020-10-03T17:50:45+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jackiebinya.github.io/posts/gsod-2020/cc-wp-batse-theme-hello-world/</loc>
-    <lastmod>2020-09-29T18:50:55+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jackiebinya.github.io/tags/gsod/</loc>
+    <loc>https://jackiebinya.github.io/posts/gsod-2020/cc-wp-theme-base-hello-world/</loc>
     <lastmod>2020-09-29T18:50:55+02:00</lastmod>
   </url>
   

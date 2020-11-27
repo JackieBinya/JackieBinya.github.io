@@ -12,14 +12,14 @@
     
     
     <item>
-      <title>Content Creation Phase: Creative Commons WordPress Theme Base Usage Guide</title>
-      <link>https://jackiebinya.github.io/posts/gsod-2020/cc-wp-theme-base/content-creation/</link>
+      <title>Content Creation Phase: Creative Commons Base Usage Guide</title>
+      <link>https://jackiebinya.github.io/posts/gsod-2020/cc-base/content-creation/</link>
       <pubDate>Wed, 18 Nov 2020 01:24:54 +0200</pubDate>
       
-      <guid>https://jackiebinya.github.io/posts/gsod-2020/cc-wp-theme-base/content-creation/</guid>
-      <description>&lt;p&gt;For the past couple of weeks we have been actively creating content for the Creative Commons WordPress Base Theme Usage Guide. Currently the draft content is under final review before it is migrated to the main docs site.&lt;/p&gt;
+      <guid>https://jackiebinya.github.io/posts/gsod-2020/cc-base/content-creation/</guid>
+      <description>&lt;p&gt;For the past couple of weeks we have been actively creating content for the Creative Commons Base Usage Guide. Currently the draft content is under final review before it is migrated to the main docs site.&lt;/p&gt;
 &lt;h2 id=&#34;our-strategy&#34;&gt;Our Strategy&lt;/h2&gt;
-&lt;p&gt;Our main goal in creating the docs is to create rich, intuitive, engaging, and beautifully presented community facing documentation for the Creative Commons WordPress Theme Base.&lt;/p&gt;
+&lt;p&gt;Our main goal in creating the docs is to create rich, intuitive, engaging, and beautifully presented community facing documentation for the Creative Commons Base.&lt;/p&gt;
 &lt;p&gt;In alignment with the defined goal, our core focus is to create the docs collaboratively.&lt;/p&gt;
 &lt;p&gt;The CC WordPress team consists of I, Jacqueline Binya, &lt;a href=&#34;https://github.com/hugosolar&#34;&gt;Hugo Solar&lt;/a&gt; and &lt;a href=&#34;&#34;&gt;Timid Robot Zehta&lt;/a&gt;. Although our team is small it is quite diverse. It consists of a diverse mix of technical skills: I am a junior developer whereas Hugo and Timid are way senior. We also have non-native and native English speakers.&lt;/p&gt;
 &lt;p&gt;Diversity is important as we hope to create a high quality product that caters for everyone.&lt;/p&gt;
@@ -66,19 +66,19 @@
     </item>
     
     <item>
-      <title>CC WP Theme Base Docs-GSOD-2020: Hello World🚀</title>
-      <link>https://jackiebinya.github.io/posts/gsod-2020/cc-wp-theme-base-hello-world/</link>
+      <title>CC Base Docs-GSOD-2020: Hello World🚀</title>
+      <link>https://jackiebinya.github.io/posts/gsod-2020/cc-base-hello-world/</link>
       <pubDate>Tue, 29 Sep 2020 18:50:55 +0200</pubDate>
       
-      <guid>https://jackiebinya.github.io/posts/gsod-2020/cc-wp-theme-base-hello-world/</guid>
+      <guid>https://jackiebinya.github.io/posts/gsod-2020/cc-base-hello-world/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;I am participating in the Google Season of Docs 2020 as a technical writer. I am contributing to Creative Commons.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;My name is Jacqueline Binya. I am a software developer and technical writer from Zimbabwe. I am going to write a series of blog posts documenting my experience and lessons as I  contribute to the &lt;a class=&#34;article-link&#34; href=&#34;https://github.com/creativecommons/wp-theme-base&#34;&gt; Creative Commons WordPress Theme Base(CC WP Theme Base) &lt;/a&gt; during the &lt;a class=&#34;article-link&#34; href=&#34;https://developers.google.com/season-of-docs&#34;&gt;Google Season of Docs (GSOD-2020) &lt;/a&gt; as a technical writer.&lt;/p&gt;
+&lt;p&gt;My name is Jacqueline Binya. I am a software developer and technical writer from Zimbabwe. I am going to write a series of blog posts documenting my experience and lessons as I  contribute to the &lt;a class=&#34;article-link&#34; href=&#34;https://github.com/creativecommons/wp-theme-base&#34;&gt; Creative Commons Base(CC Base) &lt;/a&gt;during the &lt;a class=&#34;article-link&#34; href=&#34;https://developers.google.com/season-of-docs&#34;&gt;Google Season of Docs (GSOD-2020) &lt;/a&gt; as a technical writer.&lt;/p&gt;
 &lt;h2 id=&#34;what-is-google-season-of-docs&#34;&gt;What is Google Season of Docs?&lt;/h2&gt;
 &lt;p&gt;The Google Season of the Docs was born out of a need to improve the quality of open-source documentation as well as to advocate for open source, for documentation, and for technical writing. Annually during the GSOD, technical writers are invited to contribute to open-source projects through a highly intensive process geared at ensuring that the technical writers and the projects they contribute to during GSOD are a good fit, after that has been determined GSOD then resumes.&lt;/p&gt;
 &lt;h2 id=&#34;building-the-docs&#34;&gt;Building the docs&lt;/h2&gt;
-&lt;p&gt;The CC WP Theme Base is a WordPress theme used to create front-facing Creative Commons (CC) websites. My task is to collaborate with the engineering team to create community facing docs for the theme.&lt;/p&gt;
+&lt;p&gt;The CC Base is a WordPress theme used to create front-facing Creative Commons (CC) websites. My task is to collaborate with the engineering team to create community facing docs for the theme.&lt;/p&gt;
 &lt;h3 id=&#34;guiding-principles&#34;&gt;Guiding principles&lt;/h3&gt;
 &lt;p&gt;The docs should be inclusive meaning: they should be written in an easy-to-understand manner taking care to avoid the use of excessive technical jargon, they should be accessible and they should have support for internationalization. We hope to provide our users with a smooth and memorable experience whilst using the docs hence the docs site should be fast and easy to navigate.&lt;/p&gt;
 &lt;h3 id=&#34;technical-stack-of-the-project&#34;&gt;Technical stack of the project&lt;/h3&gt;

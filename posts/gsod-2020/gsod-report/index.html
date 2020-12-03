@@ -16,12 +16,13 @@
 <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 <link rel="apple-touch-icon-precomposed" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 
-<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1606970400" />
+<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1606983022" />
 
 <meta property="og:title" content="Project Report GSOD-2020 " />
 <meta property="og:description" content="Prepared by Jacqueline Binya on 29 November 2020
- During the Google Season of Docs (GSOD) 2020, I contributed to the Creative Commons(CC) Organization&rsquo;s Usage guide for the WordPress base theme project.
-Creative Commons Base is a universal WordPress Theme used to build front facing websites for CC. My role as a technical writer was to create community facing documentation for the CC Base theme collaboratively with the engineering team." />
+ During the Google Season of Docs (GSOD) 2020, I contributed to the Creative Commons(CC) Organization&rsquo;s WordPress base theme usage guide project.
+Creative Commons Base is a universal WordPress Theme used to build front facing websites for CC. My role as a technical writer was to create community facing documentation for the CC Base theme collaboratively with the engineering team.
+This involved creating the content for the docs, creating all illustrative media and also building the site used to host the documentation." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jackiebinya.github.io/posts/gsod-2020/gsod-report/" />
 <meta property="article:published_time" content="2020-12-03T05:28:31+02:00" />
@@ -30,8 +31,9 @@ Creative Commons Base is a universal WordPress Theme used to build front facing 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Project Report GSOD-2020 "/>
 <meta name="twitter:description" content="Prepared by Jacqueline Binya on 29 November 2020
- During the Google Season of Docs (GSOD) 2020, I contributed to the Creative Commons(CC) Organization&rsquo;s Usage guide for the WordPress base theme project.
-Creative Commons Base is a universal WordPress Theme used to build front facing websites for CC. My role as a technical writer was to create community facing documentation for the CC Base theme collaboratively with the engineering team."/>
+ During the Google Season of Docs (GSOD) 2020, I contributed to the Creative Commons(CC) Organization&rsquo;s WordPress base theme usage guide project.
+Creative Commons Base is a universal WordPress Theme used to build front facing websites for CC. My role as a technical writer was to create community facing documentation for the CC Base theme collaboratively with the engineering team.
+This involved creating the content for the docs, creating all illustrative media and also building the site used to host the documentation."/>
 
 
 
@@ -74,28 +76,30 @@ Creative Commons Base is a universal WordPress Theme used to build front facing 
             <blockquote>
 <p>Prepared by Jacqueline Binya on 29 November 2020</p>
 </blockquote>
-<p>During the Google Season of Docs (GSOD) 2020, I contributed to the Creative Commons(CC) Organization&rsquo;s <em>Usage guide for the WordPress base theme</em> project.</p>
-<p>Creative Commons Base is a universal WordPress Theme used to build front facing websites for CC. My role as a technical writer was to create community facing documentation for the CC Base theme collaboratively with the engineering team.</p>
+<p>During the Google Season of Docs (GSOD) 2020, I contributed to the Creative Commons(CC) Organization&rsquo;s <em>WordPress base theme usage guide</em> project.</p>
+<p><a href="https://github.com/creativecommons/creativecommons-base" class="article-link">Creative Commons Base</a> is a universal WordPress Theme used to build front facing websites for CC. My role as a technical writer was to create community facing documentation for the CC Base theme collaboratively with the engineering team.</p>
 <p>This involved creating the content for the docs, creating all illustrative media and also building the site used to host the documentation.</p>
 <h2 id="planning---community-bonding-phase">Planning - Community Bonding phase</h2>
 <p>During the GSOD - Community Bonding phase I had a meeting with my mentor Hugo Solar in which we strategized on how to effectively build the docs: this included refining and polishing up our objectives for the project and establishing a workflow for doc development.</p>
-<p>The outcome of those deliberations were to:</p>
+<p>We decided to:</p>
 <ul>
-<li>Create a Google Doc to persist all the draft content which was accessible to all the team members</li>
-<li>Create a tracker document to manage and evaluate our progress.</li>
-<li>I prepared wireframes for the docs site and decided on the features we wanted to include.</li>
-<li>We chose a documentation tool we wanted to use to build the documentation - we chose to use Gridsome which is a static site generator for Vuejs and used the JamDocs theme to scaffold the docs site. Gridsome has plugins which support Markdown, so  the actual content pages of the docs are written in Markdown.</li>
-<li>With regards to the doc development process we decided that the initial stage would be to create draft content in a Google Doc where both my mentors would then review the draft and suggest changes then I would then implement feedback gathered. After the draft content was approved I then would migrate it to the docs site. We also scheduled Google weekly sync meetings as a team, so as to discuss the content. The mentors were readily available to answer questions on various communication channels and promptly gave me the assistance I required.
-Onboarding learning about cc commons workflow
+<li>Create a <a href="https://docs.google.com/document/d/1XmIsMTLstbhRRSaNFP538YOXJiS0G5QrN6EzuqJfRy4/edit?usp=sharing" class="article-link">Google Doc</a> to persist all the draft content which was accessible to all the team members</li>
+<li>Create a <a href="https://docs.google.com/document/d/19FYiB3zVo86_I7os7sO6ZHyZf8eN17x6OFq3WqxDQYY/edit?usp=sharing" class="article-link">tracker document</a> to manage and evaluate progress.</li>
+<li>I prepared <a href="https://www.figma.com/file/roAl4FwMwFQHhSDHpm9rk5/CC-WP-theme-frame?node-id=0%3A1" class="article-link">wireframes</a> for the docs site.</li>
+<li>We chose a documentation tool we wanted to use to build the docs site.</li>
+</ul>
+<p>Onboarding learning about cc commons workflow
 Weekly mentor sessions with mentor
 Monthly sessions with cc engineering manager
 Taking part in all community meetings
-Establishing community channels</li>
-</ul>
+Establishing community channels</p>
 <h2 id="we-create-the-docs---content-creation">We Create the Docs - Content Creation</h2>
-<p>During the content creation phase, the first step involved creating the skeleton of the actual docs site. We created a git branch called <em>docs</em> within the <a href="https://github.com/creativecommons/wp-theme-base">creative-commons/wp-base-theme</a> repository. All content related to the documentation is persisted in that branch. So,please feel free to contribute. We then used <a href="https://gridsome.org/starters/jamdocs/">JamDocs</a>, a <a href="https://gridsome.org/">Gridsome</a> theme to quickly scaffold the site. We had to adapt the theme so as to make it meet our own specific needs, this involved overhauling the styles and changing the functionality of some of the features in the theme. After that was completed, we then created a <a href="https://docs.google.com/document/d/1XmIsMTLstbhRRSaNFP538YOXJiS0G5QrN6EzuqJfRy4/edit?usp=sharing">Google Doc</a> we use for collaboratively writing the draft content for the docs site.</p>
+<p>To build the docs site we used <a href="https://gridsome.org/starters/jamdocs/" class="article-link">JamDocs</a>, a <a href="https://gridsome.org/" class="article-link">Gridsome</a> theme to quickly scaffold the site. We had to adapt the theme so as to make it meet our own specific needs, this involved overhauling the styles and changing the functionality of some of the features in the theme.</p>
+<p>With regards to the doc development process we decided that the initial stage would be to discuss the content for the section we were working on that particular week during our weekly sync meeting, the next I would create draft content in a Google Doc  during the course of the week. My mentors would then review the draft and suggest changes asynchronously then I would then implement feedback gathered. Once the draft content was approved I then would migrate it to the docs site.</p>
+<p>The mentors were readily available to answer questions on various communication channels and promptly gave me the assistance I required.</p>
+<p>The codebase for the documentation of CC Base theme is available in the <a href="https://github.com/creativecommons/wp-theme-base" class="article-link">creative-commons/creativecommons-base</a> repository on Github, in a git branch called <em>docs</em>. All content related to the documentation is persisted in that branch.</p>
 <h3 id="tech-stack">Tech Stack</h3>
-<p>As it was mentioned we used <a href="https://gridsome.org/">Gridsome</a> a static generator for <a href="https://vuejs.org/">Vuejs</a>. We chose Gridsome because:</p>
+<p>As it was mentioned we used Gridsome a static generator for <a href="https://vuejs.org/" class="article-link">Vuejs</a>. We chose Gridsome because:</p>
 <ul>
 <li>
 <p>We wanted to lower the barrier of entry to contributing:</p>
@@ -105,26 +109,26 @@ Establishing community channels</li>
 </ul>
 </li>
 <li>
-<p>Gridsome is highly flexible: The content for the actual documentation is written in <a href="https://www.markdownguide.org/getting-started/">Markdown</a> but using <a href="https://gridsome.org/plugins/@gridsome/vue-remark">@gridsome/vue-remark</a>, which is a Gridsome plugin, we are able to use javascript in Markdown. We intend to include a copy to the clipboard Vuejs component in the site.</p>
+<p>Gridsome offers support for <a href="https://www.markdownguide.org/getting-started/">Markdown</a> (a markup language) through plugins, all the content pages in the site are written using Markdown.</p>
 </li>
 <li>
 <p>Time Constraint: This project is a short running project which has to be completed in a 3 month period. Through the use of JamDocs, a Gridsome templating theme as well various plugins it was easy and fast to get started. We were able to add more functionality to the theme with minimal effort.</p>
 </li>
 <li>
-<p>Ease of integrating <a href="https://cc-vocabulary.netlify.app/">CC Vocabulary</a> with Gridsome: it is a requirement that the general aesthetics of all front facing Creative Commons applications is derived from the CC Vocabulary Design System. Major cons for using a design system include ensuring uniformity in design for all front facing CC products.</p>
+<p>Ease of integrating <a href="https://cc-vocabulary.netlify.app/" class="article-link">CC Vocabulary</a> with Gridsome: it is a requirement that the general aesthetics of all front facing Creative Commons applications is derived from the CC Vocabulary Design System. Major cons for using a design system include ensuring uniformity in design for all front facing CC products.</p>
 </li>
 </ul>
 <h3 id="tools-used">Tools Used</h3>
 <ul>
 <li>
-<p><a href="https://www.figma.com/">Figma</a>:
-Figma was used to make assets(banners, logos and illustrations) in the theme. The illustrative media was created with accessibility in mind and all the topography used in the illustrative assets was derived from the CC Vocabulary.</p>
+<p><a href="https://www.figma.com/" class="article-link">Figma</a>:
+Figma was used to make assets(banners, logos and diagrams) in the theme. The illustrative media was created with accessibility in mind and all the topography used in the illustrative assets was derived from the CC Vocabulary.</p>
 </li>
 <li>
-<p><a href="https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html">VokoScreenNG</a>: an open source screencast recording tool used to record all the screen cast demos available in the docs site.</p>
+<p><a href="https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html" class="article-link">VokoScreenNG</a>: an open source screencast recording tool used to record all the screen cast demos available in the docs site.</p>
 </li>
 <li>
-<p><a href="https://shotcut.org/">ShortCut</a>: an open source video editing tool.</p>
+<p><a href="(https://shotcut.org/" class="article-link">ShortCut</a>: an open source video editing tool.</p>
 </li>
 </ul>
 <h3 id="please-find-listed-below-the-pull-requests-prs-i-opened-during-gsod">Please find listed below the pull requests (PRs) I opened during GSOD:</h3>
@@ -153,10 +157,10 @@ Figma was used to make assets(banners, logos and illustrations) in the theme. Th
 <p>The docs are live 🎉 and are found this url: <a href="https://cc-wp-theme-base.netlify.app/">https://cc-wp-theme-base.netlify.app/</a></p>
 <h2 id="my-lessons">My lessons</h2>
 <ul>
-<li>Working as part of a remotely distributed team I learned a lot about best practices for effective async communication. I learned the importance of expressing myself yourself clearly in writing</li>
+<li>Working as part of a remotely distributed team I learned a lot about best practices for effective async communication.</li>
 <li>I also learned about etiquette of participating in online meetings</li>
-<li>I was writing prior to gsod but contributing to an org like creative commons with way more senior developers there was a lot of transfer or knowledge as consequence my writing has immensely improved.</li>
-<li>I learned a new technology: WordPress. This was a challenging feat but I am happy I persisted and grateful for all the help I got from my team.</li>
+<li>I was writing prior to gsod but contributing to an org like creative commons in a team with senior developers there was a lot of transfer or knowledge as consequence my writing has immensely improved.</li>
+<li>I learned a new technology: WordPress. This was a challenging feat but I am happy  that I persisted and grateful for all the help I got from my team.</li>
 </ul>
 
         </div>

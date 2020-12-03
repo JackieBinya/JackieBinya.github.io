@@ -6,10 +6,106 @@
     <description>Jacqueline Binya (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2020 01:24:54 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 03 Dec 2020 05:28:31 +0200</lastBuildDate>
     
     <atom:link href="https://jackiebinya.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Project Report GSOD-2020 </title>
+      <link>https://jackiebinya.github.io/posts/gsod-2020/gsod-report/</link>
+      <pubDate>Thu, 03 Dec 2020 05:28:31 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/gsod-2020/gsod-report/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Prepared by Jacqueline Binya on 29 November 2020&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;During the Google Season of Docs (GSOD) 2020, I contributed to the Creative Commons(CC) Organization&amp;rsquo;s &lt;em&gt;Usage guide for the WordPress base theme&lt;/em&gt; project.&lt;/p&gt;
+&lt;p&gt;Creative Commons Base is a universal WordPress Theme used to build front facing websites for CC. My role as a technical writer was to create community facing documentation for the CC Base theme collaboratively with the engineering team.&lt;/p&gt;
+&lt;p&gt;This involved creating the content for the docs, creating all illustrative media and also building the site used to host the documentation.&lt;/p&gt;
+&lt;h2 id=&#34;planning---community-bonding-phase&#34;&gt;Planning - Community Bonding phase&lt;/h2&gt;
+&lt;p&gt;During the GSOD - Community Bonding phase I had a meeting with my mentor Hugo Solar in which we strategized on how to effectively build the docs: this included refining and polishing up our objectives for the project and establishing a workflow for doc development.&lt;/p&gt;
+&lt;p&gt;The outcome of those deliberations were to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a Google Doc to persist all the draft content which was accessible to all the team members&lt;/li&gt;
+&lt;li&gt;Create a tracker document to manage and evaluate our progress.&lt;/li&gt;
+&lt;li&gt;I prepared wireframes for the docs site and decided on the features we wanted to include.&lt;/li&gt;
+&lt;li&gt;We chose a documentation tool we wanted to use to build the documentation - we chose to use Gridsome which is a static site generator for Vuejs and used the JamDocs theme to scaffold the docs site. Gridsome has plugins which support Markdown, so  the actual content pages of the docs are written in Markdown.&lt;/li&gt;
+&lt;li&gt;With regards to the doc development process we decided that the initial stage would be to create draft content in a Google Doc where both my mentors would then review the draft and suggest changes then I would then implement feedback gathered. After the draft content was approved I then would migrate it to the docs site. We also scheduled Google weekly sync meetings as a team, so as to discuss the content. The mentors were readily available to answer questions on various communication channels and promptly gave me the assistance I required.
+Onboarding learning about cc commons workflow
+Weekly mentor sessions with mentor
+Monthly sessions with cc engineering manager
+Taking part in all community meetings
+Establishing community channels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;we-create-the-docs---content-creation&#34;&gt;We Create the Docs - Content Creation&lt;/h2&gt;
+&lt;p&gt;During the content creation phase, the first step involved creating the skeleton of the actual docs site. We created a git branch called &lt;em&gt;docs&lt;/em&gt; within the &lt;a href=&#34;https://github.com/creativecommons/wp-theme-base&#34;&gt;creative-commons/wp-base-theme&lt;/a&gt; repository. All content related to the documentation is persisted in that branch. So,please feel free to contribute. We then used &lt;a href=&#34;https://gridsome.org/starters/jamdocs/&#34;&gt;JamDocs&lt;/a&gt;, a &lt;a href=&#34;https://gridsome.org/&#34;&gt;Gridsome&lt;/a&gt; theme to quickly scaffold the site. We had to adapt the theme so as to make it meet our own specific needs, this involved overhauling the styles and changing the functionality of some of the features in the theme. After that was completed, we then created a &lt;a href=&#34;https://docs.google.com/document/d/1XmIsMTLstbhRRSaNFP538YOXJiS0G5QrN6EzuqJfRy4/edit?usp=sharing&#34;&gt;Google Doc&lt;/a&gt; we use for collaboratively writing the draft content for the docs site.&lt;/p&gt;
+&lt;h3 id=&#34;tech-stack&#34;&gt;Tech Stack&lt;/h3&gt;
+&lt;p&gt;As it was mentioned we used &lt;a href=&#34;https://gridsome.org/&#34;&gt;Gridsome&lt;/a&gt; a static generator for &lt;a href=&#34;https://vuejs.org/&#34;&gt;Vuejs&lt;/a&gt;. We chose Gridsome because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We wanted to lower the barrier of entry to contributing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gridsome/Vuejs community is very active, help is but a click away.&lt;/li&gt;
+&lt;li&gt;The Gridsome official documentation is very resourceful and well maintained.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gridsome is highly flexible: The content for the actual documentation is written in &lt;a href=&#34;https://www.markdownguide.org/getting-started/&#34;&gt;Markdown&lt;/a&gt; but using &lt;a href=&#34;https://gridsome.org/plugins/@gridsome/vue-remark&#34;&gt;@gridsome/vue-remark&lt;/a&gt;, which is a Gridsome plugin, we are able to use javascript in Markdown. We intend to include a copy to the clipboard Vuejs component in the site.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Time Constraint: This project is a short running project which has to be completed in a 3 month period. Through the use of JamDocs, a Gridsome templating theme as well various plugins it was easy and fast to get started. We were able to add more functionality to the theme with minimal effort.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ease of integrating &lt;a href=&#34;https://cc-vocabulary.netlify.app/&#34;&gt;CC Vocabulary&lt;/a&gt; with Gridsome: it is a requirement that the general aesthetics of all front facing Creative Commons applications is derived from the CC Vocabulary Design System. Major cons for using a design system include ensuring uniformity in design for all front facing CC products.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tools-used&#34;&gt;Tools Used&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.figma.com/&#34;&gt;Figma&lt;/a&gt;:
+Figma was used to make assets(banners, logos and illustrations) in the theme. The illustrative media was created with accessibility in mind and all the topography used in the illustrative assets was derived from the CC Vocabulary.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html&#34;&gt;VokoScreenNG&lt;/a&gt;: an open source screencast recording tool used to record all the screen cast demos available in the docs site.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://shotcut.org/&#34;&gt;ShortCut&lt;/a&gt;: an open source video editing tool.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;please-find-listed-below-the-pull-requests-prs-i-opened-during-gsod&#34;&gt;Please find listed below the pull requests (PRs) I opened during GSOD:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/25&#34;&gt;Initial Project setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/28&#34; class=&#34;article-link&#34;&gt;Adds linter and code formatter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/30&#34; class=&#34;article-link&#34;&gt;Adds content for the overview section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/31&#34; class=&#34;article-link&#34;&gt;Updates the Overview Section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/32&#34; class=&#34;article-link&#34;&gt;Adds the getting started section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/33&#34; class=&#34;article-link&#34;&gt;Adds the usage guide section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/36&#34; class=&#34;article-link&#34;&gt;Clean Sidebar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/38&#34; class=&#34;article-link&#34;&gt;Fix favicon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/39&#34; class=&#34;article-link&#34;&gt;Copy to Clipboard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/40&#34; class=&#34;article-link&#34;&gt;Fix logo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/46&#34; class=&#34;article-link&#34;&gt;Customization content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/47&#34; class=&#34;article-link&#34;&gt;Adds copy to the clipboard feature&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/48&#34; class=&#34;article-link&#34;&gt;Advanced Customizations section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/49&#34; class=&#34;article-link&#34;&gt;Updates content for the update theme section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/50&#34; class=&#34;article-link&#34;&gt;Adds contributing content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/52&#34; class=&#34;article-link&#34;&gt;Fix scroll markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/54&#34; class=&#34;article-link&#34;&gt;Fixes hamburger in mobile and removes redundant styles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/55&#34; class=&#34;article-link&#34;&gt;Removes the static folder its unused&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/56&#34; class=&#34;article-link&#34;&gt;Updates the site name and homepage content&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;cc-base-docs---the-outcome&#34;&gt;CC Base docs - The Outcome&lt;/h2&gt;
+&lt;p&gt;The docs are live 🎉 and are found this url: &lt;a href=&#34;https://cc-wp-theme-base.netlify.app/&#34;&gt;https://cc-wp-theme-base.netlify.app/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;my-lessons&#34;&gt;My lessons&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Working as part of a remotely distributed team I learned a lot about best practices for effective async communication. I learned the importance of expressing myself yourself clearly in writing&lt;/li&gt;
+&lt;li&gt;I also learned about etiquette of participating in online meetings&lt;/li&gt;
+&lt;li&gt;I was writing prior to gsod but contributing to an org like creative commons with way more senior developers there was a lot of transfer or knowledge as consequence my writing has immensely improved.&lt;/li&gt;
+&lt;li&gt;I learned a new technology: WordPress. This was a challenging feat but I am happy I persisted and grateful for all the help I got from my team.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Content Creation Phase: Creative Commons Base Usage Guide</title>

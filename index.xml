@@ -12,19 +12,19 @@
     
     
     <item>
-      <title>Project Report GSOD-2020 </title>
+      <title>My Google Season of Docs(GSOD) experience in a nutshell </title>
       <link>https://jackiebinya.github.io/posts/gsod-2020/gsod-report/</link>
       <pubDate>Thu, 03 Dec 2020 05:28:31 +0200</pubDate>
       
       <guid>https://jackiebinya.github.io/posts/gsod-2020/gsod-report/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;Prepared by Jacqueline Binya on 29 November 2020&lt;/p&gt;
+&lt;p&gt;A GSOD-2020 project report prepared by Jacqueline Binya on 29 November 2020&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;During the Google Season of Docs (GSOD) 2020, I contributed to the Creative Commons&amp;rsquo; &lt;em&gt;WordPress base theme usage guide&lt;/em&gt; project.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base&#34; class=&#34;article-link&#34;&gt;Creative Commons (CC) Base&lt;/a&gt; is a universal WordPress Theme used to build front facing websites for CC. My role as a technical writer was to create community facing documentation for the CC Base theme collaboratively with the engineering team.&lt;/p&gt;
 &lt;p&gt;This involved creating the content for the docs, creating all illustrative media and also building the site used to host the documentation.&lt;/p&gt;
 &lt;h2 id=&#34;planning---community-bonding-phase&#34;&gt;Planning - Community Bonding phase&lt;/h2&gt;
-&lt;p&gt;During the GSOD - Community Bonding phase, I had a meeting with my mentor Hugo Solar in which we strategized on how to effectively build the docs: this included refining and polishing up the project&amp;rsquo;s objectives and action plan based off the &lt;a href=&#34;https://docs.google.com/document/d/1XmIsMTLstbhRRSaNFP538YOXJiS0G5QrN6EzuqJfRy4/edit&#34; class=&#34;article-link&#34;&gt;proposal&lt;/a&gt; I submitted for my GSOD application and, also establishing a workflow for doc development.&lt;/p&gt;
+&lt;p&gt;During the GSOD - Community Bonding phase, I had a meeting with my mentor Hugo Solar in which we strategized on how to effectively build the docs: this included refining and polishing up the project&amp;rsquo;s objectives and action plan based off the &lt;a href=&#34;https://docs.google.com/document/d/1XmIsMTLstbhRRSaNFP538YOXJiS0G5QrN6EzuqJfRy4/edit&#34; class=&#34;article-link&#34;&gt;proposal&lt;/a&gt; I submitted for my GSOD application and also, establishing a workflow for doc development.&lt;/p&gt;
 &lt;p&gt;We decided to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Create a &lt;a href=&#34;https://docs.google.com/document/d/1XmIsMTLstbhRRSaNFP538YOXJiS0G5QrN6EzuqJfRy4/edit?usp=sharing&#34; class=&#34;article-link&#34;&gt;Google Doc&lt;/a&gt; to persist all the draft content which was accessible to all the team members&lt;/li&gt;
@@ -34,7 +34,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;we-create-the-docs---content-creation&#34;&gt;We Create the Docs - Content Creation&lt;/h2&gt;
 &lt;p&gt;To build the docs site we used &lt;a href=&#34;https://gridsome.org/starters/jamdocs/&#34; class=&#34;article-link&#34;&gt;JamDocs&lt;/a&gt; a &lt;a href=&#34;https://gridsome.org/&#34; class=&#34;article-link&#34;&gt;Gridsome&lt;/a&gt; theme. We had to adapt the theme so as to make it meet our own specific needs, this involved overhauling the styles and changing the functionality of some of the features in the theme.&lt;/p&gt;
-&lt;p&gt;With regards to the doc development process: we decided that the first stage in doc development would be to discuss the content for the section we were working on that particular week during our weekly sync meeting, then next I would create draft content in a Google Doc during the course of the week. My mentors would then review the draft and suggest changes asynchronously, then I would then implement feedback gathered. Once the draft content was approved I then would migrate it to the docs site.&lt;/p&gt;
+&lt;p&gt;With regards to the doc development process: Its important to mention that the GSOD spans for 13 weeks and in the &lt;a href=&#34;https://docs.google.com/document/d/1XmIsMTLstbhRRSaNFP538YOXJiS0G5QrN6EzuqJfRy4/edit&#34; class=&#34;article-link&#34;&gt;proposal&lt;/a&gt; each week&amp;rsquo;s expected deliverables are outlined. So to develop the docs for each week we would start off with a team meeting to discuss the content for the section we were working on that particular week, then next I would create draft content in a Google Doc during the course of the week. My mentors would then review the draft and suggest changes asynchronously, then I would then implement feedback gathered. Once the draft content was approved I then would migrate it to the docs site.&lt;/p&gt;
 &lt;p&gt;The mentors were readily available to answer questions on various communication channels and promptly gave me the assistance I required.&lt;/p&gt;
 &lt;p&gt;The codebase for the documentation of CC Base theme is available in the &lt;a href=&#34;https://github.com/creativecommons/wp-theme-base&#34; class=&#34;article-link&#34;&gt;creative-commons/creativecommons-base&lt;/a&gt; repository on Github, in a git branch called &lt;em&gt;docs&lt;/em&gt;. All content related to the documentation is persisted in that branch.&lt;/p&gt;
 &lt;h3 id=&#34;tech-stack&#34;&gt;Tech Stack&lt;/h3&gt;

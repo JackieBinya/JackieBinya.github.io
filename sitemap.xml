@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jackiebinya.github.io/tags/gsod/</loc>
+    <lastmod>2020-12-03T05:28:31+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jackiebinya.github.io/posts/</loc>
     <lastmod>2020-12-03T05:28:31+02:00</lastmod>
   </url>
@@ -13,17 +18,12 @@
   </url>
   
   <url>
-    <loc>https://jackiebinya.github.io/posts/gsod-2020/cc-base/content-creation/</loc>
-    <lastmod>2020-11-18T01:24:54+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jackiebinya.github.io/tags/gsod/</loc>
-    <lastmod>2020-11-18T01:24:54+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jackiebinya.github.io/tags/</loc>
+    <lastmod>2020-12-03T05:28:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/posts/gsod-2020/cc-base/content-creation/</loc>
     <lastmod>2020-11-18T01:24:54+02:00</lastmod>
   </url>
   

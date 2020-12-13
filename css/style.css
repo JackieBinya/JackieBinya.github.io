@@ -1,5 +1,6 @@
 /* Basic */
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
 
 html {
     font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -141,7 +142,8 @@ ul ol, ol ol, ul ul {
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    /* justify-content: space-between; */
 }
 
 header h1 {
@@ -375,12 +377,20 @@ figcaption {
 
 .pagination {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 3em;
+    background-color: #2d2a2e;
+    list-style: none;
+    padding: 1em;
 }
 
 .pagination {
     text-align: center;   
+}
+
+.pagination a {
+    font-size: 1.25rem;
+    padding: .5rem .75rem;
 }
 
 .pagination-item {
@@ -730,4 +740,16 @@ a[href^="/tags/gsod"]{
         grid-column-end: 7;
         grid-row: 3/5;
     }
+  }
+
+  .post-heading-wrapper{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .post-pagination{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+
   }

@@ -142,8 +142,7 @@ ul ol, ol ol, ul ul {
 
 header {
     display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 
 header h1 {
@@ -391,6 +390,10 @@ figcaption {
 .pagination a {
     font-size: 1.25rem;
     padding: .5rem .75rem;
+}
+
+.pagination li.active a {
+    color: sandybrown !important;
 }
 
 .pagination-item {
@@ -743,8 +746,8 @@ a[href^="/tags/gsod"]{
   }
 
   .post-heading-wrapper{
-      display: flex;
-      flex-direction: column;
+      display: flex !important;
+      flex-direction: column !important;
   }
 
   .post-pagination{

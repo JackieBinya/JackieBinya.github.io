@@ -6,10 +6,25 @@
     <description>Jacqueline Binya (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Dec 2020 05:28:31 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 16 Dec 2020 17:53:20 +0200</lastBuildDate>
     
     <atom:link href="https://jackiebinya.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Implement hover on parent element trigger css effects on child element functionality in Vuejs</title>
+      <link>https://jackiebinya.github.io/posts/vue/hover-on-parent-css-effects-on-child/</link>
+      <pubDate>Wed, 16 Dec 2020 17:53:20 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/vue/hover-on-parent-css-effects-on-child/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://media.giphy.com/media/hFIq9i5y2H10Q/giphy.gif&#34; alt=&#34;Santa Claus&#34; &gt;&lt;/p&gt;
+&lt;p&gt;Its the holidays of-course, but I am busy working on my portfolio. No rest for a junior developer until we bag that remote dev position.&lt;/p&gt;
+&lt;p&gt;Lately I have been challenging myself to be more productive and try working on portfolio projects which require more technical skill. So, I am currently working on a &lt;a href=&#34;https://todoist.com/&#34;&gt;Todoist&lt;/a&gt; clone using Vue 2.
+Yes I know, I would rather be using Vue 3 but at the moment most npm/yarn modules do not have support Vue 3 yet.&lt;/p&gt;
+&lt;p&gt;I came across a very peculiar and interesting problem as I was trying to style the navigation bar of my web app.&lt;/p&gt;
+&lt;p&gt;The problem&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>My Google Season of Docs(GSOD) experience in a nutshell </title>

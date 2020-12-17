@@ -22,8 +22,10 @@
 &lt;p&gt;Lately I have been challenging myself to be more productive and try working on portfolio projects which require more technical skill. So, I am currently working on a &lt;a href=&#34;https://todoist.com/&#34;&gt;Todoist&lt;/a&gt; clone using Vue 2.
 Yes I know, I would rather be using Vue 3 but at the moment most npm/yarn modules do not have support Vue 3 yet.&lt;/p&gt;
 &lt;p&gt;I came across a very peculiar and interesting problem as I was trying to style the navigation bar of my web app.&lt;/p&gt;
-&lt;p&gt;The problem&lt;/p&gt;
-</description>
+&lt;h2 id=&#34;the-problem&#34;&gt;The problem:&lt;/h2&gt;
+&lt;p&gt;In the video that is embedded below. We have a simple navigation bar built using Vuejs. It has two menu items which a re namely &lt;em&gt;Item One&lt;/em&gt; and &lt;em&gt;Item Two&lt;/em&gt;. &lt;em&gt;Item Two&lt;/em&gt; has two sub menu items which are namely &lt;em&gt;Sub Menu 1&lt;/em&gt; and &lt;em&gt;Sub Menu 2&lt;/em&gt;.
+We want to emulate the functionality of &lt;em&gt;Item Two&lt;/em&gt; such that when you hover over &lt;em&gt;Item Two&lt;/em&gt;  the sub menu becomes visible so you can navigate to the sub menu items and even click them to be redirected to a new page.But in the event that leave &lt;em&gt;Item Two&lt;/em&gt; or any of its sub menu items the sub menu disappears.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/KTGg4pxiRBI&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;</description>
     </item>
     
     <item>

@@ -6,10 +6,33 @@
     <description>Jacqueline Binya (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Dec 2020 05:28:31 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 04 Jan 2021 02:19:11 +0200</lastBuildDate>
     
     <atom:link href="https://jackiebinya.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SVGs made simple</title>
+      <link>https://jackiebinya.github.io/posts/css/extract-svgs/</link>
+      <pubDate>Mon, 04 Jan 2021 02:19:11 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/css/extract-svgs/</guid>
+      <description>&lt;p&gt;The most commonly used image formats in the web include bitmap, svg and webp.&lt;/p&gt;
+&lt;p&gt;Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap. Bitmap format is suited for highly detailed images like photographs.&lt;/p&gt;
+&lt;p&gt;Scalable Vector Graphics (svg) is a vector image format are created from mathematical formula they don&amp;rsquo;t come bundled with information about how they should be painted that can be computed in the rendering device.SVGs are lighter than bitmap and they are used to create sharp images which scale e.g icons, illustrations etc.&lt;/p&gt;
+&lt;h2 id=&#34;the-syntax-of-svg&#34;&gt;The syntax of SVG&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SVGs are incoperated in HTLM through text format&lt;/li&gt;
+&lt;li&gt;they can be styled using css&lt;/li&gt;
+&lt;li&gt;thy can be scripted through javasctript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/hA7ESX7FsE4&#34; class=&#34;article-link&#34;&gt;What are Scalable Vector Graphics (SVG) &amp;amp; how are they special? | Web Demystified Episode 4&lt;a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/43804171/how-to-extract-svg-as-file-from-web-page/43804258&#34; class=&#34;article-link&#34;&gt;Stackoverflow Post - How to extract svg as a file from a web page &lt;a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>My Google Season of Docs(GSOD) experience in a nutshell </title>

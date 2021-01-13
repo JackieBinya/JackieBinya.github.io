@@ -22,9 +22,22 @@
 &lt;p&gt;Scalable Vector Graphics (svg) is a vector image format are created from mathematical formula they don&amp;rsquo;t come bundled with information about how they should be painted that can be computed in the rendering device.SVGs are lighter than bitmap and they are used to create sharp images which scale e.g icons, illustrations etc.&lt;/p&gt;
 &lt;h2 id=&#34;the-syntax-of-svg&#34;&gt;The syntax of SVG&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;SVGs are incoperated in HTLM through text format&lt;/li&gt;
-&lt;li&gt;they can be styled using css&lt;/li&gt;
-&lt;li&gt;thy can be scripted through javasctript&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SVG are defined in XML: a markup language.
+-The diagram below shows an example of an SVG in raw code:
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1610570036/svg-sample_k7bupk.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The opening &amp;laquo;svg&amp;raquo; tag is used to instantiate an SVG. It usually contains attributes like &lt;em&gt;viewbox&lt;/em&gt;, &lt;em&gt;class&lt;/em&gt;, &lt;em&gt;id&lt;/em&gt;, &lt;em&gt;fill&lt;/em&gt; and &lt;em&gt;xmlns&lt;/em&gt;.And the &lt;/svg&gt; terminates an SVG. Inside the SVG tags a variety of tags may be found.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;They can be incorporated in an HTML document:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;inline or,&lt;/li&gt;
+&lt;li&gt;as external standalone files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 &lt;ol&gt;

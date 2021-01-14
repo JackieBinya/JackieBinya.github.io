@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>SVGs made simple</title>
+      <title>Using SVGs in Vuejs made simple</title>
       <link>https://jackiebinya.github.io/posts/css/extract-svgs/</link>
       <pubDate>Mon, 04 Jan 2021 02:19:11 +0200</pubDate>
       
@@ -29,16 +29,20 @@
 &lt;ul&gt;
 &lt;li&gt;Lets analyse the definition:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;💡The opening &amp;lt;svg&amp;gt; tag is used to instantiate an SVG. It usually contains attributes like viewbox,  class, id, fill and xmlns. The id and class attributes are usually used to extend functionality in Javascript or to style the svg element. They id attribute may also be used in XML specific configurations like the setting up of links. The xmlns attribute is a XML namespace, it is used by the browser to determine how to render the SVG. It is mandatory in SVG which are incorporated in HTML documents as external files. After the opening svg tag a variety of tags may be found, e.g. &amp;lt;path&amp;gt;, &amp;lt;style&amp;gt; etc. these are used to describe specific properties of the svg. The closing &amp;lt;/svg&amp;gt; tag then terminates the SVG.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;💡The opening &amp;lt;svg&amp;gt; tag is used to instantiate an SVG. It usually contains attributes like viewbox,  class, id, fill and xmlns. The id and class attributes are usually used to extend functionality in Javascript or to style the svg element. They id attribute may also be used in XML specific configurations like the setting up of links. The xmlns attribute is a XML namespace, it is used by the browser to determine how to render the SVG. It is mandatory in SVG which are incorporated in HTML documents as external files.The closing &amp;lt;/svg&amp;gt; tag then terminates the SVG. Nested inside the svg tags are a variety of tags, e.g. &amp;lt;path&amp;gt;, &amp;lt;circle&amp;gt; etc. these are used to describe specific properties of the svg.&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;using-svgs-in-vuejs&#34;&gt;Using SVGs in Vuejs&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;They can be incorporated in an HTML document:
+&lt;li&gt;Generally SVGs can can be incorporated in an HTML document:
 &lt;ul&gt;
 &lt;li&gt;inline or,&lt;/li&gt;
 &lt;li&gt;as external standalone files.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;The above listed methods can be used in Vuejs and in addition to that we can also use &lt;code&gt;svg loaders&lt;/code&gt; to incorporate SVGs in Vuejs.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;inline-svg&#34;&gt;Inline SVG&lt;/h3&gt;
+&lt;h3 id=&#34;external-svg&#34;&gt;External SVG&lt;/h3&gt;
+&lt;h3 id=&#34;svg-loaders&#34;&gt;&lt;code&gt;SVG Loaders&lt;/code&gt;&lt;/h3&gt;
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://youtu.be/hA7ESX7FsE4&#34; class=&#34;article-link&#34;&gt;What are Scalable Vector Graphics (SVG) &amp;amp; how are they special? | Web Demystified Episode 4&lt;a&gt;&lt;/li&gt;

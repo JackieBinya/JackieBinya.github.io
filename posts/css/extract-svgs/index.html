@@ -16,11 +16,11 @@
 <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 <link rel="apple-touch-icon-precomposed" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 
-<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1610612148" />
+<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1611861656" />
 
 <meta property="og:title" content="Using SVGs in Vuejs made simple" />
-<meta property="og:description" content="The most commonly used image formats in the web include bitmap, svg and webp.
-Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap. Bitmap format is suited for highly detailed images like photographs." />
+<meta property="og:description" content="Images of the web The most commonly used image formats in the web include bitmap, svg and webp.
+Bitmap Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jackiebinya.github.io/posts/css/extract-svgs/" />
 <meta property="article:published_time" content="2021-01-04T02:19:11+02:00" />
@@ -28,8 +28,8 @@ Bitmap images are made up from tiny dots called pixels. Each pixel is actually a
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Using SVGs in Vuejs made simple"/>
-<meta name="twitter:description" content="The most commonly used image formats in the web include bitmap, svg and webp.
-Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap. Bitmap format is suited for highly detailed images like photographs."/>
+<meta name="twitter:description" content="Images of the web The most commonly used image formats in the web include bitmap, svg and webp.
+Bitmap Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap."/>
 
 
 
@@ -69,14 +69,17 @@ Bitmap images are made up from tiny dots called pixels. Each pixel is actually a
             <h1>Using SVGs in Vuejs made simple</h1>
         
             <p class="post-pagination"><time>January 4, 2021</time> . ☕&nbsp;
-                    2  mins  read</p>
+                    3  mins  read</p>
 
         </header>
         <div class="content">
-            <p>The most commonly used image formats in the web include bitmap, svg and webp.</p>
+            <h2 id="images-of-the-web">Images of the web</h2>
+<p>The most commonly used image formats in the web include bitmap, svg and webp.</p>
+<h3 id="bitmap">Bitmap</h3>
 <p>Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap. Bitmap format is suited for highly detailed images like photographs.</p>
-<p>Scalable Vector Graphics (svg) is a vector image format are created from mathematical formula they don&rsquo;t come bundled with information about how they should be painted that can be computed in the rendering device.SVGs are lighter than bitmap and they are used to create sharp images which scale e.g icons, illustrations etc.</p>
-<h2 id="the-syntax-of-svg">The syntax of SVG</h2>
+<h3 id="svg">SVG</h3>
+<p>Scalable Vector Graphics (svg) is a vector image format are created from mathematical formula they don&rsquo;t come bundled with information about how they should be painted that can be computed in the rendering device. SVGs are lighter than bitmap and they are used to create sharp images which scale e.g icons, illustrations etc.</p>
+<h4 id="the-syntax-of-svg">The syntax of SVG</h4>
 <ul>
 <li>SVG are defined in XML: a markup language.</li>
 <li>The diagram below shows an example of a SVG in raw code:</li>
@@ -85,8 +88,8 @@ Bitmap images are made up from tiny dots called pixels. Each pixel is actually a
 <ul>
 <li>Lets analyse the definition:</li>
 </ul>
-<p><code>💡The opening &lt;svg&gt; tag is used to instantiate an SVG. It usually contains attributes like viewBox,  class, id, fill and xmlns. The id and class attributes are usually used to extend functionality in Javascript or to style the svg element. They id attribute may also be used in XML specific configurations like the setting up of links. The xmlns attribute is a XML namespace, it is used by the browser to determine how to render the SVG. The closing &lt;/svg&gt; tag then terminates the SVG. Nested inside the svg tags are a variety of elements, e.g. &lt;path&gt;, &lt;/style&gt;,&lt;circle&gt; etc. these are used to describe specific properties of the svg.</code></p>
-<h2 id="using-svgs-in-vuejs">Using SVGs in Vuejs</h2>
+<p><code>💡SVG usually consists of a variety of elements e.g. &lt;path&gt;, &lt;/style&gt;,&lt;circle&gt; etc. nested inside an svg element. The inner elements enclosed inside the svg tags are used to describe specific properties of the SVG whereas the outer svg element which is normally referred to as the root element basically instantiate and terminate an instance of SVG.The root element may contain attributes like viewBox,  class, id, fill, height, width and xmlns. The id and class attributes are usually used to extend functionality in Javascript or to style the svg element. The id attribute may also be used in XML specific configurations like the setting up of links. The xmlns attribute is a XML namespace, it is used by the browser to determine how to render the SVG. Attributes like</code></p>
+<h4 id="using-svgs-in-vuejs">Using SVGs in Vuejs</h4>
 <ul>
 <li>Generally SVGs can can be incorporated in an HTML document:
 <ul>
@@ -96,9 +99,13 @@ Bitmap images are made up from tiny dots called pixels. Each pixel is actually a
 </li>
 <li>The above listed methods can be used in Vuejs and in addition to that we can also use <code>svg loaders</code> to incorporate SVGs in Vuejs.</li>
 </ul>
-<h3 id="inline-svg">Inline SVG</h3>
-<h3 id="external-svg">External SVG</h3>
-<h3 id="svg-loaders"><code>SVG Loaders</code></h3>
+<h5 id="inline-svg">Inline SVG</h5>
+<p>When using this method you just include the <code>svg</code> directly in the template. Its important to mention that when the <code>svg</code> is directly put in the document or template as in the case of Vuejs there is no need to include the <code>xlmns</code> attribute. The main drawback of this method is that when you have a lot of <code>svg</code> your template becomes cluttered. In that case it would be better incorporate SVGs as standalone files as it is explained in the next section.</p>
+<h5 id="external-svg">External SVG</h5>
+<p>In this method you include the SVG in your project structure as a standalone  <code>.svg</code>. Then to include the SVG in your Vuejs template you use the methods listed below:</p>
+<p>(i) <code>img</code> tag:</p>
+<p>(ii) <code>SVG Loaders</code>
+Vuejs uses Webpack as an asset bundler. Webpack uses a loader for each file type it handles. The loaders for the common file types usually come pre-configured in the event you use Vue CLI to bootstrap your project. But unfortunately <code>.svg</code> file types are not pre-configured so to read them in your project you have to download specify vue svg loaders.</p>
 <h3 id="references">References</h3>
 <ol>
 <li><a href="https://youtu.be/hA7ESX7FsE4" class="article-link">What are Scalable Vector Graphics (SVG) &amp; how are they special? | Web Demystified Episode 4<a></li>

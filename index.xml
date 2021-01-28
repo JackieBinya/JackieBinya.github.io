@@ -12,6 +12,53 @@
     
     
     <item>
+      <title>Using SVGs in Vuejs made simple</title>
+      <link>https://jackiebinya.github.io/posts/css/extract-svgs/</link>
+      <pubDate>Mon, 04 Jan 2021 02:19:11 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/css/extract-svgs/</guid>
+      <description>&lt;h2 id=&#34;images-of-the-web&#34;&gt;Images of the web&lt;/h2&gt;
+&lt;p&gt;The most commonly used image formats in the web include bitmap, svg and webp.&lt;/p&gt;
+&lt;h3 id=&#34;bitmap&#34;&gt;Bitmap&lt;/h3&gt;
+&lt;p&gt;Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap. Bitmap format is suited for highly detailed images like photographs.&lt;/p&gt;
+&lt;h3 id=&#34;svg&#34;&gt;SVG&lt;/h3&gt;
+&lt;p&gt;Scalable Vector Graphics (svg) is a vector image format are created from mathematical formula they don&amp;rsquo;t come bundled with information about how they should be painted that can be computed in the rendering device. SVGs are lighter than bitmap and they are used to create sharp images which scale e.g icons, illustrations etc.&lt;/p&gt;
+&lt;h4 id=&#34;the-syntax-of-svg&#34;&gt;The syntax of SVG&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;SVG are defined in XML: a markup language.&lt;/li&gt;
+&lt;li&gt;The diagram below shows an example of a SVG in raw code:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1610570036/svg-sample_k7bupk.png&#34; alt=&#34;&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;Lets analyse the definition:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;💡SVG usually consists of a variety of elements e.g. &amp;lt;path&amp;gt;, &amp;lt;/style&amp;gt;,&amp;lt;circle&amp;gt; etc. nested inside an svg element. The inner elements enclosed inside the svg tags are used to describe specific properties of the SVG whereas the outer svg element which is normally referred to as the root element basically instantiate and terminate an instance of SVG.The root element may contain attributes like viewBox,  class, id, fill, height, width and xmlns. The id and class attributes are usually used to extend functionality in Javascript or to style the svg element. The id attribute may also be used in XML specific configurations like the setting up of links. The xmlns attribute is a XML namespace, it is used by the browser to determine how to render the SVG. Attributes like&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;using-svgs-in-vuejs&#34;&gt;Using SVGs in Vuejs&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Generally SVGs can can be incorporated in an HTML document:
+&lt;ul&gt;
+&lt;li&gt;inline or,&lt;/li&gt;
+&lt;li&gt;as external standalone files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The above listed methods can be used in Vuejs and in addition to that we can also use &lt;code&gt;svg loaders&lt;/code&gt; to incorporate SVGs in Vuejs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;inline-svg&#34;&gt;Inline SVG&lt;/h5&gt;
+&lt;p&gt;When using this method you just include the &lt;code&gt;svg&lt;/code&gt; directly in the template. Its important to mention that when the &lt;code&gt;svg&lt;/code&gt; is directly put in the document or template as in the case of Vuejs there is no need to include the &lt;code&gt;xlmns&lt;/code&gt; attribute. The main drawback of this method is that when you have a lot of &lt;code&gt;svg&lt;/code&gt; your template becomes cluttered. In that case it would be better incorporate SVGs as standalone files as it is explained in the next section.&lt;/p&gt;
+&lt;h5 id=&#34;external-svg&#34;&gt;External SVG&lt;/h5&gt;
+&lt;p&gt;In this method you include the SVG in your project structure as a standalone  &lt;code&gt;.svg&lt;/code&gt;. Then to include the SVG in your Vuejs template you use the methods listed below:&lt;/p&gt;
+&lt;p&gt;(i) &lt;code&gt;img&lt;/code&gt; tag:&lt;/p&gt;
+&lt;p&gt;(ii) &lt;code&gt;SVG Loaders&lt;/code&gt;
+Vuejs uses Webpack as an asset bundler. Webpack uses a loader for each file type it handles. The loaders for the common file types usually come pre-configured in the event you use Vue CLI to bootstrap your project. But unfortunately &lt;code&gt;.svg&lt;/code&gt; file types are not pre-configured so to read them in your project you have to download specify vue svg loaders.&lt;/p&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/hA7ESX7FsE4&#34; class=&#34;article-link&#34;&gt;What are Scalable Vector Graphics (SVG) &amp;amp; how are they special? | Web Demystified Episode 4&lt;a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/43804171/how-to-extract-svg-as-file-from-web-page/43804258&#34; class=&#34;article-link&#34;&gt;Stackoverflow Post - How to extract svg as a file from a web page &lt;a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
       <title>My Google Season of Docs(GSOD) experience in a nutshell </title>
       <link>https://jackiebinya.github.io/posts/gsod-2020/gsod-report/</link>
       <pubDate>Thu, 03 Dec 2020 05:28:31 +0200</pubDate>

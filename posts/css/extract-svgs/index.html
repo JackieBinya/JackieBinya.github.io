@@ -16,7 +16,7 @@
 <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 <link rel="apple-touch-icon-precomposed" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 
-<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1611925572" />
+<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1611928043" />
 
 <meta property="og:title" content="Using SVGs in Vuejs made simple" />
 <meta property="og:description" content="Images of the web The most commonly used image formats in the web include bitmap, svg and webp.
@@ -78,7 +78,7 @@ Bitmap Bitmap images are made up from tiny dots called pixels. Each pixel is act
 <h3 id="bitmap">Bitmap</h3>
 <p>Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap. Bitmap format is suited for highly detailed images like photographs.</p>
 <h3 id="webp">Webp</h3>
-<p>This a highly perfomant image format create by Google.</p>
+<p><a href="https://developers.google.com/speed/webp">Webp</a> is a highly perfomant image format create by Google it was created to replace bitmap.</p>
 <h3 id="svg">SVG</h3>
 <p><img src="https://res.cloudinary.com/di70zcupa/image/upload/v1611902092/svg-pic_qexrsj.png" alt="SVG"></p>
 <p>Scalable Vector Graphics (svg) is a vector image format are created from mathematical formula they don&rsquo;t come bundled with information about how they should be painted that can be computed in the rendering device. SVGs are lighter than bitmap and they are used to create sharp images which scale e.g icons, illustrations etc.</p>
@@ -118,7 +118,7 @@ Bitmap Bitmap images are made up from tiny dots called pixels. Each pixel is act
 <ul>
 <li>You will then be prompted to pick a preset for your app, just press Enter to choose the default preset which at the time of publishing this article is: <code>Default ([Vue 2] babel, eslint)</code>.</li>
 <li>Then wait as Vue CLI creates a Vuejs project for you.</li>
-<li>When you project is successfully created you will get the message below in your terminal:
+<li>When you project is successfully created🎉, you will get the message below in your terminal:
 <img src="https://res.cloudinary.com/di70zcupa/image/upload/v1611909294/sucesssful-vuejs-install_ddlvl7.png" alt="Successful vuejs project created">
 The message contains handy command to get you started!</li>
 <li>Let&rsquo;s take a look at our project&rsquo;s file structure paying special attention to the <code>src</code> folder since most of our work pertaining to SVG will be restricted to that folder.</li>
@@ -140,7 +140,7 @@ The message contains handy command to get you started!</li>
     └── main.js
 </pre>
 <ul>
-<li>I have created a sample SVG to use in our tutorial. You may go ahead and download it by clicking this
+<li>I have created a sample SVG to use in the interactive examples provided.. You may go ahead and download it by clicking this
 <a href="/posts/css/svg-sample.svg" download="Using SVG in Vuejs" class="article-link">link</a>. You may choose to rename the file, then proceed to add it to the root of the <code>src</code> directory. Such that the structure of the <code>src</code> folder is similar to the one below:</li>
 </ul>
 <pre>
@@ -159,7 +159,7 @@ The message contains handy command to get you started!</li>
 <p>The pros of using this method are that you can use CSS to style your <code>svg</code> and use Javascript to extend its functionality just as you would a normal HTML element.</p>
 <p>The main drawback of this method is that if your <code>svg</code> is large or when you have a lot of <code>svg</code> your template, your template becomes cluttered. In that case it would be better incorporate SVGs as standalone files as it is explained in the next section.</p>
 <h4 id="external-svg">External SVG</h4>
-<p>To embed the SVG in your Vuejs template you use the methods listed below:</p>
+<p>To embed the SVG in your Vuejs template you use the methods listed below and always ensure that the <code>xlmns</code> attribute is included in your root element otherwise none of the methods provided will work!</p>
 <p>(i) Embedding an external svg as an image element in a Vuejs template:
 <img src="https://res.cloudinary.com/di70zcupa/image/upload/v1611904084/svg-img-implementantion_bhxx8s.png" alt="Embedding an external svg as an image element in a Vuejs template"></p>
 <p><em>Note you replace the <code>&lt;file-name&gt;</code> with the unique name you gave to the image resource you downloaded in this section.</em></p>
@@ -191,9 +191,20 @@ Vuejs uses Webpack as an asset bundler. Webpack uses a loader for each file type
   },
 };
 </code></pre><p>Ensure that you save your changes.</p>
-<p>Congrats!!!🎊 You have successfully installed and configured the setting of the <code>vue-svg-loader</code>.</p>
-<p>Now, let&rsquo;s proceed to how we can use <code>vue-svg-loader</code> to incorporate SVG in Vuejs.</p>
+<p>Congrats!!!🎊
+You have successfully installed and configured the setting of the <code>vue-svg-loader</code>.</p>
+<p>Now, let&rsquo;s proceed to learn how we can use the <code>vue-svg-loader</code> module to embed SVG in Vuejs.</p>
 <p><img src="https://res.cloudinary.com/di70zcupa/image/upload/v1611925461/using-svg-loader_ximunw.png" alt="using SVG loaders to embed svg in Vuejs"></p>
+<ul>
+<li>You first remove all the boilerplate code from the <code>App.vue</code> file in the <code>src</code> directory.</li>
+<li>Then you copy and paste the code above in <code>App.vue</code> and save your changes.</li>
+<li>The SGV I used exists as a standalone file in the assets folder as is named <code>sample.svg</code>, so depending on what you named your .svg file you may need to tweak the code above.</li>
+</ul>
+<p>The cons of using this method are:</p>
+<ul>
+<li>Your template is kept clean,</li>
+<li>And there are no limitations on how you can style or extend the functionality of your svg.</li>
+</ul>
 <h3 id="references">References</h3>
 <ol>
 <li><a href="https://youtu.be/hA7ESX7FsE4" class="article-link">What are Scalable Vector Graphics (SVG) &amp; how are they special? | Web Demystified Episode 4<a></li>

@@ -16,12 +16,11 @@
 <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 <link rel="apple-touch-icon-precomposed" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 
-<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1611905798" />
+<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1611917036" />
 
 <meta property="og:title" content="Using SVGs in Vuejs made simple" />
-<meta property="og:description" content="Please note that this blog post is a living document in which I write notes as I learn about using SVG in Vuejs. I am mainly focused in the use of svg and hope to include topics like animation of SVG in a latter stage.
- Images of the web The most commonly used image formats in the web include bitmap, svg and webp.
-Bitmap Bitmap images are made up from tiny dots called pixels." />
+<meta property="og:description" content="Images of the web The most commonly used image formats in the web include bitmap, svg and webp.
+Bitmap Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jackiebinya.github.io/posts/css/extract-svgs/" />
 <meta property="article:published_time" content="2021-01-04T02:19:11+02:00" />
@@ -29,9 +28,8 @@ Bitmap Bitmap images are made up from tiny dots called pixels." />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Using SVGs in Vuejs made simple"/>
-<meta name="twitter:description" content="Please note that this blog post is a living document in which I write notes as I learn about using SVG in Vuejs. I am mainly focused in the use of svg and hope to include topics like animation of SVG in a latter stage.
- Images of the web The most commonly used image formats in the web include bitmap, svg and webp.
-Bitmap Bitmap images are made up from tiny dots called pixels."/>
+<meta name="twitter:description" content="Images of the web The most commonly used image formats in the web include bitmap, svg and webp.
+Bitmap Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap."/>
 
 
 
@@ -75,10 +73,7 @@ Bitmap Bitmap images are made up from tiny dots called pixels."/>
 
         </header>
         <div class="content">
-            <blockquote>
-<p><em>Please note that this blog post is a living document in which I write notes as I learn about using SVG in Vuejs. I am mainly focused in the use of svg and hope to include topics like animation of SVG in a latter stage.</em></p>
-</blockquote>
-<h2 id="images-of-the-web">Images of the web</h2>
+            <h2 id="images-of-the-web">Images of the web</h2>
 <p>The most commonly used image formats in the web include bitmap, svg and webp.</p>
 <h3 id="bitmap">Bitmap</h3>
 <p>Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap. Bitmap format is suited for highly detailed images like photographs.</p>
@@ -116,10 +111,37 @@ Bitmap Bitmap images are made up from tiny dots called pixels."/>
 </ul>
 <p>To create a Vuejs project:</p>
 <ul>
-<li>On your terminal type <code>vue create &lt;project-name&gt;</code>.
-Replace <code>&lt;project-name&gt;</code> with a unique name for your project. My project is name <code>svg-tutorial</code>.</li>
+<li>On your terminal type:</li>
+</ul>
+<pre><code>vue create &lt;project-name&gt;
+</code></pre><p>Replace <code>&lt;project-name&gt;</code> with a unique name for your project. My project is name <code>svg-tutorial</code>.</p>
+<ul>
 <li>You will then be prompted to pick a preset for your app, just press Enter to choose the default preset which at the time of publishing this article is: <code>Default ([Vue 2] babel, eslint)</code>.</li>
 <li>Then wait as Vue CLI creates a Vuejs project for you.</li>
+<li>When you project is successfully created you will get the message below in your terminal:
+<img src="https://res.cloudinary.com/di70zcupa/image/upload/v1611909294/sucesssful-vuejs-install_ddlvl7.png" alt="Successful vuejs project created">
+The message contains handy command to get you started!</li>
+<li>Let&rsquo;s take a look at our project&rsquo;s file structure paying special attention to the <code>src</code> folder since most of our work pertaining to SVG will be restricted to that folder.</li>
+</ul>
+<pre>
+.
+├── babel.config.js
+├── node_modules
+├── package.json
+├── package-lock.json
+├── public
+├── README.md
+└── src
+    ├── App.vue
+    ├── assets
+    │   └── logo.png
+    ├── components
+    │   └── HelloWorld.vue
+    └── main.js
+</pre>
+<ul>
+<li>I have created a sample SVG to use in our tutorial. You may go ahead and download it by clicking this
+<a href="/posts/css/svg-sample.svg" download="Using SVG in Vuejs" class="article-link">link</a>.</li>
 </ul>
 <h4 id="inline-svg">Inline SVG</h4>
 <p>When using this method you just include the <code>svg</code> directly in the template. Its important to mention that when the <code>svg</code> is directly embedded in the document or template as in the case of Vuejs there is no need to include the <code>xlmns</code> attribute. The main drawback of this method is that when you have a lot of <code>svg</code> your template becomes cluttered. In that case it would be better incorporate SVGs as standalone files as it is explained in the next section.</p>

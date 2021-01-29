@@ -17,10 +17,7 @@
       <pubDate>Mon, 04 Jan 2021 02:19:11 +0200</pubDate>
       
       <guid>https://jackiebinya.github.io/posts/css/extract-svgs/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Please note that this blog post is a living document in which I write notes as I learn about using SVG in Vuejs. I am mainly focused in the use of svg and hope to include topics like animation of SVG in a latter stage.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;images-of-the-web&#34;&gt;Images of the web&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;images-of-the-web&#34;&gt;Images of the web&lt;/h2&gt;
 &lt;p&gt;The most commonly used image formats in the web include bitmap, svg and webp.&lt;/p&gt;
 &lt;h3 id=&#34;bitmap&#34;&gt;Bitmap&lt;/h3&gt;
 &lt;p&gt;Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap. Bitmap format is suited for highly detailed images like photographs.&lt;/p&gt;
@@ -58,10 +55,37 @@
 &lt;/ul&gt;
 &lt;p&gt;To create a Vuejs project:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;On your terminal type &lt;code&gt;vue create &amp;lt;project-name&amp;gt;&lt;/code&gt;.
-Replace &lt;code&gt;&amp;lt;project-name&amp;gt;&lt;/code&gt; with a unique name for your project. My project is name &lt;code&gt;svg-tutorial&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;On your terminal type:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;vue create &amp;lt;project-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Replace &lt;code&gt;&amp;lt;project-name&amp;gt;&lt;/code&gt; with a unique name for your project. My project is name &lt;code&gt;svg-tutorial&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;You will then be prompted to pick a preset for your app, just press Enter to choose the default preset which at the time of publishing this article is: &lt;code&gt;Default ([Vue 2] babel, eslint)&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Then wait as Vue CLI creates a Vuejs project for you.&lt;/li&gt;
+&lt;li&gt;When you project is successfully created you will get the message below in your terminal:
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1611909294/sucesssful-vuejs-install_ddlvl7.png&#34; alt=&#34;Successful vuejs project created&#34;&gt;
+The message contains handy command to get you started!&lt;/li&gt;
+&lt;li&gt;Let&amp;rsquo;s take a look at our project&amp;rsquo;s file structure paying special attention to the &lt;code&gt;src&lt;/code&gt; folder since most of our work pertaining to SVG will be restricted to that folder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;
+.
+├── babel.config.js
+├── node_modules
+├── package.json
+├── package-lock.json
+├── public
+├── README.md
+└── src
+    ├── App.vue
+    ├── assets
+    │   └── logo.png
+    ├── components
+    │   └── HelloWorld.vue
+    └── main.js
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;I have created a sample SVG to use in our tutorial. You may go ahead and download it by clicking this
+&lt;a href=&#34;https://jackiebinya.github.io/posts/css/svg-sample.svg&#34; download=&#34;Using SVG in Vuejs&#34; class=&#34;article-link&#34;&gt;link&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;inline-svg&#34;&gt;Inline SVG&lt;/h4&gt;
 &lt;p&gt;When using this method you just include the &lt;code&gt;svg&lt;/code&gt; directly in the template. Its important to mention that when the &lt;code&gt;svg&lt;/code&gt; is directly embedded in the document or template as in the case of Vuejs there is no need to include the &lt;code&gt;xlmns&lt;/code&gt; attribute. The main drawback of this method is that when you have a lot of &lt;code&gt;svg&lt;/code&gt; your template becomes cluttered. In that case it would be better incorporate SVGs as standalone files as it is explained in the next section.&lt;/p&gt;

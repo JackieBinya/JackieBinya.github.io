@@ -22,7 +22,7 @@
 &lt;h3 id=&#34;bitmap&#34;&gt;Bitmap&lt;/h3&gt;
 &lt;p&gt;Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap. Bitmap format is suited for highly detailed images like photographs.&lt;/p&gt;
 &lt;h3 id=&#34;webp&#34;&gt;WebP&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://developers.google.com/speed/webp&#34;&gt;WebP&lt;/a&gt; is a highly perfomant image format create by Google it was created to replace bitmap.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/speed/webp&#34;&gt;WebP&lt;/a&gt; is a highly perfomant image format created by Google it was created to replace bitmap.&lt;/p&gt;
 &lt;h3 id=&#34;svg&#34;&gt;SVG&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1611902092/svg-pic_qexrsj.png&#34; alt=&#34;SVG&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Scalable Vector Graphics (svg) is a vector image format are created from mathematical formula they don&amp;rsquo;t come bundled with information about how they should be painted that can be computed in the rendering device. SVGs are lighter than bitmap and they are used to create sharp images which scale e.g icons, illustrations etc.&lt;/p&gt;

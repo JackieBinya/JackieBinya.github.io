@@ -8,7 +8,17 @@
   </url>
   
   <url>
+    <loc>https://jackiebinya.github.io/tags/</loc>
+    <lastmod>2021-01-04T02:19:11+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jackiebinya.github.io/posts/vue/using-svg/</loc>
+    <lastmod>2021-01-04T02:19:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackiebinya.github.io/tags/vuejs/</loc>
     <lastmod>2021-01-04T02:19:11+02:00</lastmod>
   </url>
   
@@ -19,11 +29,6 @@
   
   <url>
     <loc>https://jackiebinya.github.io/posts/gsod-2020/gsod-report/</loc>
-    <lastmod>2020-12-03T05:28:31+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jackiebinya.github.io/tags/</loc>
     <lastmod>2020-12-03T05:28:31+02:00</lastmod>
   </url>
   

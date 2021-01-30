@@ -16,7 +16,7 @@
 <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 <link rel="apple-touch-icon-precomposed" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
 
-<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1611931974" />
+<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1612021730" />
 
 <meta property="og:title" content="Using SVGs in Vuejs made simple" />
 <meta property="og:description" content="Images of the web The most commonly used image formats in the web include bitmap, svg and webp.
@@ -77,8 +77,8 @@ Bitmap Bitmap images are made up from tiny dots called pixels. Each pixel is act
 <p>The most commonly used image formats in the web include bitmap, svg and webp.</p>
 <h3 id="bitmap">Bitmap</h3>
 <p>Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap. Bitmap format is suited for highly detailed images like photographs.</p>
-<h3 id="webp">Webp</h3>
-<p><a href="https://developers.google.com/speed/webp">Webp</a> is a highly perfomant image format create by Google it was created to replace bitmap.</p>
+<h3 id="webp">WebP</h3>
+<p><a href="https://developers.google.com/speed/webp">WebP</a> is a highly perfomant image format create by Google it was created to replace bitmap.</p>
 <h3 id="svg">SVG</h3>
 <p><img src="https://res.cloudinary.com/di70zcupa/image/upload/v1611902092/svg-pic_qexrsj.png" alt="SVG"></p>
 <p>Scalable Vector Graphics (svg) is a vector image format are created from mathematical formula they don&rsquo;t come bundled with information about how they should be painted that can be computed in the rendering device. SVGs are lighter than bitmap and they are used to create sharp images which scale e.g icons, illustrations etc.</p>
@@ -161,10 +161,12 @@ The message contains handy commands to get you started!</li>
 <p>The main drawback of this method is that if your <code>svg</code> is large or when you have a lot of <code>svg</code> your template, your template becomes cluttered. In that case it would be better incorporate SVGs as standalone files as it is explained in the next section.</p>
 <h4 id="external-svg">External SVG</h4>
 <p>To embed an external SVG in your Vuejs template you use the methods listed below and always ensure that the <code>xlmns</code> attribute is included in the root element of the SVG otherwise none of the methods provided will work!</p>
-<p>(i) Embedding an external svg as an image element in a Vuejs template:
-<img src="https://res.cloudinary.com/di70zcupa/image/upload/v1611904084/svg-img-implementantion_bhxx8s.png" alt="Embedding an external svg as an image element in a Vuejs template"></p>
+<pre><code>💡
+  xmlns=&quot;http://www.w3.org/2000/svg&quot;
+</code></pre><p>(i) Embedding an external svg as an image element in a Vuejs template:</p>
+<p><img src="https://res.cloudinary.com/di70zcupa/image/upload/v1611904084/svg-img-implementantion_bhxx8s.png" alt="Embedding an external svg as an image element in a Vuejs template"></p>
 <p><em>Note: Replace the <code>&lt;file-name&gt;</code> with the unique name you gave to the svg resource you downloaded above.</em></p>
-<p>Using this method limits how you can manipulate the <code>svg</code> as it really doesn&rsquo;t exist in the document but it is encapsulated in the <img> element. So at most you can only manipulate it as you would a normal image.</p>
+<p>Using this method limits how you can manipulate the <code>svg</code> as it really doesn&rsquo;t exist in the document but it is encapsulated in the<code>&lt;img&gt;</code> element. So at most you can only manipulate it as you would a normal image.</p>
 <p>The cons of this method include limitations in styling and in extending the functionality of SVGs and in addition to that if you are dealing with a lot of SVGs in your template it becomes rather cumbersome to keep wrapping them in image elements.</p>
 <p>(ii) Using <code>SVG Loaders</code></p>
 <p>Vuejs uses Webpack as an asset bundler. Webpack uses a loader for each file type it handles. The loaders for the common file types usually come pre-configured whenever you use Vue CLI to bootstrap your project. What that means is that when you import those file types they can be automatically read. But unfortunately <code>.svg</code> loaders do not come pre-configured so you have to download them from <a href="https://www.npmjs.com/">npm</a> then configure them manually.</p>
@@ -184,7 +186,7 @@ The message contains handy commands to get you started!</li>
     svgRule.uses.clear();
  
     svgRule
-      .use('babel-loader')e
+      .use('babel-loader')
       .loader('babel-loader')
       .end()
       .use('vue-svg-loader')
@@ -198,12 +200,12 @@ The message contains handy commands to get you started!</li>
 <p><img src="https://res.cloudinary.com/di70zcupa/image/upload/v1611925461/using-svg-loader_ximunw.png" alt="using SVG loaders to embed svg in Vuejs"></p>
 <ul>
 <li>You first remove all the boilerplate code from the <code>App.vue</code> file in the <code>src</code> directory.</li>
-<li>Then you copy and paste the code  in diagram above in <code>App.vue</code>, and save your changes.</li>
-<li>The SGV, I used exists as a standalone file in the assets folder as is named <code>sample.svg</code>, so depending on what you named your .svg file you may need to tweak the code above.</li>
+<li>Then you copy the code in diagram above into <code>App.vue</code>, and save your changes.</li>
+<li>The <code>svg</code> I used exists as a standalone file in the assets folder as is named <code>sample.svg</code>, so depending on what you named your .svg file you may need to tweak the code above.</li>
 <li>Run the command below on your terminal, and then on your browser visit <code> http://localhost:8080/</code> to view the Vuejs app with the embedded SVG 🚀.</li>
 </ul>
 <pre><code>npm run serve
-</code></pre><p>The cons of using this method are:</p>
+</code></pre><p>The pros of using this method are:</p>
 <ul>
 <li>Your template is kept clean,</li>
 <li>And there are no limitations on how you can style or extend the functionality of your svg.</li>
@@ -211,7 +213,6 @@ The message contains handy commands to get you started!</li>
 <h3 id="references">References</h3>
 <ol>
 <li><a href="https://youtu.be/hA7ESX7FsE4" class="article-link">What are Scalable Vector Graphics (SVG) &amp; how are they special? | Web Demystified Episode 4<a></li>
-<li><a href="https://stackoverflow.com/questions/43804171/how-to-extract-svg-as-file-from-web-page/43804258" class="article-link">Stackoverflow Post - How to extract svg as a file from a web page <a></li>
 </ol>
 
         </div>
@@ -219,6 +220,12 @@ The message contains handy commands to get you started!</li>
     <div class="article-taxonomies">
         
             
+                <ul class="article-tags">
+                    
+                        <li><a href="https://jackiebinya.github.io/tags/vuejs">#vuejs</a></li>
+                    
+                </ul>
+        
     </div>
 </div>
 

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on Jacqueline Binya</title>
+    <link>https://jackiebinya.github.io/tags/github/</link>
+    <description>Jacqueline Binya (github)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Jun 2020 11:48:59 +0200</lastBuildDate>
+    
+    <atom:link href="https://jackiebinya.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Another conflict: resolving conflicts in git that occur when using rebase.</title>
+      <link>https://jackiebinya.github.io/posts/how-to-resolve-git-merge-conflicts/s2./</link>
+      <pubDate>Sun, 07 Jun 2020 11:48:59 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/how-to-resolve-git-merge-conflicts/s2./</guid>
+      <description>&lt;p&gt;This interactive tutorial about the resolution of conflicts in git is a continuation of my first blog in the series titled &lt;em&gt;And then we resolve a merge conflict&amp;hellip;&lt;/em&gt;. If you have not read it, please check it out &lt;a class=&#34;article-link&#34; href=&#34;https://jackiebinya.github.io/posts/how-to-resolve-git-merge-conflicts/s1/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The aim of this tutorial is to show how you can use rebasing as an alternative to merging so to combine to branches in git. It will demonstrate how you resolve conflicts that occur thereof.&lt;/p&gt;
+&lt;h2 id=&#34;intro-to-rebasing&#34;&gt;Intro to rebasing&lt;/h2&gt;
+&lt;p&gt;Every commit in github is based on its preceding commit. When you trace the history you realize that every commit has an ancestor.
+Practically this is shown by that whenever you log the history of a branch, all the commits are listed in chronological order. With first commit at the bottom and the most recent commit which is the HEAD at the top.
+Now, what rebasing does is it rewrites history of your current branch, through assigning a commit of your choice as the ancestor of the HEAD.&lt;/p&gt;
+&lt;h2 id=&#34;now-lets-get-started&#34;&gt;Now, let&amp;rsquo;s get started&lt;/h2&gt;
+&lt;p&gt;As indicated in the first blog to get started, we create a repo on github and initialize it with a README. Then clone it locally on my machine. After that, I open the project on an editor. My editor of choice is Visual Studio Code.&lt;/p&gt;
+&lt;p&gt;I  then create and check out a new branch called &lt;em&gt;list-interests&lt;/em&gt;. And create &lt;em&gt;bio.txt&lt;/em&gt;. In &lt;em&gt;bio.txt&lt;/em&gt; I add a list of my personal interests. Then voila:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/0t8fdikm5m3rvxlr31dc.png&#34; alt=&#34;code screenshot&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To stage the changes, on the terminal I run the command,&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then to commit the changes to my local repo I run the command,&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit -m &amp;#34;Adds interests to bio&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then to look up the history of the &lt;em&gt;list-interests&lt;/em&gt; branch, on the terminal I run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git log --oneline
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The result:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;5d944ac (HEAD -&amp;gt; list-interests) Adds interest to bio
+305d937 (origin/master, origin/HEAD, master) Initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now let&amp;rsquo;s imagine that a bunch of devs was assigned to this project. One dev, in particular, was assigned to add an intro to the bio. The dev successfully created the intro and then proceed to merge it to master.&lt;/p&gt;
+&lt;p&gt;To mimic that, on the terminal run the command,&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git checkout -
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The command above listed above allows you to navigate to the branch you were in before you checked out your current branch.&lt;/p&gt;
+&lt;p&gt;On &lt;em&gt;master&lt;/em&gt; I then create the file &lt;em&gt;bio.txt&lt;/em&gt;. Then add a basic intro about myself.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/20focxl3d59b2p1tsbrf.png&#34; alt=&#34;screenshot of codeblock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I then add the changes to the staging area by running the command below on the terminal.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To add the changes to my  local repo,&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit -m &amp;#34;Adds intro to bio&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then I log the history by running the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git log --oneline
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;4586948 (HEAD -&amp;gt; master) Adds intro to bio
+305d937 (origin/master, origin/HEAD) Initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then to sync &lt;em&gt;master&lt;/em&gt; to my &lt;em&gt;origin/master&lt;/em&gt; which is the  branch that corresponds to &lt;em&gt;master&lt;/em&gt; on the remote repository;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git push 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I then check out the branch &lt;em&gt;list-interests&lt;/em&gt; to continue.
+If you log the history of the branch &lt;em&gt;list-interests&lt;/em&gt; you will realize that it was based on the old version of &lt;em&gt;master&lt;/em&gt; that did not have the intro. I intend to rebase it to the new version of &lt;em&gt;master&lt;/em&gt; so as to include the intro.&lt;/p&gt;
+&lt;p&gt;To do that on the terminal I then run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git rebase master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;On the terminal I get the error message:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;First, rewinding head to replay your work on top of it...
+Applying: Adds interest to bio
+Using index info to reconstruct a base tree...
+Falling back to patching base and 3-way merge...
+CONFLICT (add/add): Merge conflict in bio.txt
+Auto-merging bio.txt
+error: Failed to merge in the changes.
+hint: Use &amp;#39;git am --show-current-patch&amp;#39; to see the failed patch
+Patch failed at 0001 Adds interest to bio
+&amp;#34;git add/rm &amp;lt;conflicted_files&amp;gt;&amp;#34;, then run &amp;#34;git rebase --continue&amp;#34;.        
+You can instead skip this commit: run &amp;#34;git rebase --skip&amp;#34;.
+To abort and get back to the state before &amp;#34;git rebase&amp;#34;, run &amp;#34;git rebase --abort&amp;#34;.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The above message informs me that git failed to merge then provides me commands I can use to resolve the issue.&lt;/p&gt;
+&lt;p&gt;On the editor, this is what is there:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/s140yydyfyxfgupma6ym.png&#34; alt=&#34;screenshot of codeblock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Because I want to keep both the changes, I select the option &lt;em&gt;Accept Both Changes&lt;/em&gt; on VS code.&lt;/p&gt;
+&lt;p&gt;To continue I then add the change to the staging area, by running the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then on the terminal, I  run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git rebase --continue
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then get the message&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Applying: Adds interest to bio
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Under the hood when you rebase, git basically rewinds fetches the tip of &lt;em&gt;master&lt;/em&gt;, places it in the position of the last commit of the branch you had checked out, then applies the tip of &lt;em&gt;list_interests&lt;/em&gt; on &lt;em&gt;master&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;To visualize it imagine your history was a deck of cards, a stack. You pop the topmost card which is the HEAD of your current branch, in its place you push the HEAD of &lt;em&gt;master&lt;/em&gt; then finally you push the HEAD of the current branch in its rightful position.&lt;/p&gt;
+&lt;p&gt;If you have conflicts you resolve them and then stage the changes. But instead of making a new merge commit when you run the command &lt;em&gt;git rebase &amp;ndash;continue&lt;/em&gt; the changes are applied to the HEAD, which in this case had the message &lt;em&gt;Adds interests to bio&lt;/em&gt;. When you log the history you get:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1a378f3 (HEAD -&amp;gt; list-interests) Adds interest to bio
+4586948 (origin/master, origin/HEAD, master) Adds intro to bio
+305d937 Initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I have successfully made a rebase. Rebasing offers a clean way to combine diverging branches and its main advantage is the history is kept linear, unlike when you do merge commits.&lt;/p&gt;
+&lt;p&gt;I then sync my local and remote. Make a pull request. Then merge my pull request to &lt;em&gt;origin/master&lt;/em&gt;. On  my local I checkout &lt;em&gt;master&lt;/em&gt; then on the terminal run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git pull
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So as to sync &lt;em&gt;master&lt;/em&gt; to &lt;em&gt;origin/master&lt;/em&gt;. Then voila:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/hkvzfhdgaz0ohexcvck5.png&#34; alt=&#34;screenshot of codeblock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;With that done, hopefully, you now have an understanding of how rebasing works in git. We now proceed to the main business of the day which is using rebasing to implement what we did on the &lt;a href=&#34;https://dev.to/nubian_geekess/and-then-a-conflict-2eli&#34;&gt;first blog&lt;/a&gt; in the series.&lt;/p&gt;
+&lt;p&gt;Well, I would love to add a new feature to my bio. This time I will add a list of programming languages I have worked on. To do that I create and check out a new branch called &lt;em&gt;list-languages&lt;/em&gt;. On the terminal, I run the command,&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git checkout -b list-languages
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then I edit &lt;em&gt;bio.txt&lt;/em&gt; by adding a list of programming languages.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/wpplvusgsy52k3wtpekd.png&#34; alt=&#34;screenshot of codeblock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To proceed I then add the changes to the staging area by  running the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To commit the changes to my local repo, on the terminal I then run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit -m &amp;#34;Adds programming languages to bio
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To create a branch on the remote corresponding to &lt;em&gt;list&amp;ndash;languages&lt;/em&gt; and push changes associated with it. On the terminal I then run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git push --set-upstream origin list-languages
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I just realized I made a blooper on my bio. Instead of adding C++, I meant to add C. But in the same regard, I want to keep my commit message.&lt;/p&gt;
+&lt;p&gt;So back on my editor, I edit my bio.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/7968tagpiwjffcfy92m2.png&#34; alt=&#34;screenshot of code block&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now to stage the changes I run:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And to commit to my local, on my terminal I run the command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit --amend --no-edit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As we know from the first tutorial &lt;em&gt;git commit &amp;ndash;amend &amp;ndash;no-edit&lt;/em&gt;, alters the history of the branch. We end up with a scenario whereby the local and remote diverge from each other with the remote branch always leading.&lt;/p&gt;
+&lt;p&gt;When I attempt to sync my local and remote using:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git push
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I  get this message as a response:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;To github.com:JackieBinya/git-tut-2.git
+! [rejected]        list-languages -&amp;gt; list-languages (non-fast-forward)
+error: failed to push some refs to &amp;#39;git@github.com:JackieBinya/git-tut-2.git&amp;#39;
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: &amp;#39;git pull ...&amp;#39;) before pushing again.
+hint: See the &amp;#39;Note about fast-forwards&amp;#39; in &amp;#39;git push --help&amp;#39; for details.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Before we proceed let&amp;rsquo;s take a quick look at the history of the branch &lt;em&gt;list-languages&lt;/em&gt;, using the command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git log --oneline
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;c0fa933 (HEAD -&amp;gt; list-languages) Adds programming languages to bio
+d2c5e0f (origin/master, origin/HEAD, master) Merge pull request #1 from JackieBinya/list-interests
+1a378f3 (origin/list-interests, list-interests) Adds interest to bio
+4586948 Adds intro to bio
+305d937 Initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Basically when I run the command &lt;em&gt;git push&lt;/em&gt;. Under the hood git attempts to sync my local &lt;em&gt;list-languages&lt;/em&gt; to the corresponding branch on the remote &lt;em&gt;origin/list-languages&lt;/em&gt;. Git is clever enough to realize that the branches have diverged, the remote is ahead of the local branch so it suggests I pull changes on the remote to my local, resolve any conflicts and push again.&lt;/p&gt;
+&lt;p&gt;To resolve the issue highlighted I run the command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git pull --rebase
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I added the flag &lt;em&gt;&amp;ndash;rebase&lt;/em&gt; to the &lt;em&gt;git pull&lt;/em&gt; command so as to rebase the HEAD of my local on the tip of &lt;em&gt;origin/list-laguages&lt;/em&gt;. This offers an alternative to merging branches.&lt;/p&gt;
+&lt;p&gt;On my editor this is what my file looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/dljclocd8wl0h84y05ex.png&#34; alt=&#34;screenshot of codeblock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To resolve the conflict, on VS Code I select the option to keep incoming changes. I then add the changes to the staging area then run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git rebase --continue
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is what &lt;em&gt;bio.txt&lt;/em&gt; looks like on my editor:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/p1814pamnh50jvbd6915.png&#34; alt=&#34;screenshot of codeblock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When I log the history on the terminal I get the output below:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;b584e1c (HEAD -&amp;gt; list-languages) Adds programming languages to bio
+7b06700 (origin/list-languages) Adds programming languages to bio
+d2c5e0f (origin/master, origin/HEAD, master) Merge pull request #1 from JackieBinya/list-interests
+1a378f3 (origin/list-interests, list-interests) Adds interest to bio
+4586948 Adds intro to bio
+305d937 Initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I then sync my local and remote. Make a PR then merge it to &lt;em&gt;master&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Finally my bio:
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/JackieBinya/e308108940e959157448c517aee21b71.js&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;This post was originally published on &lt;a class=&#34;article-link&#34; href=&#34;https://dev.to/jacqueline/another-conflict-resolving-conflicts-in-git-that-occur-when-using-rebase-3dho&#34;&gt;dev.to&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Thank you for reading my article.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>And then we resolve a merge conflict...</title>
+      <link>https://jackiebinya.github.io/posts/how-to-resolve-git-merge-conflicts/s1/</link>
+      <pubDate>Sun, 07 Jun 2020 11:28:59 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/how-to-resolve-git-merge-conflicts/s1/</guid>
+      <description>&lt;p&gt;Since my introduction to the git workflow. I have resolved my own fair share of conflicts. Admittedly when I started using git, conflicts were frustrating and upsetting occurrence mainly because I didn&amp;rsquo;t understand why and how they occurred.&lt;/p&gt;
+&lt;p&gt;Unwittingly I actually thought they were something I could avoid, I thought there was a way I could outsmart git, hahaha! The word conflict has a negative connotation to it so don&amp;rsquo;t blame my newbie response.
+I remember during my BootCamp at Andela, we worked in such a way that you could only merge your pull request to the main develop branch if it had been reviewed and then approved.
+So my genius way of ensuring I totally avoided conflicts, was to wait and have my PRs approved and consequently merged to the develop branch one at a time and that impacted negatively on my overall output.
+The reason I feared conflicts was the first time I was ever brave enough to queue up my PRs I made a giant mess trying to resolve the conflicts and lost all my work.&lt;/p&gt;
+&lt;p&gt;Anyways all the previous tutorials I had followed up to that point had only covered &lt;em&gt;git clone, pull and push&lt;/em&gt;, I honestly didn&amp;rsquo;t know we made war in git!&lt;/p&gt;
+&lt;p&gt;In this series, I document my steps in re-creating and hopefully resolving my favorite conflicts.&lt;/p&gt;
+&lt;h2 id=&#34;keywords&#34;&gt;Keywords&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HEAD: normally the HEAD pointer, points to the latest commit on a branch you have currently checked out.&lt;/li&gt;
+&lt;li&gt;History: Git works by compiling information about details of commits of individual branches if you run the command &lt;code&gt;git log &lt;/code&gt; you get the history of a branch you have currently checked out.
+Then &lt;em&gt;git log &amp;ndash;oneline&lt;/em&gt; prints each commit on a single line, which is useful if you’re looking at a lot of commits.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;creating-the-conflict&#34;&gt;Creating the conflict&lt;/h2&gt;
+&lt;p&gt;To get started I created a repo on github initialized it with a README.md and cloned it on my machine.&lt;/p&gt;
+&lt;p&gt;Then on VS code, I opened
+Using the command, &lt;code&gt;git checkout -b create-bio&lt;/code&gt; I branched off &lt;em&gt;master&lt;/em&gt; and created a branch called &lt;em&gt;create-bio&lt;/em&gt; and then checked out &lt;em&gt;create-bio&lt;/em&gt;.&lt;br&gt;
+&lt;em&gt;create-bio&lt;/em&gt; is normally referred to as a feature branch. Its good practice to open a branch for every feature than work on your &lt;em&gt;master&lt;/em&gt;. This ensures you only merge to &lt;em&gt;master&lt;/em&gt; the code that works and your work is clean.&lt;/p&gt;
+&lt;p&gt;After that I then created a file called &lt;em&gt;bio.txt&lt;/em&gt; and added a simple unimaginative line of code to it:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/ribmlj9y7io89c1zucil.png&#34; alt=&#34;codeblock sceenshot&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A git environment can be broken down into two distinct parts. The remote repository is where you push the code you want to share with others which in my case is hosted by Github and your development environment. The development environment consists of the working directory, staging area, and local repository. So basically when using git workflow, when you clone your repo from the remote it comes with a .git folder. That folder is basically the local repository.
+In essence, Git is a clever piece of software that not only ensures that you can track your files it also allows you to share them as well. Under the hood, git works by persisting branches and commits.
+The working directory is just that, the stuff you work on. So as you work you have to naturally keep track of the files you are working on and to do that you add them to the staging area.&lt;/p&gt;
+&lt;p&gt;So to track &lt;em&gt;bio.txt&lt;/em&gt;. I add it to the staging area by running the command, &lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Using the command, &lt;code&gt;git commit -m &amp;quot;Adds bio.txt&amp;quot;&lt;/code&gt;
+I add &lt;em&gt;bio.txt&lt;/em&gt; to my local repository it&amp;rsquo;s official, the changes I was tracking have been committed to my local repo.&lt;/p&gt;
+&lt;p&gt;Remember when I started off I cloned my remote repository and it only had the &lt;em&gt;master&lt;/em&gt; branch now that I&amp;rsquo;ve created a new branch in my local. The local and the remote are out of sync so using the command, &lt;code&gt;git push --set-upstream origin create-bio&lt;/code&gt;
+I create the branch &lt;em&gt;create-bio&lt;/em&gt; in the origin/remote and simultaneously push the changes in that branch to the remote repo.&lt;/p&gt;
+&lt;p&gt;So far all things are fine and dandy, to introduce some chaos I then edit the file &lt;em&gt;bio.txt&lt;/em&gt; ever so slightly,
+![screenshot of code block on vs code]
+(&lt;a href=&#34;https://thepracticaldev.s3.amazonaws.com/i/4ru147jlq82pcnxhj33c.png&#34;&gt;https://thepracticaldev.s3.amazonaws.com/i/4ru147jlq82pcnxhj33c.png&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;If u run the command, &lt;code&gt;git status&lt;/code&gt;
+You will see that the &lt;em&gt;bio.txt&lt;/em&gt; has been modified. So to add the changes I made to &lt;em&gt;bio.txt&lt;/em&gt; to the staging area I run the command &lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This time to add my staged changes to my local I use the command, &lt;code&gt;git commit --amend --no-edit&lt;/code&gt;
+The command above allows me to combine staged changes with the previous commit instead of creating an entirely new commit. This git views as an entirely new commit, history has been re-written.&lt;/p&gt;
+&lt;p&gt;To verify that history has been altered, if I log my git history on the terminal, although the commit message is the same for the tip of the branch before and after running the command &lt;em&gt;git commit &amp;ndash;amend &amp;ndash;no-edit&lt;/em&gt; the commit hashes (i.e. the string that precedes the commit message) are different as shown below:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;f780b5d (HEAD -&amp;gt; create-bio, origin/create-bio) Adds bio.txt
+7619836 (origin/master, origin/HEAD, master) Initial commit
+PS C:\Users\\Desktop\git-tut-1&amp;gt; git commit --amend --no-edit
+[create-bio 1b61b25] Adds bio.txt
+ Date: Thu Oct 10 03:30:45 2019 +0200
+ 1 file changed, 3 insertions(+)
+ create mode 100644 bio.txt
+PS C:\Users\\Desktop\git-tut-1&amp;gt; git log --oneline
+1b61b25 (HEAD -&amp;gt; create-bio) Adds bio.txt
+7619836 (origin/master, origin/HEAD, master) Initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you run the command, &lt;code&gt;git status&lt;/code&gt;
+The message you get on the terminal is:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;On branch create-bio
+Your branch and &amp;#39;origin/create-bio&amp;#39; have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use &amp;#34;git pull&amp;#34; to merge the remote branch into yours)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I then attempt to sync my remote to my local, by running the command,&lt;code&gt;git push&lt;/code&gt;
+On the terminal I get the error:
+&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/eklp6fkudekdyka7m4zo.png&#34; alt=&#34;Screenshot of code block&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As advised in the error message, I then run the command, &lt;code&gt;git pull&lt;/code&gt;
+And voila the message on the terminal reads:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;CONFLICT (add/add): Merge conflict in bio.txt
+Auto-merging bio.txt
+Automatic merge failed; fix conflicts and then commit the result.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The conflict on VS Code:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/kr8ezdjpwj7djjzmog8u.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resolving-the-conflict&#34;&gt;Resolving the Conflict&lt;/h2&gt;
+&lt;p&gt;Using VS Code editor it&amp;rsquo;s very easy to resolve the conflict I simply choose to &lt;em&gt;Accept Current Change&lt;/em&gt;, this option allows me to keep the changes in the HEAD.
+You can then play around with the other options to explore how they work. Just ensure when you are done resolving the conflict your code looks normal as in you have gotten rid of the arrows, commit hash, and equal signs.&lt;/p&gt;
+&lt;p&gt;I then run the command,  &lt;code&gt;git add .&lt;/code&gt;
+To add changes to the staging area, then proceed to commit them by running the command &lt;code&gt;git commit -m &amp;quot;Resolved&amp;quot;&lt;/code&gt; After which I run the command: &lt;code&gt;git push&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;So my local and remote are in sync.&lt;/p&gt;
+&lt;h4 id=&#34;the-result&#34;&gt;The result:&lt;/h4&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/JackieBinya/52ca912c1a73db46d5b2f9c1ed5649f1.js&#34;&gt;&lt;/script&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;This post was originally published on &lt;a class=&#34;article-link&#34; href=&#34;https://dev.to/jacqueline/and-then-a-conflict-2eli&#34;&gt;dev.to&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

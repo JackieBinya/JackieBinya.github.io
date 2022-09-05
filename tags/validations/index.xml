@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>validations on Jacqueline Binya</title>
+    <link>https://jackiebinya.github.io/tags/validations/</link>
+    <description>Jacqueline Binya (validations)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Jun 2020 08:47:42 +0200</lastBuildDate>
+    
+    <atom:link href="https://jackiebinya.github.io/tags/validations/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Joi Tutorial-Using @hapi/joi version 16.1.7 to validate a request body in a RESTful API.</title>
+      <link>https://jackiebinya.github.io/posts/validations/validating-with-hapi-joi/</link>
+      <pubDate>Mon, 08 Jun 2020 08:47:42 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/validations/validating-with-hapi-joi/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;h3 id=&#34;why-validate&#34;&gt;Why validate?&lt;/h3&gt;
+&lt;p&gt;Before we even get started I know there is someone thinking, &amp;quot; Why should I bother with validations in the backend? Validations should be done in the front end, after all, we have inbuilt &lt;a src=&#34;https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation&#34; class=&#34;article-link&#34;&gt;HTML5 form validations&lt;/a&gt;, why must I validate twice?
+Well, it is good practice when designing your API to always design it in isolation never make any assumptions, cause, in all honesty, you never know who is going to consume your API.&lt;/p&gt;
+&lt;p&gt;So in a RESTful  API, you typically have at least one  HTTP POST method that accepts a payload of user data in json format. Now the question arises how then do we ensure that the data we receive is of the desired type and in the correct format before we persist that data in our application&amp;rsquo;s database?&lt;/p&gt;
+&lt;p&gt;To do that we use middleware functions normally referred to as validators. The goal is to ensure that your application&amp;rsquo;s validators cover all edge cases so as to protect the integrity of your database. And to do that you use either regular expressions or alternately handy modules like @hapi/joi which make input validations in Javascript easy, seamless and fast.&lt;/p&gt;
+&lt;h3 id=&#34;what-then-is-hapijoi&#34;&gt;What then is @hapi/joi&lt;/h3&gt;
+&lt;p&gt;From the official documentation from &lt;a src=&#34;https://www.npmjs.com/package/@hapi/joi&#34; class=&#34;article-link&#34;&gt;npmjs&lt;/a&gt;, @hapi/joi is defined as:&amp;quot;
+&lt;strong&gt;The most powerful schema description language and data validator for JavaScript.&lt;/strong&gt;
+joi is part of the hapi ecosystem and was designed to work seamlessly with the hapi web framework and its other components (but works great on its own or with other frameworks)&amp;hellip;&amp;quot;&lt;/p&gt;
+&lt;p&gt;Well to break it down, @hapi/joi is a module that is used to define a schema or blueprint of Javascript objects. Once the schema is defined, you then can use Joi&amp;rsquo;s handy methods that come bundled with it, to validate any other objects against the schema. It was designed for the hapi ecosystem but works well with other frameworks of which for our purposes we will use it in an &lt;a src=&#34;https://expressjs.com/&#34; class=&#34;article-link&#34;&gt;express&lt;/a&gt; server.&lt;/p&gt;
+&lt;h3 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h3&gt;
+&lt;p&gt;In your project &lt;a src=&#34;https://dev.to/nubian_geekess/setting-up-a-basic-express-server-in-e6-bootstrapped-with-eslint-and-airbnb-style-guide-1g6i&#34; class=&#34;article-link&#34;&gt;set up a basic express&lt;/a&gt; server, and then install @hapi/joi by running the command &lt;code&gt;npm i @hapi/joi&lt;/code&gt; on the terminal. This will install the current latest version of @hapi/joi of which at the time of publishing this article was version 16.1.7&lt;/p&gt;
+&lt;p&gt;In the root of your project create files:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;schema.js&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;validators.js&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the file &lt;em&gt;schema.js&lt;/em&gt; we will define our schema and in the file &lt;em&gt;validators.js&lt;/em&gt; we will define our validator middleware functions.&lt;/p&gt;
+&lt;p&gt;A schema can be defined as either a Joi type or a simple Javascript object whose keys are joi types.&lt;/p&gt;
+&lt;h3 id=&#34;what-are-joi-types&#34;&gt;What are Joi types&lt;/h3&gt;
+&lt;p&gt;Joi has inbuilt types e.g. Joi.object(), Joi.string(), Joi.array(), Joi.date() etc. More types are found listed in the official documentation.&lt;/p&gt;
+&lt;h3 id=&#34;defining-a-schema&#34;&gt;Defining a schema&lt;/h3&gt;
+&lt;p&gt;In practical applications, the schema is usually defined as a Joi object, whose keys have values which are Joi types and have optional constraints chained to them. Below are two ways I use to define a validation schema in &lt;em&gt;schema.js&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;method-one&#34;&gt;Method One&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/zz68fr9nkt1zm076kmwd.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;method-two&#34;&gt;Method Two&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/6r1opkiw96xqh6h86nvk.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The above schema definitions are equal whatever method you use totally depends on personal preference.&lt;/p&gt;
+&lt;h4 id=&#34;validating-a-request-body-payload&#34;&gt;Validating a request body payload&lt;/h4&gt;
+&lt;p&gt;Before we are able to perform any validations we should be able to communicate with our server, and to do that on &lt;em&gt;app.js&lt;/em&gt; we add a route &lt;em&gt;localhost:5000/signup&lt;/em&gt; as shown in the figure below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/v7wl80fhnbpfaft9l0se.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When it comes to performing actual validations the Joi module provides various different methods we can use to validate our data as shown below:&lt;/p&gt;
+&lt;h5 id=&#34;synchronous-validations&#34;&gt;Synchronous validations&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/8fdj5mr2hi8ug8bjfsgi.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;async-validations&#34;&gt;Async validations&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/njeedj3dywzot4jl746p.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;validating-schema-by-using-_joiassert_&#34;&gt;Validating schema by using &lt;em&gt;Joi.assert()&lt;/em&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/k99njk5kkx5b9efy3nws.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When we run our server and send a payload via Postman as shown in the figure below using any of the above validators we get the same output. Joi by default aborts validations once the first rule is broken.
+&lt;a href=&#34;https://thepracticaldev.s3.amazonaws.com/i/msep90upupi47klei48b.png&#34;&gt;Alt Text&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Alternately if you want to list all the validation errors in the payload, you can pass an option of &lt;code&gt;{ abortEarly: false }&lt;/code&gt;, to any of the above-listed Joi validator methods, this is usually handy for debugging purposes. For example:
+&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/h1tkqanmpdh6tot4afsv.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If we start the server and on Postman send the same payload as above to the endpoint &lt;em&gt;POST localhost:5000/signup&lt;/em&gt;, as a response we get a detailed error message:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+    &amp;#34;error&amp;#34;: {
+        &amp;#34;_original&amp;#34;: {
+            &amp;#34;username&amp;#34;: &amp;#34;&amp;#34;,
+            &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;
+        },
+        &amp;#34;details&amp;#34;: [
+            {
+                &amp;#34;message&amp;#34;: &amp;#34;\&amp;#34;username\&amp;#34; is not allowed to be empty&amp;#34;,
+                &amp;#34;path&amp;#34;: [
+                    &amp;#34;username&amp;#34;
+                ],
+                &amp;#34;type&amp;#34;: &amp;#34;string.empty&amp;#34;,
+                &amp;#34;context&amp;#34;: {
+                    &amp;#34;label&amp;#34;: &amp;#34;username&amp;#34;,
+                    &amp;#34;value&amp;#34;: &amp;#34;&amp;#34;,
+                    &amp;#34;key&amp;#34;: &amp;#34;username&amp;#34;
+                }
+            },
+            {
+                &amp;#34;message&amp;#34;: &amp;#34;\&amp;#34;email\&amp;#34; is not allowed to be empty&amp;#34;,
+                &amp;#34;path&amp;#34;: [
+                    &amp;#34;email&amp;#34;
+                ],
+                &amp;#34;type&amp;#34;: &amp;#34;string.empty&amp;#34;,
+                &amp;#34;context&amp;#34;: {
+                    &amp;#34;label&amp;#34;: &amp;#34;email&amp;#34;,
+                    &amp;#34;value&amp;#34;: &amp;#34;&amp;#34;,
+                    &amp;#34;key&amp;#34;: &amp;#34;email&amp;#34;
+                }
+            }
+        ]
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;custom-error-messages&#34;&gt;Custom Error Messages&lt;/h3&gt;
+&lt;p&gt;So far we have been sending default Joi error messages in the response object which look like:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+    &amp;#34;error&amp;#34;: &amp;#34;\&amp;#34;username\&amp;#34; is not allowed to be empty&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The error message above is difficult to understand for the end-user. Error messages must be short and easy to understand. So to customize error messages on our schema definition in &lt;em&gt;schema.js&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/3p6rmx38ty5dmjmvkzb8.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As you can see above in the schema we modified the value of the &lt;em&gt;username&lt;/em&gt; key and added an extra rule/constraints &lt;code&gt;messages()&lt;/code&gt;.
+&lt;code&gt;messages()&lt;/code&gt; takes an object as an argument, whose keys are validation error types and their corresponding values are custom error messages.&lt;/p&gt;
+&lt;p&gt;Now to view our customized error messages on the response object:&lt;/p&gt;
+&lt;p&gt;We start our server then on Postman, in the payload we post an empty string as a &lt;em&gt;username&lt;/em&gt;. The response:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/968kwglta9p0w514if1e.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;And then, we intentionally post an invalid type as a &lt;em&gt;username&lt;/em&gt; to test the other custom error message, which in this case is a number. The response:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/p8g810rl8ynfv10m0ane.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;So our error messages have been successfully customized.&lt;/p&gt;
+&lt;h3 id=&#34;validating-strings&#34;&gt;Validating strings&lt;/h3&gt;
+&lt;p&gt;The Joi module provides several constraints we can use to increase validations on string data types which allow us to cover more edge cases. The most common ones I often use are in the example below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/mpwg1u6j8mtvlnzhxab5.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the example in the figure above:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;string.trim()&lt;/code&gt; removes any whitespace before and after the &lt;code&gt;username&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;string.min()&lt;/code&gt; specifies the minimum number of characters for &lt;code&gt;username&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;string.max()&lt;/code&gt; specifies the maximum number of characters for &lt;code&gt;username&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;string.regex()&lt;/code&gt; specifies a regular expression the &lt;code&gt;username&lt;/code&gt; must match against.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;validating-numbers&#34;&gt;Validating numbers&lt;/h3&gt;
+&lt;p&gt;The important thing to note when validating numbers is to pass the option
+&lt;code&gt;{ convert: false }&lt;/code&gt; to your default Joi validator functions. It&amp;rsquo;s especially effective when validating decimals.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/03gn1yqze9nun0r7v548.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the example in the figure above:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;number.min()&lt;/code&gt; specifies the minimum number for &lt;code&gt;age&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;number.max()&lt;/code&gt; specifies the maximum number for &lt;code&gt;age&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;number.positive()&lt;/code&gt; specifies that only positive numbers are accepted for the &lt;code&gt;price&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;number.precision(limit)&lt;/code&gt; specifies the maximum permissible number of decimal places for the &lt;code&gt;price&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note&lt;/em&gt; The purpose of this article was to hopefully get you started on using the Joi modules for validations, it does not in any way cover everything about performing validations using the module, to learn more, I encourage you to go over the &lt;a src=&#34;https://hapi.dev/family/joi/?v=16.1.7#string&#34; class=&#34;article-link&#34;&gt;official documentation.&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;This post was originally published on &lt;a class=&#34;article-link&#34; href=&#34;https://dev.to/jacqueline/using-hapi-joi-version-16-1-7-to-validate-a-request-body-in-a-restful-api-bje&#34;&gt;dev.to&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

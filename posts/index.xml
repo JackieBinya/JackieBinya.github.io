@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Jacqueline Binya</title>
+    <link>https://jackiebinya.github.io/posts/</link>
+    <description>Jacqueline Binya (Posts)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Aug 2022 09:38:51 +0200</lastBuildDate>
+    
+    <atom:link href="https://jackiebinya.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Im Back</title>
+      <link>https://jackiebinya.github.io/posts/im-back/</link>
+      <pubDate>Thu, 18 Aug 2022 09:38:51 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/im-back/</guid>
+      <description>&lt;p&gt;Well initially I was only meant to go on small haitus but its been 2 years since my last blog in this site!&lt;/p&gt;
+&lt;p&gt;I have been insanely busy these past 2 years, they feel like a blur in my memory, where did the time go? My responsibilities have since increased, I amworking fulltime as a developer and technical writer that takes most of my time and I also been working on upskilling trying to get better by the day. All this time my blog was always at the back of my mind but I procrastinated to get on with writing because, I switched laptops several times since my last blog, writing a blog would mean I would have to set up my local development environment for Hugo I just found the thought of it unpleasent. I am not exactly sure why cause today it took me less that 15mins to get everything running in my mac just now. There was a time I thought about migration the blog from Hugo to Javascript and use a framework Gastby or Nextjs, phew! The past 2 years have definitely been crazy indeed.&lt;/p&gt;
+&lt;p&gt;Onward looking I want to commit to writing more and document my life and learnings as that is the intended purpose of the blog and also showcase my skills. I am excited about the future and its prospects.&lt;/p&gt;
+&lt;p&gt;My wins in the past 2 years:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I lived through a pandemic&lt;/li&gt;
+&lt;li&gt;I learnt a ton of things( I cant wait to document what I learned the past couple of years)&lt;/li&gt;
+&lt;li&gt;I bought a Mac Book Pro 16 gig RAM 512 SSD finally!!!!&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using SVGs in Vuejs made simple</title>
+      <link>https://jackiebinya.github.io/posts/vue/using-svg/</link>
+      <pubDate>Mon, 04 Jan 2021 02:19:11 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/vue/using-svg/</guid>
+      <description>&lt;h2 id=&#34;images-of-the-web&#34;&gt;Images of the web&lt;/h2&gt;
+&lt;p&gt;The most commonly used image formats in the web include bitmap, svg and webp.&lt;/p&gt;
+&lt;h3 id=&#34;bitmap&#34;&gt;Bitmap&lt;/h3&gt;
+&lt;p&gt;Bitmap images are made up from tiny dots called pixels. Each pixel is actually a square which is assigned a specific color and is arranged in a pattern to form the image. When you zoom in on a bitmap you can actually see each pixel. Image formats like JPEG, PNG and GIF are all bitmap. Bitmap format is suited for highly detailed images like photographs.&lt;/p&gt;
+&lt;h3 id=&#34;webp&#34;&gt;WebP&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/speed/webp&#34;&gt;WebP&lt;/a&gt; is a highly perfomant image format created by Google it was created to replace bitmap.&lt;/p&gt;
+&lt;h3 id=&#34;svg&#34;&gt;SVG&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1611902092/svg-pic_qexrsj.png&#34; alt=&#34;SVG&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Scalable Vector Graphics (svg) is a vector image format are created from mathematical formula they don&amp;rsquo;t come bundled with information about how they should be painted that can be computed in the rendering device. SVGs are lighter than bitmap and they are used to create sharp images which scale e.g icons, illustrations etc.&lt;/p&gt;
+&lt;h4 id=&#34;the-syntax-of-svg&#34;&gt;The syntax of SVG&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;SVG are defined in XML: a markup language.&lt;/li&gt;
+&lt;li&gt;The diagram below shows an example of a SVG in raw code:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1610570036/svg-sample_k7bupk.png&#34; alt=&#34;&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;Lets analyse the definition:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt; 💡SVG usually consists of a variety of elements e.g. &amp;lt;path&amp;gt;, &amp;lt;/style&amp;gt;,&amp;lt;circle&amp;gt; etc. nested inside an svg element. The inner elements enclosed inside the svg tags are used to describe specific properties of the SVG whereas the outer svg element which is normally referred to as the root element basically instantiate and terminate an instance of SVG.The root element may contain attributes like viewBox,  class, id, fill, height, width and xmlns. The id and class attributes are usually used to extend functionality in Javascript or to style the svg element. The id attribute may also be used in XML specific configurations like the setting up of links. The xmlns attribute is a XML namespace, it is used by the browser to determine how to render the SVG.&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;using-svgs-in-vuejs&#34;&gt;Using SVGs in Vuejs&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Generally SVGs can can be incorporated in an HTML document:
+&lt;ul&gt;
+&lt;li&gt;inline or,&lt;/li&gt;
+&lt;li&gt;as external standalone files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The above listed methods can be used in Vuejs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But before we explore how we can incorporate SVG in a Vuejs web app. First let us create a simple Vuejs application we will use to demonstrate how to embed SVG in Vuejs.&lt;/p&gt;
+&lt;p&gt;We will be using Vue CLI to bootstrap our project.&lt;/p&gt;
+&lt;p&gt;Requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Nodejs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cli.vuejs.org/&#34;&gt;Vue CLI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To create a Vuejs project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;On your terminal type:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vue create &amp;lt;project-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Replace &lt;code&gt;&amp;lt;project-name&amp;gt;&lt;/code&gt; with a unique name for your project. My project is name &lt;code&gt;svg-tutorial&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You will then be prompted to pick a preset for your app, just press Enter to choose the default preset which at the time of publishing this article is: &lt;code&gt;Default ([Vue 2] babel, eslint)&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Then wait as Vue CLI creates a Vuejs project for you.&lt;/li&gt;
+&lt;li&gt;When you project is successfully created🎉, you will get the message below in your terminal:
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1611909294/sucesssful-vuejs-install_ddlvl7.png&#34; alt=&#34;Successful vuejs project created&#34;&gt;
+The message contains handy commands to get you started!&lt;/li&gt;
+&lt;li&gt;Let&amp;rsquo;s take a look at our project&amp;rsquo;s file structure paying special attention to the &lt;code&gt;src&lt;/code&gt; folder since most of our work pertaining to SVG will be restricted to that folder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;
+.
+├── babel.config.js
+├── node_modules
+├── package.json
+├── package-lock.json
+├── public
+├── README.md
+└── src
+    ├── App.vue
+    ├── assets
+    │   └── logo.png
+    ├── components
+    │   └── HelloWorld.vue
+    └── main.js
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;I have created a sample SVG to use in the interactive examples provided.. You may go ahead and download it by clicking this
+&lt;a href=&#34;https://jackiebinya.github.io/posts/css/svg-sample.svg&#34; download=&#34;sample&#34; class=&#34;article-link&#34;&gt;link&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You may choose to rename the file, then proceed to add it to the root of the &lt;code&gt;src/assets&lt;/code&gt; folder, such that the structure of the &lt;code&gt;src&lt;/code&gt; folder is similar to the one below:&lt;/p&gt;
+&lt;pre&gt;
+.
+├── App.vue
+├── assets
+│   ├── logo.png
+│   └── sample.svg
+├── components
+│   └── HelloWorld.vue
+└── main.js
+&lt;/pre&gt;
+&lt;h4 id=&#34;inline-svg&#34;&gt;Inline SVG&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1611922129/inline-svg_jlerxx.png&#34; alt=&#34;Inline SVG in Vuejs&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When using this method you include the &lt;code&gt;svg&lt;/code&gt; directly in your markup. It&amp;rsquo;s important to mention that when the &lt;code&gt;svg&lt;/code&gt; is directly embedded in the document or template as in the case of Vuejs ,there is no need to include the &lt;code&gt;xlmns&lt;/code&gt; attribute.&lt;/p&gt;
+&lt;p&gt;The pros of using this method are that you can use CSS to style your &lt;code&gt;svg&lt;/code&gt; and use Javascript to extend its functionality just as you would a normal HTML element.&lt;/p&gt;
+&lt;p&gt;The main drawback of this method is that if your &lt;code&gt;svg&lt;/code&gt; is large or when you have a lot of &lt;code&gt;svg&lt;/code&gt; your template, your template becomes cluttered. In that case it would be better incorporate SVGs as standalone files as it is explained in the next section.&lt;/p&gt;
+&lt;h4 id=&#34;external-svg&#34;&gt;External SVG&lt;/h4&gt;
+&lt;p&gt;To embed an external SVG in your Vuejs template you use the methods listed below and always ensure that the &lt;code&gt;xlmns&lt;/code&gt; attribute is included in the root element of the SVG otherwise none of the methods provided will work!&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;💡
+  xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;(i) Embedding an external svg as an image element in a Vuejs template:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1611904084/svg-img-implementantion_bhxx8s.png&#34; alt=&#34;Embedding an external svg as an image element in a Vuejs template&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: Replace the &lt;code&gt;&amp;lt;file-name&amp;gt;&lt;/code&gt; with the unique name you gave to the svg resource you downloaded above.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Using this method limits how you can manipulate the &lt;code&gt;svg&lt;/code&gt; as it really doesn&amp;rsquo;t exist in the document but it is encapsulated in the&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; element. So at most you can only manipulate it as you would a normal image.&lt;/p&gt;
+&lt;p&gt;The cons of this method include limitations in styling and in extending the functionality of SVGs and in addition to that if you are dealing with a lot of SVGs in your template it becomes rather cumbersome to keep wrapping them in image elements.&lt;/p&gt;
+&lt;p&gt;(ii) Using &lt;code&gt;SVG Loaders&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Vuejs uses Webpack as an asset bundler. Webpack uses a loader for each file type it handles. The loaders for the common file types usually come pre-configured whenever you use Vue CLI to bootstrap your project. What that means is that when you import those file types they can be automatically read. But unfortunately &lt;code&gt;.svg&lt;/code&gt; loaders do not come pre-configured so you have to download them from &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;npm&lt;/a&gt; then configure them manually.&lt;/p&gt;
+&lt;p&gt;There are many modules available on npm which are svg vuejs loaders. In this example we will be using the &lt;a href=&#34;https://www.npmjs.com/package/vue-svg-loader&#34;&gt;vue-svg-loader&lt;/a&gt;. The set up instructions are listed in the link provided, for those who have never installed and configured a module in Vuejs follow the instructions below:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The instructions below are only suited for a project bootstrapped with Vue CLI.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To install the module type the command below in your terminal:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm i -D vue-svg-loader vue-template-compiler
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;In the root of you project directory, create a &lt;code&gt;vue.config.js&lt;/code&gt; file and copy and paste the code below:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;module.exports = {
+  chainWebpack: (config) =&amp;gt; {
+    const svgRule = config.module.rule(&amp;#39;svg&amp;#39;);
+ 
+    svgRule.uses.clear();
+ 
+    svgRule
+      .use(&amp;#39;babel-loader&amp;#39;)
+      .loader(&amp;#39;babel-loader&amp;#39;)
+      .end()
+      .use(&amp;#39;vue-svg-loader&amp;#39;)
+      .loader(&amp;#39;vue-svg-loader&amp;#39;);
+  },
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ensure that you save your changes.&lt;/p&gt;
+&lt;p&gt;Congrats!!!🎊&lt;/p&gt;
+&lt;p&gt;You have successfully installed and configured the settings of the &lt;code&gt;vue-svg-loader&lt;/code&gt; module.&lt;/p&gt;
+&lt;p&gt;Now, let&amp;rsquo;s proceed to learn how we can use the &lt;code&gt;vue-svg-loader&lt;/code&gt; module to embed SVG in Vuejs.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1611925461/using-svg-loader_ximunw.png&#34; alt=&#34;using SVG loaders to embed svg in Vuejs&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You first remove all the boilerplate code from the &lt;code&gt;App.vue&lt;/code&gt; file in the &lt;code&gt;src&lt;/code&gt; directory.&lt;/li&gt;
+&lt;li&gt;Then you copy the code in diagram above into &lt;code&gt;App.vue&lt;/code&gt;, and save your changes.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;svg&lt;/code&gt; I used exists as a standalone file in the assets folder as is named &lt;code&gt;sample.svg&lt;/code&gt;, so depending on what you named your .svg file you may need to tweak the code above.&lt;/li&gt;
+&lt;li&gt;Run the command below on your terminal, and then on your browser visit &lt;code&gt; http://localhost:8080/&lt;/code&gt; to view the Vuejs app with the embedded SVG 🚀.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm run serve
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The pros of using this method are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your template is kept clean,&lt;/li&gt;
+&lt;li&gt;And there are no limitations on how you can style or extend the functionality of your svg.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/hA7ESX7FsE4&#34; class=&#34;article-link&#34;&gt;What are Scalable Vector Graphics (SVG) &amp;amp; how are they special? | Web Demystified Episode 4&lt;a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My Google Season of Docs(GSOD) experience in a nutshell </title>
+      <link>https://jackiebinya.github.io/posts/gsod-2020/gsod-report/</link>
+      <pubDate>Thu, 03 Dec 2020 05:28:31 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/gsod-2020/gsod-report/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;A GSOD-2020 project report prepared by Jacqueline Binya on 29 November 2020&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;During the Google Season of Docs (GSOD) 2020, I contributed to the Creative Commons&amp;rsquo; &lt;em&gt;WordPress base theme usage guide&lt;/em&gt; project.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base&#34; class=&#34;article-link&#34;&gt;Creative Commons (CC) Base&lt;/a&gt; is a universal WordPress Theme used to build front facing websites for CC. My role as a technical writer was to create community facing documentation for the CC Base theme collaboratively with the engineering team.&lt;/p&gt;
+&lt;p&gt;This involved creating the content for the docs, creating all illustrative media and also building the site used to host the documentation.&lt;/p&gt;
+&lt;h2 id=&#34;planning---community-bonding-phase&#34;&gt;Planning - Community Bonding phase&lt;/h2&gt;
+&lt;p&gt;During the GSOD - Community Bonding phase, I had a meeting with my mentor Hugo Solar in which we strategized on how to effectively build the docs: this included refining and polishing up the project&amp;rsquo;s objectives and action plan based off the &lt;a href=&#34;https://docs.google.com/document/d/1XmIsMTLstbhRRSaNFP538YOXJiS0G5QrN6EzuqJfRy4/edit&#34; class=&#34;article-link&#34;&gt;proposal&lt;/a&gt; I submitted for my GSOD application and also, establishing a workflow for doc development.&lt;/p&gt;
+&lt;p&gt;We decided to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a &lt;a href=&#34;https://docs.google.com/document/d/1XmIsMTLstbhRRSaNFP538YOXJiS0G5QrN6EzuqJfRy4/edit?usp=sharing&#34; class=&#34;article-link&#34;&gt;Google Doc&lt;/a&gt; to persist all the draft content which was accessible to all the team members&lt;/li&gt;
+&lt;li&gt;Create a &lt;a href=&#34;https://docs.google.com/document/d/19FYiB3zVo86_I7os7sO6ZHyZf8eN17x6OFq3WqxDQYY/edit?usp=sharing&#34; class=&#34;article-link&#34;&gt;tracker document&lt;/a&gt; to manage and evaluate progress.&lt;/li&gt;
+&lt;li&gt;I prepared &lt;a href=&#34;https://www.figma.com/file/roAl4FwMwFQHhSDHpm9rk5/CC-WP-theme-frame?node-id=0%3A1&#34; class=&#34;article-link&#34;&gt;wireframes&lt;/a&gt; for the docs site.&lt;/li&gt;
+&lt;li&gt;We chose a documentation tool we wanted to use to build the docs site.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;we-create-the-docs---content-creation&#34;&gt;We Create the Docs - Content Creation&lt;/h2&gt;
+&lt;p&gt;To build the docs site we used &lt;a href=&#34;https://gridsome.org/starters/jamdocs/&#34; class=&#34;article-link&#34;&gt;JamDocs&lt;/a&gt; a &lt;a href=&#34;https://gridsome.org/&#34; class=&#34;article-link&#34;&gt;Gridsome&lt;/a&gt; theme. We had to adapt the theme: JamDocs, so as to make it meet our own specific needs, this involved overhauling the theme&amp;rsquo;s default styles and also, changing the functionality of some of the features in the theme.&lt;/p&gt;
+&lt;p&gt;With regards to the doc development process: Its important to mention that the GSOD spans for 13 weeks and in the &lt;a href=&#34;https://docs.google.com/document/d/1XmIsMTLstbhRRSaNFP538YOXJiS0G5QrN6EzuqJfRy4/edit&#34; class=&#34;article-link&#34;&gt;proposal&lt;/a&gt; each week&amp;rsquo;s expected deliverables are outlined. So to develop the docs for each week, we would start off with a team meeting to discuss the content for the section we were working on that particular week, then next I would create draft content in a Google Doc during the course of the week. My mentors: Hugo Solar and Timid Robot Zehta, would then review the draft and suggest changes asynchronously, then I would then implement feedback gathered. Once the draft content was approved I then would migrate it to the docs site.&lt;/p&gt;
+&lt;p&gt;The mentors were readily available to answer questions on various communication channels and promptly gave me the assistance I required.&lt;/p&gt;
+&lt;p&gt;The codebase for the documentation of CC Base theme is available in the &lt;a href=&#34;https://github.com/creativecommons/wp-theme-base&#34; class=&#34;article-link&#34;&gt;creative-commons/creativecommons-base&lt;/a&gt; repository on Github, in a git branch called &lt;em&gt;docs&lt;/em&gt;. All content related to the documentation is persisted in that branch.&lt;/p&gt;
+&lt;h3 id=&#34;tech-stack&#34;&gt;Tech Stack&lt;/h3&gt;
+&lt;p&gt;As it was mentioned we used Gridsome a static generator for &lt;a href=&#34;https://vuejs.org/&#34; class=&#34;article-link&#34;&gt;Vuejs&lt;/a&gt;. We chose Gridsome because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We wanted to lower the barrier of entry to contributing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gridsome/Vuejs community is very active, help is but a click away.&lt;/li&gt;
+&lt;li&gt;The Gridsome official documentation is very resourceful and well maintained.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gridsome offers support for &lt;a href=&#34;https://www.markdownguide.org/getting-started/&#34;&gt;Markdown&lt;/a&gt; (a markup language) through plugins, all the content pages in the site are written using Markdown.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Time Constraint: This project is a short running project which has to be completed in a 3 month period. Through the use of JamDocs, a Gridsome templating theme as well various plugins it was easy and fast to get started. We were able to add more functionality to the theme with minimal effort.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ease of integrating &lt;a href=&#34;https://cc-vocabulary.netlify.app/&#34; class=&#34;article-link&#34;&gt;CC Vocabulary&lt;/a&gt; with Gridsome: it is a requirement that the general aesthetics of all front facing Creative Commons applications is derived from the CC Vocabulary Design System. Major cons for using a design system include ensuring uniformity in design for all front facing CC products.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tools-used&#34;&gt;Tools Used&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.figma.com/&#34; class=&#34;article-link&#34;&gt;Figma&lt;/a&gt;:
+Figma was used to make assets(banners, logos and diagrams) in the theme. The illustrative media was created with accessibility in mind and all the topography used in the illustrative assets was derived from the CC Vocabulary.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html&#34; class=&#34;article-link&#34;&gt;VokoScreenNG&lt;/a&gt;: an open source screencast recording tool used to record all the screen cast demos available in the docs site.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;(https://shotcut.org/&#34; class=&#34;article-link&#34;&gt;ShortCut&lt;/a&gt;: an open source video editing tool.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;please-find-listed-below-the-pull-requests-prs-i-opened-during-gsod&#34;&gt;Please find listed below the pull requests (PRs) I opened during GSOD:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/25&#34;&gt;Initial Project setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/28&#34; class=&#34;article-link&#34;&gt;Adds linter and code formatter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/30&#34; class=&#34;article-link&#34;&gt;Adds content for the overview section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/31&#34; class=&#34;article-link&#34;&gt;Updates the Overview Section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/32&#34; class=&#34;article-link&#34;&gt;Adds the getting started section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/33&#34; class=&#34;article-link&#34;&gt;Adds the usage guide section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/36&#34; class=&#34;article-link&#34;&gt;Clean Sidebar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/38&#34; class=&#34;article-link&#34;&gt;Fix favicon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/39&#34; class=&#34;article-link&#34;&gt;Copy to Clipboard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/40&#34; class=&#34;article-link&#34;&gt;Fix logo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/46&#34; class=&#34;article-link&#34;&gt;Customization content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/47&#34; class=&#34;article-link&#34;&gt;Adds copy to the clipboard feature&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/48&#34; class=&#34;article-link&#34;&gt;Advanced Customizations section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/49&#34; class=&#34;article-link&#34;&gt;Updates content for the update theme section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/50&#34; class=&#34;article-link&#34;&gt;Adds contributing content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/52&#34; class=&#34;article-link&#34;&gt;Fix scroll markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/54&#34; class=&#34;article-link&#34;&gt;Fixes hamburger in mobile and removes redundant styles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/55&#34; class=&#34;article-link&#34;&gt;Removes the static folder its unused&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/creativecommons/creativecommons-base/pull/56&#34; class=&#34;article-link&#34;&gt;Updates the site name and homepage content&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;cc-base-docs---the-outcome&#34;&gt;CC Base docs - The Outcome&lt;/h2&gt;
+&lt;p&gt;The docs are live 🎉 and are found this url: &lt;a href=&#34;https://cc-wp-theme-base.netlify.app/&#34;&gt;https://cc-wp-theme-base.netlify.app/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;my-lessons&#34;&gt;My lessons&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Working as part of a remotely distributed team I learned a lot about best practices for effective async communication.&lt;/li&gt;
+&lt;li&gt;I also learned about etiquette of participating in online meetings: this was especially important skill to learn in 2020 as remote work has since become the norm.&lt;/li&gt;
+&lt;li&gt;I was writing prior to gsod but contributing to an org like creative commons in a team with senior developers there was a lot of transfer or knowledge as consequence my writing has immensely improved.&lt;/li&gt;
+&lt;li&gt;I learned a new technology: WordPress. This was a challenging feat but I am happy that I persisted and grateful for all the help I got from my team.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Content Creation Phase: Creative Commons Base Usage Guide</title>
+      <link>https://jackiebinya.github.io/posts/gsod-2020/cc-base/content-creation/</link>
+      <pubDate>Wed, 18 Nov 2020 01:24:54 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/gsod-2020/cc-base/content-creation/</guid>
+      <description>&lt;p&gt;For the past couple of weeks we have been actively creating content for the Creative Commons Base Usage Guide. Currently the draft content is under final review before it is migrated to the main docs site.&lt;/p&gt;
+&lt;h2 id=&#34;our-strategy&#34;&gt;Our Strategy&lt;/h2&gt;
+&lt;p&gt;Our main goal in creating the docs is to create rich, intuitive, engaging, and beautifully presented community facing documentation for the Creative Commons Base.&lt;/p&gt;
+&lt;p&gt;In alignment with the defined goal, our core focus is to create the docs collaboratively.&lt;/p&gt;
+&lt;p&gt;The CC WordPress team consists of I, Jacqueline Binya, &lt;a href=&#34;https://github.com/hugosolar&#34;&gt;Hugo Solar&lt;/a&gt; and &lt;a href=&#34;&#34;&gt;Timid Robot Zehta&lt;/a&gt;. Although our team is small it is quite diverse. It consists of a diverse mix of technical skills: I am a junior developer whereas Hugo and Timid are way senior. We also have non-native and native English speakers.&lt;/p&gt;
+&lt;p&gt;Diversity is important as we hope to create a high quality product that caters for everyone.&lt;/p&gt;
+&lt;p&gt;My role as the tech writer/frontend developer is to create the content: write the documentation, build the docs site and also to create all illustrative media.&lt;/p&gt;
+&lt;p&gt;During the content creation phase, the first step involved creating the skeleton of the actual docs site. We created a git branch called &lt;em&gt;docs&lt;/em&gt; within the &lt;a href=&#34;https://github.com/creativecommons/wp-theme-base&#34;&gt;creative-commons/wp-theme-base&lt;/a&gt; repository. All content related to the documentation is persisted in that branch. So,please feel free to contribute. We then used &lt;a href=&#34;https://gridsome.org/starters/jamdocs/&#34;&gt;JamDocs&lt;/a&gt;, a &lt;a href=&#34;https://gridsome.org/&#34;&gt;Gridsome&lt;/a&gt; theme to quickly scaffold the site. We had to adapt the theme so as to make it meet our own specific needs, this involved overhauling the styles and changing the functionality of some of the features in the theme. After that was completed, we then created a &lt;a href=&#34;https://docs.google.com/document/d/1yfAQGG70T8BUhZYWglAlQ_lTo4_tYpyjhPN5FsZnSvI/edit?usp=sharing&#34;&gt;Google Doc&lt;/a&gt; we use for collaboratively writing the draft content for the docs site.&lt;/p&gt;
+&lt;h2 id=&#34;tech-stack&#34;&gt;Tech Stack&lt;/h2&gt;
+&lt;p&gt;As it was mentioned we used &lt;a href=&#34;https://gridsome.org/&#34;&gt;Gridsome&lt;/a&gt; a static generator for &lt;a href=&#34;https://vuejs.org/&#34;&gt;Vuejs&lt;/a&gt;. We chose Gridsome because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We wanted to lower the barrier of entry to contributing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gridsome/Vuejs community is very active, help is but a click away.&lt;/li&gt;
+&lt;li&gt;The Gridsome official documentation is very resourceful and well maintained.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gridsome is highly flexible: The content for the actual documentation is written in &lt;a href=&#34;https://www.markdownguide.org/getting-started/&#34;&gt;Markdown&lt;/a&gt; but using &lt;a href=&#34;https://gridsome.org/plugins/@gridsome/vue-remark&#34;&gt;@gridsome/vue-remark&lt;/a&gt;, which is a Gridsome plugin, we are able to use javascript in Markdown. We intend to include a copy to the clipboard Vuejs component in the site.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Time Constraint: This project is a short running project which has to be completed in a 3 month period. Through the use of JamDocs, a Gridsome templating theme as well various plugins it was easy and fast to get started we were able to add more functionality to the theme with minimal effort.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ease of integrating &lt;a href=&#34;https://cc-vocabulary.netlify.app/&#34;&gt;CC Vocabulary&lt;/a&gt; with Gridsome: it is a requirement that the general aesthetics of all front facing Creative Commons applications is derived from the CC Vocabulary Design System. Major cons for using a design system include the ensuring uniformity in design for all front facing CC products.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tools-used&#34;&gt;Tools Used&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.figma.com/&#34;&gt;Figma&lt;/a&gt;:
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1605656295/has-widgets_y3at9g.png&#34; alt=&#34;An example of an illustrative asset made on Figma&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Figma was used to make assets(banners, logos and illustrations) in the theme. The illustrative media was created with accessibility in mind and all the topography used in the illustrative assets was derived from the CC Vocabulary.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html&#34;&gt;VokoScreenNG&lt;/a&gt;: an open source screencast recording tool used to record all the screen cast demos available in the docs site.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://shotcut.org/&#34;&gt;ShortCut&lt;/a&gt;: an open source video editing tool.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-comes-next-&#34;&gt;What comes next ?&lt;/h2&gt;
+&lt;p&gt;After the final review is completed and all feedback implemented we will migrate all the content to the main docs site.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Stay tuned for an update about the launch of the CC WP Theme Base docs site.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GraphQL vs REST</title>
+      <link>https://jackiebinya.github.io/posts/lets-learn-graphql/lesson-2/</link>
+      <pubDate>Sat, 03 Oct 2020 17:50:45 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/lets-learn-graphql/lesson-2/</guid>
+      <description>&lt;p&gt;Historically REST is the accepted standard for designing web APIs.&lt;/p&gt;
+&lt;p&gt;The main advantages of using REST were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;REST is stateless meaning every server call is independent of any other network calls made to the server. The server will not persist any state about the queries it receives.&lt;/li&gt;
+&lt;li&gt;It provides a structured way to query resources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;The problem&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;REST was intended to be a strict specification used to design APIs but in reality, it was wildly interpreted: most APIs described as being Restful aren&amp;rsquo;t really Restful, they don’t adhere to the strict specification&lt;/li&gt;
+&lt;li&gt;REST APIs have shown to be too inflexible to keep up with the rapidly changing requirements on the client apps that access them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;The Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GraphQL was designed to cope with the need for increased flexibility and efficient client-server interaction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;demo-of--a-query-rest-vs-graphql&#34;&gt;Demo of  a query REST vs GraphQL&lt;/h2&gt;
+&lt;p&gt;Say we have a blogging application, such that for each blogger’s page:  we render the blogger’s name, titles of their posts, and their latest three followers. As shown below:
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1601742427/example-blogging-app_xorm3b.png&#34; alt=&#34;Example Blog&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;using-rest&#34;&gt;Using REST&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Typically several network calls are made by the client to the server at different endpoints:
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;/users/&amp;lt; id &amp;gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;/users/&amp;lt; id &amp;gt;/ posts&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;/users/&amp;lt; id &amp;gt;/ followers&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The client app is constantly downloading the resources which are not required, so the user’s data is wasted. For instance it fetches all the user data eg email, age, lastname, birthday, etc. when a network call is made to &lt;em&gt;/users/&amp;lt; id &amp;gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;The most simple and obvious solution would be to design our API such that it only exposes the data they required by the client. But the problem is that in modern app development, you need to iterate quickly, constantly redesigning your API can be a huge drawback time-wise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;using-graphql&#34;&gt;Using GraphQL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;In a graphql server you only have a single endpoint that can be used by different clients who want to retrieve data from the database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1601750016/typical-gql-post_huyn9z.png&#34; alt=&#34;Typical GraphQL Post Request&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it works:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You make a post request to the Graphql server&lt;/li&gt;
+&lt;li&gt;In the post request body, you include the query&lt;/li&gt;
+&lt;li&gt;The query contains all the data requirements of the client.&lt;/li&gt;
+&lt;li&gt;The graphql processes the request and manipulates the database and then sends a response which is JSON object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Differences between Rest and GraphQL&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Eliminate the problem of Overfetching and Underfetching:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Overfetching&lt;/em&gt;: Describes a scenario that happens when querying a Restful server and we end up downloading unnecessary data into our app.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Underfetching&lt;/em&gt;: The response to the query made to a specific endpoint returns insufficient data that the client has to make  (n+1) requests just to get sufficient data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Graphql allows for low-level monitoring of the requests made to the server. It uses resolver functions to resolve queries made by the client. These can be monitored so as to analyze the application.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GraphQL uses a strong type system once types are described in the schema the frontend developers can mock an API and continue working on the client-side whilst the backend engineers continue to build the backend.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All the images used in this blog article were part of the &lt;a href=&#34;https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS141x+3T2019/course/&#34; class=&#34;article-link&#34;&gt; Exploring GraphQL: A Query Language for APIs&lt;/a&gt; course.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CC Base Docs-GSOD-2020: Hello World🚀</title>
+      <link>https://jackiebinya.github.io/posts/gsod-2020/cc-base-hello-world/</link>
+      <pubDate>Tue, 29 Sep 2020 18:50:55 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/gsod-2020/cc-base-hello-world/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;I am participating in the Google Season of Docs 2020 as a technical writer. I am contributing to Creative Commons.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My name is Jacqueline Binya. I am a software developer and technical writer from Zimbabwe. I am going to write a series of blog posts documenting my experience and lessons as I  contribute to the &lt;a class=&#34;article-link&#34; href=&#34;https://github.com/creativecommons/wp-theme-base&#34;&gt; Creative Commons Base(CC Base) &lt;/a&gt;during the &lt;a class=&#34;article-link&#34; href=&#34;https://developers.google.com/season-of-docs&#34;&gt;Google Season of Docs (GSOD-2020) &lt;/a&gt; as a technical writer.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-google-season-of-docs&#34;&gt;What is Google Season of Docs?&lt;/h2&gt;
+&lt;p&gt;The Google Season of the Docs was born out of a need to improve the quality of open-source documentation as well as to advocate for open source, for documentation, and for technical writing. Annually during the GSOD, technical writers are invited to contribute to open-source projects through a highly intensive process geared at ensuring that the technical writers and the projects they contribute to during GSOD are a good fit, after that has been determined GSOD then resumes.&lt;/p&gt;
+&lt;h2 id=&#34;building-the-docs&#34;&gt;Building the docs&lt;/h2&gt;
+&lt;p&gt;The CC Base is a WordPress theme used to create front-facing Creative Commons (CC) websites. My task is to collaborate with the engineering team to create community facing docs for the theme.&lt;/p&gt;
+&lt;h3 id=&#34;guiding-principles&#34;&gt;Guiding principles&lt;/h3&gt;
+&lt;p&gt;The docs should be inclusive meaning: they should be written in an easy-to-understand manner taking care to avoid the use of excessive technical jargon, they should be accessible and they should have support for internationalization. We hope to provide our users with a smooth and memorable experience whilst using the docs hence the docs site should be fast and easy to navigate.&lt;/p&gt;
+&lt;h3 id=&#34;technical-stack-of-the-project&#34;&gt;Technical stack of the project&lt;/h3&gt;
+&lt;p&gt;We decided to build the docs using &lt;a href=&#34;https://jamstack.org/&#34; class=&#34;article-link&#34;&gt;Jamstack&lt;/a&gt;, to be specific we are using  &lt;a href=&#34;https://gridsome.org/&#34; class=&#34;article-link&#34;&gt;Gridsome&lt;/a&gt; a static generator for &lt;a href=&#34;https://vuejs.org/&#34; class=&#34;article-link&#34;&gt;Vuejs&lt;/a&gt;. We are using Gridsome as it is highly performant, and it also integrates smoothly with the &lt;a href=&#34;https://cc-vocabulary.netlify.app/&#34; class=&#34;article-link&#34;&gt; CC Vocabulary &lt;/a&gt;. Gridsome also has out-of-the-box support for important features like Google Analytics and &lt;a href=&#34;https://www.algolia.com/&#34; class=&#34;article-link&#34;&gt;Angolia&lt;/a&gt;, these features will obviously be useful in future iterations of the docs. To quickly scaffold the docs we used a Gridsome theme called &lt;a href=&#34;https://gridsome.org/starters/jamdocs/&#34; class=&#34;article-link&#34;&gt;JamDocs&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;progress&#34;&gt;Progress&lt;/h3&gt;
+&lt;p&gt;Currently, the project is on track. As it&amp;rsquo;s been stated we are creating the docs collaboratively. The very first step in our workflow is to create draft content using Google docs. That task is assigned to me, it involves doing lots of research, reading and also testing out the theme. Afterward, my mentors Hugo Solar and Timid Robot Zehta then give me feedback on the draft. Then I implement the feedback and continuously work on improvements. The final step is migrating the approved draft content to the docs projects in markdown format.&lt;/p&gt;
+&lt;h3 id=&#34;my-lessons-so-far&#34;&gt;My lessons so far:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Always ask questions: frankly, the only way you can create good content is when you have a solid understanding of the subject matter.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s better to over-communicate than under-communicate especially when working in a remotely, this is especially more important if you encounter blockers whilst executing your work.&lt;/li&gt;
+&lt;li&gt;Push that code and open PR quickly and then go ahead and ask for a review don&amp;rsquo;t procrastinate this will ensure  fast turnover you get feedback quickly and can work on improvements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Thank you for reading, watch out for the next update which will be posted soon.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Intro to GraphQL</title>
+      <link>https://jackiebinya.github.io/posts/lets-learn-graphql/lesson-1/</link>
+      <pubDate>Wed, 23 Sep 2020 16:32:17 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/lets-learn-graphql/lesson-1/</guid>
+      <description>&lt;p&gt;Well I have a huge announcement to make!
+Wait for it&amp;hellip;&lt;/p&gt;
+&lt;img src=&#34;https://media.giphy.com/media/xUA7b7pLM4w1edn0yI/giphy.gif&#34; alt=&#34;Woman making gestures&#34;&gt;
+&lt;p&gt;I am learning GraphQL 😱&lt;/p&gt;
+&lt;p&gt;I just finished my first tutorial on &lt;a href= &#34;&#34; class=&#34;article-link&#34;&gt;EDX&lt;/a&gt;. I am pretty stoked about it, its something I have been putting off for months mainly because of two reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I have been insanely busy and,&lt;/li&gt;
+&lt;li&gt;I have been feeling overwhelmed lately about the ton of stuff I have to learn as a developer. When you hear people say as that &lt;em&gt;As a developer the learning never stops&lt;/em&gt;, its definitely not a cliche.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But the good news is: I have since developed a strategy to deal with the anxiety associated with handling a lot of work responsibilities whilst trying to maintain a healthy life balance. I now keep a calender to manage and track my work. I set up weekly goals, which I then breakdown into small daily tasks which are achievable. Adjusting my attitude towards learning has been helpful as well, I have since reconciled with the fact that if I am serious about being a developer: consistently learning new things has to become part of my lifestyle.&lt;/p&gt;
+&lt;p&gt;Lastly, one more thing I feel is important to mention is that: I practice a kindness towards myself. If for any reason I fail to achieve a goal I journal the experience and give an account of how and where I struggled, then adjust my goal. I&amp;rsquo;m basically my own mentor. I also have a reward system in place. So, am really looking forward to that holiday in Capetown🧳🐳👙.&lt;/p&gt;
+&lt;p&gt;Well, &lt;a href= &#34;https://www.edx.org/&#34; class=&#34;article-link&#34;&gt;EDX&lt;/a&gt; is an online learning platform which offers a variety of university level courses. The EDX courses are free but if you want certification you have to pay a fee.&lt;/p&gt;
+&lt;p&gt;I decided to document my learning as I am going through the &lt;a href=&#34;https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS141x+3T2019/course/&#34; class=&#34;article-link&#34;&gt; Exploring GraphQL: A Query Language for APIs
+&lt;/a&gt; course and share them.&lt;/p&gt;
+&lt;p&gt;So here goes:&lt;/p&gt;
+&lt;h2 id=&#34;lets-discuss-how-modern-apps-work&#34;&gt;Lets discuss how modern apps work&lt;/h2&gt;
+ &lt;img  src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1600877965/client-server_bpqr51.png&#34; alt=&#34;Client server model&#34;&gt;
+&lt;p&gt;Modern apps are generally dynamic and robust. They make multiple network calls to fetch and display dynamic data. The data is usually stored in some remote database. The data stored within the databases is exposed through APIs. An API is an application programming interface, basically that means it allows computers to communicate over the client-server model. Now a server is a computer that is optimized to respond to queries.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-graphql-&#34;&gt;What is GraphQL ?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;It’s a query language for APIs&lt;/li&gt;
+&lt;li&gt;It was created as an alternative to REST in 2015 by Facebook&lt;/li&gt;
+&lt;li&gt;Enables declarative data fetching: client can explicitly specify what data they require from a server. The catch here is that the specification has to be in a hierarchical structure.&lt;/li&gt;
+&lt;li&gt;So essentially you set up a GraphQL server to handle queries, the graphql server exposes a single endpoint and that endpoint responds to all the queries&lt;/li&gt;
+&lt;li&gt;GraphQL is generally more performant than  REST&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-graphql-&#34;&gt;Why GraphQL ?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;As the data used in applications became more detailed and complex its become cumbersome to query data using REST, GraphQL provides a clean and effective solution to query complex data.&lt;/li&gt;
+&lt;li&gt;GraphQL drastically reduces the number of network calls when transferring data between the client and the server so that makes it a good fit for use in areas with poor internet connectivity it’s also suited for users who use low power devices (with poor batteries repeated network calls deplete power fast)&lt;/li&gt;
+&lt;li&gt;Increased mobile usage: GraphQL reduces the amount of data transferred over the network so applications running on mobile devices generally become more performant.&lt;/li&gt;
+&lt;li&gt;In modern software development, we have a wide array of frameworks and platforms that run client applications, GraphQL standardizes how they query data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;And we done, thank you for taking time to read my blog 🦥.&lt;/em&gt;
+&lt;em&gt;Sale kahle👋&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Closures, Scope and All the Good Stuff About Javascript</title>
+      <link>https://jackiebinya.github.io/posts/javascript/closures-scope-and-all-the-good-stuff-about-js/</link>
+      <pubDate>Sat, 05 Sep 2020 21:05:11 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/javascript/closures-scope-and-all-the-good-stuff-about-js/</guid>
+      <description>&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;This article was written to help explain a topic which is an interview staple for Javascript developers.
+Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a src=&#34;https://nodejs.org/en/download/&#34; class=&#34;article-link&#34;&gt;Nodejs&lt;/a&gt; installed locally.&lt;/li&gt;
+&lt;li&gt;Text editor of your choice.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;key-concepts&#34;&gt;Key Concepts&lt;/h2&gt;
+&lt;h3 id=&#34;variable&#34;&gt;Variable&lt;/h3&gt;
+&lt;p&gt;A variable in Javascript is an entity that is used to refer to data stored in memory. You declare a variable in your script by giving it a name, which is preceded by a mandatory keyword which can either be &lt;em&gt;let&lt;/em&gt;, &lt;em&gt;const&lt;/em&gt; or &lt;em&gt;var&lt;/em&gt; and assigning it a value. Assigning an initial value is optional for any variable preceded by keyword &lt;em&gt;let&lt;/em&gt;. All &lt;em&gt;var&lt;/em&gt; and &lt;em&gt;let&lt;/em&gt; variables can be reassigned values whereas &lt;em&gt;const&lt;/em&gt; variables are immutable once declared and initialized.&lt;/p&gt;
+ &lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1599441833/js-closures-tut/Defining_variables_in_JS_1_uom50u.png&#34; alt=&#34;Defining variables in Javascript&#34;&gt;
+&lt;p&gt;&lt;em&gt;To learn more about variable declaration, initialization,  data types and hoisting check out this &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables&#34; class=&#34;article-link&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;. It contains resources published by &lt;a href=&#34;https://developer.mozilla.org/en-US/&#34; class=&#34;article-link&#34; target=&#34;_blank&#34;&gt;mozilla (MDN)&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;block&#34;&gt;Block&lt;/h3&gt;
+&lt;p&gt;A block (&lt;em&gt;or compound statement in other programming languages&lt;/em&gt;) is used to group statements in javascript. The boundaries of a block statement is a pair of curly brackets.&lt;/p&gt;
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1599461896/js-closures-tut/Block-Syntax_1_waqhf3.png&#34; alt=&#34;Block Syntax&#34;&gt;
+&lt;p&gt;On that basis of the given definition of a block, it follows that &lt;em&gt;functions&lt;/em&gt;, &lt;em&gt;if statements&lt;/em&gt;, &lt;em&gt;loops&lt;/em&gt; all have block statements.&lt;/p&gt;
+&lt;h3 id=&#34;local-and-global-variables&#34;&gt;Local and Global Variables&lt;/h3&gt;
+&lt;p&gt;In Javascript variables are either declared inside a block or independent of a block. When a variable is declared inside a block it is &lt;em&gt;local&lt;/em&gt; in reference to that block. A global variable is one whose scope is global.&lt;/p&gt;
+&lt;h2 id=&#34;what-then-is-scope-&#34;&gt;What then is scope ?&lt;/h2&gt;
+&lt;p&gt;In Javascript scope denotes the reach or range or accessibility of Javascript variables. So, whenever a javascript variable is declared it automatically has scope associated with it.&lt;/p&gt;
+&lt;p&gt;The scope of a variable is determined by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;where a variable is declared within a script and,&lt;/li&gt;
+&lt;li&gt;its type i.e &lt;em&gt;let&lt;/em&gt;, &lt;em&gt;const&lt;/em&gt; and &lt;em&gt;var&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;types-of-scope&#34;&gt;Types of scope&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Global scope: globally scoped variables are accessible throughout the window object or globally within your script.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Block scope: block scoped variables are variables that when declared inside of a block are only accessible within that block. The block referenced to, being a &lt;em&gt;generic block&lt;/em&gt; or a block which is part of a &lt;em&gt;loop&lt;/em&gt; or an &lt;em&gt;if statement&lt;/em&gt; or a &lt;em&gt;function&lt;/em&gt;. So essentially &lt;em&gt;const&lt;/em&gt; and &lt;em&gt;let&lt;/em&gt; variables can either be &lt;em&gt;globally scoped&lt;/em&gt; if declared outside of a block or &lt;em&gt;block scoped&lt;/em&gt; when declared inside of a block. When &lt;em&gt;var&lt;/em&gt; variables are declared in blocks which aren&amp;rsquo;t functions, their scope is global.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In the screenshot below I declared a couple of variables, I suggest you go to your text editor and create a &lt;em&gt;main.js&lt;/em&gt; file and copy the contents of the screenshot and modify them to your liking.
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1599466095/js-closures-tut/scope-example_ghtmaq.png&#34; alt=&#34;Illustrating scope in Javascript&#34;&gt;
+Now to execute &lt;em&gt;main.js&lt;/em&gt; file, type the command below in your terminal:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;node main.js
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The expected results are shown in the screenshot below:
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1599467585/js-closures-tut/scope-terminal_result_o3dz6n.png&#34; alt=&#34;Results on the terminal&#34;&gt;
+The variables &lt;em&gt;name&lt;/em&gt;, &lt;em&gt;lastName&lt;/em&gt; and &lt;em&gt;isSoftwareDeveloper&lt;/em&gt; are declared independent of a block. These are known as global variables and they have global scope.
+Variables &lt;em&gt;hobbies&lt;/em&gt; and &lt;em&gt;countryOfResidence&lt;/em&gt; are local to a block in which they were declared but, although &lt;em&gt;hobbies&lt;/em&gt; has global scope  &lt;em&gt;countryOfResidence&lt;/em&gt; is block scoped.&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Functional Scope: functionally scoped variables are variables that when declared inside of a function they are only accessible within that function, if the same variable was declared in any other block e.g. an &lt;em&gt;if statement&lt;/em&gt; and it was accessible only within that block as well. Its scope is then described as being block scoped. So essentially &lt;em&gt;functional scope&lt;/em&gt; is a special type of &lt;em&gt;block scope&lt;/em&gt; used to describe the scope of &lt;em&gt;var&lt;/em&gt; variables declared inside functions. A &lt;em&gt;var&lt;/em&gt; variable is always globally scoped otherwise it is &lt;em&gt;functionally scoped&lt;/em&gt; if declared inside of a function.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1600108316/js-closures-tut/functional_scope_wflflh.png&#34; alt=&#34;Functional scope examples&#34;&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Lexical Scope: given a scenario where we have a group of nested functions, lexical scope means that the inner functions have access to the variables and/or resources of the outer function even after the outer function is returned.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1600118955/js-closures-tut/lexical_scope_c8rcm4.png&#34; alt=&#34;Lexical scope example&#34;&gt;
+&lt;h2 id=&#34;finally-what-then-are-closures-&#34;&gt;Finally, what then are closures ?&lt;/h2&gt;
+&lt;p&gt;To truly understand closures we need to have a basic understanding of how the Javascript engine executes functions. So, whenever a function is invoked an execution context associated with the function is created. An execution context contains meta data about the function and all its associated variables. Upon execution of the function all the meta data associated with the function is then removed from the memory, what is often refereed to as garbage collection.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Closures are functions which have references to variables in their lexical environment.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Let&amp;rsquo;s reconsider the screenshot provided above, when the file is executed internally what happens is that, the javascript engine parses &lt;em&gt;main.js&lt;/em&gt; line by line. When it reaches the point in the script where the &lt;em&gt;outer&lt;/em&gt; function is invoked it creates a context associated with it. When the javascript engine eventually executes the &lt;em&gt;inner&lt;/em&gt; function is creates an execution context associated with it as well. Now as it was verified above, the variables of the &lt;em&gt;outer&lt;/em&gt; function are always accessible inside the &lt;em&gt;inner&lt;/em&gt; function, even when the outer function&amp;rsquo;s execution context has been removed from memory. Let&amp;rsquo;s see how that is possible:&lt;/p&gt;
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1600121543/js-closures-tut/closures_bdxhjn.png&#34; alt=&#34;Closures example&#34;&gt;
+&lt;p&gt;So, we have seen that when the &lt;em&gt;inner&lt;/em&gt; function (which is a closure) is invoked its execution context&amp;rsquo;s contains a reference to the &lt;em&gt;outer&lt;/em&gt; function&amp;rsquo;s variables, despite the fact that the &lt;em&gt;outer&lt;/em&gt; function has already been returned.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;It is my hope that this article has helped you understand closures in javascript.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Happy Coding  😉!!!&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Be the Change</title>
+      <link>https://jackiebinya.github.io/posts/be-the-change/</link>
+      <pubDate>Mon, 22 Jun 2020 09:35:46 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/be-the-change/</guid>
+      <description>&lt;p&gt;The calamity and threat brought by the pandemic had us locked away in our homes for months.
+As we came out of the lockdown we were forced to introspect and confront systematic and institutionalized prejudices(be it racism, ableism, ageism, sexism, homophobia, xenophobia, religious prejudice or any form of prejudice that exists thereof) which act as barriers to social and economic inclusion.&lt;/p&gt;
+&lt;p&gt;The catalyst to this awareness and movement was the untimely death of Gorge Floyd, a victim of police brutality and racism in Minneapolis, Minnesota USA. He has since become a global symbol for dismantling all forms of racial discrimination and inequality.&lt;/p&gt;
+&lt;p&gt;Now at the aftermath of global protests against inequality and racism the question in everyone else&amp;rsquo;s mind is: &amp;lsquo;How do we translate activism into long term meaningful and impactful change?&amp;rsquo;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&#34;https://media.giphy.com/media/fYfh8DBB6JxcqXK5Cr/giphy.gif&#34; alt=&#34;Gif inscribed with the words everybody love everybody&#34;&gt;
+&lt;figcaption&gt;If only it were that simple 🤦🏾&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Well I have been a techie for a little over a year. I come from a small country in Southern Africa called Zimbabwe. A decade ago someone like me would had never been able to break into tech. Because of barriers of entry like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Poverty (computers don&amp;rsquo;t come cheap eey!, a quality CS degree is pricey, paid tutorials cost an arm and leg),&lt;/li&gt;
+&lt;li&gt;Lack of access to the internet,&lt;/li&gt;
+&lt;li&gt;And the worst by my books as a non native English speaker, was the fact that ten years ago I would have had to read and comprehend ancient documentation of age old technologies written in a complex hard to understand manner with excessive use of technical jargon.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Today in comparison we have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Countless high quality free resources on the internet in the form of tutorials made by content-creators of diverse backgrounds.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The price of PCs has been on a steady decrease in the recent years so has that of the internet.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Technical writers and developer advocates are doing the most! Tech documentation of modern tools, frameworks and technologies is now more intuitive. Dev advocates create content in the form of demo applications, blogs, videos and are always available to answer questions. All this to facilitate faster onboarding of developers into using tools they represent.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Organizations like &lt;a href=&#34;https://vueschool.io/&#34; class=&#34;article-link&#34;&gt;VueSchool &lt;/a&gt; although not free provide a discount in their subscriptions for users from marginalized backgrounds of up to 62%.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Online developer communities on &lt;a href=&#34;https://dev.to/&#34; class=&#34;article-link&#34;&gt;DEV&lt;/a&gt; and tech Twitter. Those communities have been a lifeline for me. They allow me to stay up to date with the latest trends and provide opportunities to network with the global dev community.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Inclusive internship opportunities from organizations like&lt;a href=&#34;https://www.outreachy.org/&#34;  class=&#34;article-link&#34;&gt;Outreachy&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&#34;highlight-content&#34;&gt;
+Disclaimer: Some of the above listed opportunities might have existed a decade ago, but the fact that tech communities weren&#39;t as strong and accessible as they are today. Those opportunities wouldn&#39;t have had been available to persons from marginalized backgrounds because they frankly would have been ignorant of their existence.
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tech has indeed been democratized, but there is still so much more to be done.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I have been a FOSS enthusiast for sometime now. My experiences in FOSS have been great. I have participated in communities where the maintainers and contributors collaborate, share and are intentional in ensuring that the &lt;em&gt;community&lt;/em&gt; experience is positive for everyone. In turn I always try to make meaningful contributions and practise kindness. Despite my positive experiences, I have always had fears and doubts lurking at the back of my mind about contributing in FOSS and pursing a career in tech in general but in light of the recent events those fears have been amplified. These are some of the anxieties I have :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As a black woman from Africa are my contributions taken seriously and valued?&lt;/li&gt;
+&lt;li&gt;Is the playing field even? Do I have equal opportunity to participate and complete ?&lt;/li&gt;
+&lt;li&gt;Will my value as a techie diminish as I grow older? I transitioned into tech in my thirties and this something I plan to be doing for the longest time possible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This winter I was fortunate to get involved with the &lt;a href=&#34;https://chaoss.community/&#34; class=&#34;article-link&#34;&gt;Community Health Analytics Open Source Software(CHAOSS)&lt;/a&gt; Community and be part of the amazing work they are doing to change the future of tech. The work being done at CHAOSS gives me hope about the future and for me it&amp;rsquo;s been an opportunity to be part of the change.
+I am contributing to the awesome &lt;a href=&#34;https://github.com/badging&#34; class=&#34;article-link&#34;&gt;CHAOSS Diversity and Inclusion (D&amp;amp;I) Badging&lt;/a&gt; project. My participation in the CHAOSS D&amp;amp;I Badging project has been part of my application for Google Summer of Docs 2020.&lt;/p&gt;
+&lt;p&gt;The CHAOSS Project was created to meet the demand and satisfy the need to measure the health of open source projects or communities.&lt;/p&gt;
+&lt;p&gt;The simple way to solve this problem, was to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define metrics to measure open source health&lt;/li&gt;
+&lt;li&gt;Develop tools to measure those metrics&lt;/li&gt;
+&lt;li&gt;And then finally collect data and analyse it to determine open-source project health.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CHAOSS is a Linux Foundation project focused on creating analytics and metrics to help define community health (CHAOSS official website).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The metrics to measure open source health defined by CHAOSS are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Common Metrics&lt;/li&gt;
+&lt;li&gt;Diversity and Inclusion(D&amp;amp;I)&lt;/li&gt;
+&lt;li&gt;Evolution&lt;/li&gt;
+&lt;li&gt;Risk&lt;/li&gt;
+&lt;li&gt;Value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The CHAOSS Community is then divided into different Working Groups. The aims of the Working Groups is to refine the metrics and to work with software implementation.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s recap before we proceed:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; 💡Well in the beginning the big problem was coming up with a means to measure open source health. The CHAOSS Project then defined the metrics. But the metrics were still big and ambiguous and there was still no means to measure the metrics.The CHAOSS Project then formed different Working Groups for the defined metrics.The responsibility of each Working Group is to refine the metrics and come up with tools to measure the metrics.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;So the CHAOSS D&amp;amp;I Badging Project falls under the CHAOSS D&amp;amp;I Working Group.&lt;/p&gt;
+&lt;p&gt;The D&amp;amp;I Working Group formulated the following focus areas(these are sub-metrics of D&amp;amp;I):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Communication Inclusivity&lt;/li&gt;
+&lt;li&gt;Contributor Community Diversity&lt;/li&gt;
+&lt;li&gt;Event Diversity&lt;/li&gt;
+&lt;li&gt;Governance&lt;/li&gt;
+&lt;li&gt;Leadership&lt;/li&gt;
+&lt;li&gt;Project and Community&lt;/li&gt;
+&lt;li&gt;Recognition of Good Work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The D&amp;amp;I Badging Project is implementation software, its purpose is to determine if open source projects and events are diverse and inclusive.&lt;/p&gt;
+&lt;p&gt;The D&amp;amp;I Badging Workflow takes place in the open and in the public on GitHub. The CHAOSS D&amp;amp;I Badging working group created two repos &lt;a href=&#34;https://github.com/badging/project-diversity-and-inclusion&#34; class=&#34;article-link&#34;&gt;Project Badging&lt;/a&gt; and &lt;a href=&#34;https://github.com/badging/event-diversity-and-inclusion&#34; src=&#34;article-link&#34;&gt; Event Bagding&lt;/a&gt;. All the documentation pertaining to the the D&amp;amp;I Badging workflow and D&amp;amp;I metrics for the above mentioned focus areas is also found in these repos.&lt;/p&gt;
+&lt;p&gt;In the documentation the prospective applicants are provided with information on how to apply for a badge. This is a two-step process which starts with appending either an event or project in a events or projects table in the corresponding repos of the entities. The table is used to showcase the badging status and/or outcome of either events or projects for which badging applications were made. Because of the underlining git workflow once the applicants append their entities to the tables i.e make changes, they can open pull requests so as to submit their changes. The PRs opened have an embedded template which is a form the applicants are expected to fill out in Markdown. The questions asked in the form are used for D&amp;amp;I assessment.
+So far review guides or specifications are yet to be advised.&lt;/p&gt;
+&lt;p&gt;To participate in the CHAOSS Project, check out this &lt;a href=&#34;https://chaoss.community/participate/&#34; class=&#34;article-link&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Joi Tutorial-Using @hapi/joi version 16.1.7 to validate a request body in a RESTful API.</title>
+      <link>https://jackiebinya.github.io/posts/validations/validating-with-hapi-joi/</link>
+      <pubDate>Mon, 08 Jun 2020 08:47:42 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/validations/validating-with-hapi-joi/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;h3 id=&#34;why-validate&#34;&gt;Why validate?&lt;/h3&gt;
+&lt;p&gt;Before we even get started I know there is someone thinking, &amp;quot; Why should I bother with validations in the backend? Validations should be done in the front end, after all, we have inbuilt &lt;a src=&#34;https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation&#34; class=&#34;article-link&#34;&gt;HTML5 form validations&lt;/a&gt;, why must I validate twice?
+Well, it is good practice when designing your API to always design it in isolation never make any assumptions, cause, in all honesty, you never know who is going to consume your API.&lt;/p&gt;
+&lt;p&gt;So in a RESTful  API, you typically have at least one  HTTP POST method that accepts a payload of user data in json format. Now the question arises how then do we ensure that the data we receive is of the desired type and in the correct format before we persist that data in our application&amp;rsquo;s database?&lt;/p&gt;
+&lt;p&gt;To do that we use middleware functions normally referred to as validators. The goal is to ensure that your application&amp;rsquo;s validators cover all edge cases so as to protect the integrity of your database. And to do that you use either regular expressions or alternately handy modules like @hapi/joi which make input validations in Javascript easy, seamless and fast.&lt;/p&gt;
+&lt;h3 id=&#34;what-then-is-hapijoi&#34;&gt;What then is @hapi/joi&lt;/h3&gt;
+&lt;p&gt;From the official documentation from &lt;a src=&#34;https://www.npmjs.com/package/@hapi/joi&#34; class=&#34;article-link&#34;&gt;npmjs&lt;/a&gt;, @hapi/joi is defined as:&amp;quot;
+&lt;strong&gt;The most powerful schema description language and data validator for JavaScript.&lt;/strong&gt;
+joi is part of the hapi ecosystem and was designed to work seamlessly with the hapi web framework and its other components (but works great on its own or with other frameworks)&amp;hellip;&amp;quot;&lt;/p&gt;
+&lt;p&gt;Well to break it down, @hapi/joi is a module that is used to define a schema or blueprint of Javascript objects. Once the schema is defined, you then can use Joi&amp;rsquo;s handy methods that come bundled with it, to validate any other objects against the schema. It was designed for the hapi ecosystem but works well with other frameworks of which for our purposes we will use it in an &lt;a src=&#34;https://expressjs.com/&#34; class=&#34;article-link&#34;&gt;express&lt;/a&gt; server.&lt;/p&gt;
+&lt;h3 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h3&gt;
+&lt;p&gt;In your project &lt;a src=&#34;https://dev.to/nubian_geekess/setting-up-a-basic-express-server-in-e6-bootstrapped-with-eslint-and-airbnb-style-guide-1g6i&#34; class=&#34;article-link&#34;&gt;set up a basic express&lt;/a&gt; server, and then install @hapi/joi by running the command &lt;code&gt;npm i @hapi/joi&lt;/code&gt; on the terminal. This will install the current latest version of @hapi/joi of which at the time of publishing this article was version 16.1.7&lt;/p&gt;
+&lt;p&gt;In the root of your project create files:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;schema.js&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;validators.js&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the file &lt;em&gt;schema.js&lt;/em&gt; we will define our schema and in the file &lt;em&gt;validators.js&lt;/em&gt; we will define our validator middleware functions.&lt;/p&gt;
+&lt;p&gt;A schema can be defined as either a Joi type or a simple Javascript object whose keys are joi types.&lt;/p&gt;
+&lt;h3 id=&#34;what-are-joi-types&#34;&gt;What are Joi types&lt;/h3&gt;
+&lt;p&gt;Joi has inbuilt types e.g. Joi.object(), Joi.string(), Joi.array(), Joi.date() etc. More types are found listed in the official documentation.&lt;/p&gt;
+&lt;h3 id=&#34;defining-a-schema&#34;&gt;Defining a schema&lt;/h3&gt;
+&lt;p&gt;In practical applications, the schema is usually defined as a Joi object, whose keys have values which are Joi types and have optional constraints chained to them. Below are two ways I use to define a validation schema in &lt;em&gt;schema.js&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;method-one&#34;&gt;Method One&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/zz68fr9nkt1zm076kmwd.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;method-two&#34;&gt;Method Two&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/6r1opkiw96xqh6h86nvk.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The above schema definitions are equal whatever method you use totally depends on personal preference.&lt;/p&gt;
+&lt;h4 id=&#34;validating-a-request-body-payload&#34;&gt;Validating a request body payload&lt;/h4&gt;
+&lt;p&gt;Before we are able to perform any validations we should be able to communicate with our server, and to do that on &lt;em&gt;app.js&lt;/em&gt; we add a route &lt;em&gt;localhost:5000/signup&lt;/em&gt; as shown in the figure below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/v7wl80fhnbpfaft9l0se.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When it comes to performing actual validations the Joi module provides various different methods we can use to validate our data as shown below:&lt;/p&gt;
+&lt;h5 id=&#34;synchronous-validations&#34;&gt;Synchronous validations&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/8fdj5mr2hi8ug8bjfsgi.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;async-validations&#34;&gt;Async validations&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/njeedj3dywzot4jl746p.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;validating-schema-by-using-_joiassert_&#34;&gt;Validating schema by using &lt;em&gt;Joi.assert()&lt;/em&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/k99njk5kkx5b9efy3nws.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When we run our server and send a payload via Postman as shown in the figure below using any of the above validators we get the same output. Joi by default aborts validations once the first rule is broken.
+&lt;a href=&#34;https://thepracticaldev.s3.amazonaws.com/i/msep90upupi47klei48b.png&#34;&gt;Alt Text&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Alternately if you want to list all the validation errors in the payload, you can pass an option of &lt;code&gt;{ abortEarly: false }&lt;/code&gt;, to any of the above-listed Joi validator methods, this is usually handy for debugging purposes. For example:
+&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/h1tkqanmpdh6tot4afsv.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If we start the server and on Postman send the same payload as above to the endpoint &lt;em&gt;POST localhost:5000/signup&lt;/em&gt;, as a response we get a detailed error message:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+    &amp;#34;error&amp;#34;: {
+        &amp;#34;_original&amp;#34;: {
+            &amp;#34;username&amp;#34;: &amp;#34;&amp;#34;,
+            &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;
+        },
+        &amp;#34;details&amp;#34;: [
+            {
+                &amp;#34;message&amp;#34;: &amp;#34;\&amp;#34;username\&amp;#34; is not allowed to be empty&amp;#34;,
+                &amp;#34;path&amp;#34;: [
+                    &amp;#34;username&amp;#34;
+                ],
+                &amp;#34;type&amp;#34;: &amp;#34;string.empty&amp;#34;,
+                &amp;#34;context&amp;#34;: {
+                    &amp;#34;label&amp;#34;: &amp;#34;username&amp;#34;,
+                    &amp;#34;value&amp;#34;: &amp;#34;&amp;#34;,
+                    &amp;#34;key&amp;#34;: &amp;#34;username&amp;#34;
+                }
+            },
+            {
+                &amp;#34;message&amp;#34;: &amp;#34;\&amp;#34;email\&amp;#34; is not allowed to be empty&amp;#34;,
+                &amp;#34;path&amp;#34;: [
+                    &amp;#34;email&amp;#34;
+                ],
+                &amp;#34;type&amp;#34;: &amp;#34;string.empty&amp;#34;,
+                &amp;#34;context&amp;#34;: {
+                    &amp;#34;label&amp;#34;: &amp;#34;email&amp;#34;,
+                    &amp;#34;value&amp;#34;: &amp;#34;&amp;#34;,
+                    &amp;#34;key&amp;#34;: &amp;#34;email&amp;#34;
+                }
+            }
+        ]
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;custom-error-messages&#34;&gt;Custom Error Messages&lt;/h3&gt;
+&lt;p&gt;So far we have been sending default Joi error messages in the response object which look like:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+    &amp;#34;error&amp;#34;: &amp;#34;\&amp;#34;username\&amp;#34; is not allowed to be empty&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The error message above is difficult to understand for the end-user. Error messages must be short and easy to understand. So to customize error messages on our schema definition in &lt;em&gt;schema.js&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/3p6rmx38ty5dmjmvkzb8.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As you can see above in the schema we modified the value of the &lt;em&gt;username&lt;/em&gt; key and added an extra rule/constraints &lt;code&gt;messages()&lt;/code&gt;.
+&lt;code&gt;messages()&lt;/code&gt; takes an object as an argument, whose keys are validation error types and their corresponding values are custom error messages.&lt;/p&gt;
+&lt;p&gt;Now to view our customized error messages on the response object:&lt;/p&gt;
+&lt;p&gt;We start our server then on Postman, in the payload we post an empty string as a &lt;em&gt;username&lt;/em&gt;. The response:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/968kwglta9p0w514if1e.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;And then, we intentionally post an invalid type as a &lt;em&gt;username&lt;/em&gt; to test the other custom error message, which in this case is a number. The response:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/p8g810rl8ynfv10m0ane.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;So our error messages have been successfully customized.&lt;/p&gt;
+&lt;h3 id=&#34;validating-strings&#34;&gt;Validating strings&lt;/h3&gt;
+&lt;p&gt;The Joi module provides several constraints we can use to increase validations on string data types which allow us to cover more edge cases. The most common ones I often use are in the example below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/mpwg1u6j8mtvlnzhxab5.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the example in the figure above:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;string.trim()&lt;/code&gt; removes any whitespace before and after the &lt;code&gt;username&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;string.min()&lt;/code&gt; specifies the minimum number of characters for &lt;code&gt;username&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;string.max()&lt;/code&gt; specifies the maximum number of characters for &lt;code&gt;username&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;string.regex()&lt;/code&gt; specifies a regular expression the &lt;code&gt;username&lt;/code&gt; must match against.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;validating-numbers&#34;&gt;Validating numbers&lt;/h3&gt;
+&lt;p&gt;The important thing to note when validating numbers is to pass the option
+&lt;code&gt;{ convert: false }&lt;/code&gt; to your default Joi validator functions. It&amp;rsquo;s especially effective when validating decimals.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/03gn1yqze9nun0r7v548.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the example in the figure above:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;number.min()&lt;/code&gt; specifies the minimum number for &lt;code&gt;age&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;number.max()&lt;/code&gt; specifies the maximum number for &lt;code&gt;age&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;number.positive()&lt;/code&gt; specifies that only positive numbers are accepted for the &lt;code&gt;price&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;number.precision(limit)&lt;/code&gt; specifies the maximum permissible number of decimal places for the &lt;code&gt;price&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note&lt;/em&gt; The purpose of this article was to hopefully get you started on using the Joi modules for validations, it does not in any way cover everything about performing validations using the module, to learn more, I encourage you to go over the &lt;a src=&#34;https://hapi.dev/family/joi/?v=16.1.7#string&#34; class=&#34;article-link&#34;&gt;official documentation.&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;This post was originally published on &lt;a class=&#34;article-link&#34; href=&#34;https://dev.to/jacqueline/using-hapi-joi-version-16-1-7-to-validate-a-request-body-in-a-restful-api-bje&#34;&gt;dev.to&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Another conflict: resolving conflicts in git that occur when using rebase.</title>
+      <link>https://jackiebinya.github.io/posts/how-to-resolve-git-merge-conflicts/s2./</link>
+      <pubDate>Sun, 07 Jun 2020 11:48:59 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/how-to-resolve-git-merge-conflicts/s2./</guid>
+      <description>&lt;p&gt;This interactive tutorial about the resolution of conflicts in git is a continuation of my first blog in the series titled &lt;em&gt;And then we resolve a merge conflict&amp;hellip;&lt;/em&gt;. If you have not read it, please check it out &lt;a class=&#34;article-link&#34; href=&#34;https://jackiebinya.github.io/posts/how-to-resolve-git-merge-conflicts/s1/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The aim of this tutorial is to show how you can use rebasing as an alternative to merging so to combine to branches in git. It will demonstrate how you resolve conflicts that occur thereof.&lt;/p&gt;
+&lt;h2 id=&#34;intro-to-rebasing&#34;&gt;Intro to rebasing&lt;/h2&gt;
+&lt;p&gt;Every commit in github is based on its preceding commit. When you trace the history you realize that every commit has an ancestor.
+Practically this is shown by that whenever you log the history of a branch, all the commits are listed in chronological order. With first commit at the bottom and the most recent commit which is the HEAD at the top.
+Now, what rebasing does is it rewrites history of your current branch, through assigning a commit of your choice as the ancestor of the HEAD.&lt;/p&gt;
+&lt;h2 id=&#34;now-lets-get-started&#34;&gt;Now, let&amp;rsquo;s get started&lt;/h2&gt;
+&lt;p&gt;As indicated in the first blog to get started, we create a repo on github and initialize it with a README. Then clone it locally on my machine. After that, I open the project on an editor. My editor of choice is Visual Studio Code.&lt;/p&gt;
+&lt;p&gt;I  then create and check out a new branch called &lt;em&gt;list-interests&lt;/em&gt;. And create &lt;em&gt;bio.txt&lt;/em&gt;. In &lt;em&gt;bio.txt&lt;/em&gt; I add a list of my personal interests. Then voila:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/0t8fdikm5m3rvxlr31dc.png&#34; alt=&#34;code screenshot&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To stage the changes, on the terminal I run the command,&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then to commit the changes to my local repo I run the command,&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit -m &amp;#34;Adds interests to bio&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then to look up the history of the &lt;em&gt;list-interests&lt;/em&gt; branch, on the terminal I run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git log --oneline
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The result:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;5d944ac (HEAD -&amp;gt; list-interests) Adds interest to bio
+305d937 (origin/master, origin/HEAD, master) Initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now let&amp;rsquo;s imagine that a bunch of devs was assigned to this project. One dev, in particular, was assigned to add an intro to the bio. The dev successfully created the intro and then proceed to merge it to master.&lt;/p&gt;
+&lt;p&gt;To mimic that, on the terminal run the command,&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git checkout -
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The command above listed above allows you to navigate to the branch you were in before you checked out your current branch.&lt;/p&gt;
+&lt;p&gt;On &lt;em&gt;master&lt;/em&gt; I then create the file &lt;em&gt;bio.txt&lt;/em&gt;. Then add a basic intro about myself.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/20focxl3d59b2p1tsbrf.png&#34; alt=&#34;screenshot of codeblock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I then add the changes to the staging area by running the command below on the terminal.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To add the changes to my  local repo,&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit -m &amp;#34;Adds intro to bio&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then I log the history by running the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git log --oneline
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;4586948 (HEAD -&amp;gt; master) Adds intro to bio
+305d937 (origin/master, origin/HEAD) Initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then to sync &lt;em&gt;master&lt;/em&gt; to my &lt;em&gt;origin/master&lt;/em&gt; which is the  branch that corresponds to &lt;em&gt;master&lt;/em&gt; on the remote repository;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git push 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I then check out the branch &lt;em&gt;list-interests&lt;/em&gt; to continue.
+If you log the history of the branch &lt;em&gt;list-interests&lt;/em&gt; you will realize that it was based on the old version of &lt;em&gt;master&lt;/em&gt; that did not have the intro. I intend to rebase it to the new version of &lt;em&gt;master&lt;/em&gt; so as to include the intro.&lt;/p&gt;
+&lt;p&gt;To do that on the terminal I then run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git rebase master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;On the terminal I get the error message:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;First, rewinding head to replay your work on top of it...
+Applying: Adds interest to bio
+Using index info to reconstruct a base tree...
+Falling back to patching base and 3-way merge...
+CONFLICT (add/add): Merge conflict in bio.txt
+Auto-merging bio.txt
+error: Failed to merge in the changes.
+hint: Use &amp;#39;git am --show-current-patch&amp;#39; to see the failed patch
+Patch failed at 0001 Adds interest to bio
+&amp;#34;git add/rm &amp;lt;conflicted_files&amp;gt;&amp;#34;, then run &amp;#34;git rebase --continue&amp;#34;.        
+You can instead skip this commit: run &amp;#34;git rebase --skip&amp;#34;.
+To abort and get back to the state before &amp;#34;git rebase&amp;#34;, run &amp;#34;git rebase --abort&amp;#34;.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The above message informs me that git failed to merge then provides me commands I can use to resolve the issue.&lt;/p&gt;
+&lt;p&gt;On the editor, this is what is there:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/s140yydyfyxfgupma6ym.png&#34; alt=&#34;screenshot of codeblock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Because I want to keep both the changes, I select the option &lt;em&gt;Accept Both Changes&lt;/em&gt; on VS code.&lt;/p&gt;
+&lt;p&gt;To continue I then add the change to the staging area, by running the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then on the terminal, I  run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git rebase --continue
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then get the message&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Applying: Adds interest to bio
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Under the hood when you rebase, git basically rewinds fetches the tip of &lt;em&gt;master&lt;/em&gt;, places it in the position of the last commit of the branch you had checked out, then applies the tip of &lt;em&gt;list_interests&lt;/em&gt; on &lt;em&gt;master&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;To visualize it imagine your history was a deck of cards, a stack. You pop the topmost card which is the HEAD of your current branch, in its place you push the HEAD of &lt;em&gt;master&lt;/em&gt; then finally you push the HEAD of the current branch in its rightful position.&lt;/p&gt;
+&lt;p&gt;If you have conflicts you resolve them and then stage the changes. But instead of making a new merge commit when you run the command &lt;em&gt;git rebase &amp;ndash;continue&lt;/em&gt; the changes are applied to the HEAD, which in this case had the message &lt;em&gt;Adds interests to bio&lt;/em&gt;. When you log the history you get:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1a378f3 (HEAD -&amp;gt; list-interests) Adds interest to bio
+4586948 (origin/master, origin/HEAD, master) Adds intro to bio
+305d937 Initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I have successfully made a rebase. Rebasing offers a clean way to combine diverging branches and its main advantage is the history is kept linear, unlike when you do merge commits.&lt;/p&gt;
+&lt;p&gt;I then sync my local and remote. Make a pull request. Then merge my pull request to &lt;em&gt;origin/master&lt;/em&gt;. On  my local I checkout &lt;em&gt;master&lt;/em&gt; then on the terminal run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git pull
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So as to sync &lt;em&gt;master&lt;/em&gt; to &lt;em&gt;origin/master&lt;/em&gt;. Then voila:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/hkvzfhdgaz0ohexcvck5.png&#34; alt=&#34;screenshot of codeblock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;With that done, hopefully, you now have an understanding of how rebasing works in git. We now proceed to the main business of the day which is using rebasing to implement what we did on the &lt;a href=&#34;https://dev.to/nubian_geekess/and-then-a-conflict-2eli&#34;&gt;first blog&lt;/a&gt; in the series.&lt;/p&gt;
+&lt;p&gt;Well, I would love to add a new feature to my bio. This time I will add a list of programming languages I have worked on. To do that I create and check out a new branch called &lt;em&gt;list-languages&lt;/em&gt;. On the terminal, I run the command,&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git checkout -b list-languages
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then I edit &lt;em&gt;bio.txt&lt;/em&gt; by adding a list of programming languages.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/wpplvusgsy52k3wtpekd.png&#34; alt=&#34;screenshot of codeblock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To proceed I then add the changes to the staging area by  running the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To commit the changes to my local repo, on the terminal I then run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit -m &amp;#34;Adds programming languages to bio
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To create a branch on the remote corresponding to &lt;em&gt;list&amp;ndash;languages&lt;/em&gt; and push changes associated with it. On the terminal I then run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git push --set-upstream origin list-languages
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I just realized I made a blooper on my bio. Instead of adding C++, I meant to add C. But in the same regard, I want to keep my commit message.&lt;/p&gt;
+&lt;p&gt;So back on my editor, I edit my bio.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/7968tagpiwjffcfy92m2.png&#34; alt=&#34;screenshot of code block&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now to stage the changes I run:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And to commit to my local, on my terminal I run the command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git commit --amend --no-edit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As we know from the first tutorial &lt;em&gt;git commit &amp;ndash;amend &amp;ndash;no-edit&lt;/em&gt;, alters the history of the branch. We end up with a scenario whereby the local and remote diverge from each other with the remote branch always leading.&lt;/p&gt;
+&lt;p&gt;When I attempt to sync my local and remote using:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git push
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I  get this message as a response:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;To github.com:JackieBinya/git-tut-2.git
+! [rejected]        list-languages -&amp;gt; list-languages (non-fast-forward)
+error: failed to push some refs to &amp;#39;git@github.com:JackieBinya/git-tut-2.git&amp;#39;
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: &amp;#39;git pull ...&amp;#39;) before pushing again.
+hint: See the &amp;#39;Note about fast-forwards&amp;#39; in &amp;#39;git push --help&amp;#39; for details.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Before we proceed let&amp;rsquo;s take a quick look at the history of the branch &lt;em&gt;list-languages&lt;/em&gt;, using the command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git log --oneline
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;c0fa933 (HEAD -&amp;gt; list-languages) Adds programming languages to bio
+d2c5e0f (origin/master, origin/HEAD, master) Merge pull request #1 from JackieBinya/list-interests
+1a378f3 (origin/list-interests, list-interests) Adds interest to bio
+4586948 Adds intro to bio
+305d937 Initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Basically when I run the command &lt;em&gt;git push&lt;/em&gt;. Under the hood git attempts to sync my local &lt;em&gt;list-languages&lt;/em&gt; to the corresponding branch on the remote &lt;em&gt;origin/list-languages&lt;/em&gt;. Git is clever enough to realize that the branches have diverged, the remote is ahead of the local branch so it suggests I pull changes on the remote to my local, resolve any conflicts and push again.&lt;/p&gt;
+&lt;p&gt;To resolve the issue highlighted I run the command:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git pull --rebase
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I added the flag &lt;em&gt;&amp;ndash;rebase&lt;/em&gt; to the &lt;em&gt;git pull&lt;/em&gt; command so as to rebase the HEAD of my local on the tip of &lt;em&gt;origin/list-laguages&lt;/em&gt;. This offers an alternative to merging branches.&lt;/p&gt;
+&lt;p&gt;On my editor this is what my file looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/dljclocd8wl0h84y05ex.png&#34; alt=&#34;screenshot of codeblock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To resolve the conflict, on VS Code I select the option to keep incoming changes. I then add the changes to the staging area then run the command;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git rebase --continue
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is what &lt;em&gt;bio.txt&lt;/em&gt; looks like on my editor:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/p1814pamnh50jvbd6915.png&#34; alt=&#34;screenshot of codeblock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When I log the history on the terminal I get the output below:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;b584e1c (HEAD -&amp;gt; list-languages) Adds programming languages to bio
+7b06700 (origin/list-languages) Adds programming languages to bio
+d2c5e0f (origin/master, origin/HEAD, master) Merge pull request #1 from JackieBinya/list-interests
+1a378f3 (origin/list-interests, list-interests) Adds interest to bio
+4586948 Adds intro to bio
+305d937 Initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I then sync my local and remote. Make a PR then merge it to &lt;em&gt;master&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Finally my bio:
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/JackieBinya/e308108940e959157448c517aee21b71.js&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;This post was originally published on &lt;a class=&#34;article-link&#34; href=&#34;https://dev.to/jacqueline/another-conflict-resolving-conflicts-in-git-that-occur-when-using-rebase-3dho&#34;&gt;dev.to&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Thank you for reading my article.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>And then we resolve a merge conflict...</title>
+      <link>https://jackiebinya.github.io/posts/how-to-resolve-git-merge-conflicts/s1/</link>
+      <pubDate>Sun, 07 Jun 2020 11:28:59 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/how-to-resolve-git-merge-conflicts/s1/</guid>
+      <description>&lt;p&gt;Since my introduction to the git workflow. I have resolved my own fair share of conflicts. Admittedly when I started using git, conflicts were frustrating and upsetting occurrence mainly because I didn&amp;rsquo;t understand why and how they occurred.&lt;/p&gt;
+&lt;p&gt;Unwittingly I actually thought they were something I could avoid, I thought there was a way I could outsmart git, hahaha! The word conflict has a negative connotation to it so don&amp;rsquo;t blame my newbie response.
+I remember during my BootCamp at Andela, we worked in such a way that you could only merge your pull request to the main develop branch if it had been reviewed and then approved.
+So my genius way of ensuring I totally avoided conflicts, was to wait and have my PRs approved and consequently merged to the develop branch one at a time and that impacted negatively on my overall output.
+The reason I feared conflicts was the first time I was ever brave enough to queue up my PRs I made a giant mess trying to resolve the conflicts and lost all my work.&lt;/p&gt;
+&lt;p&gt;Anyways all the previous tutorials I had followed up to that point had only covered &lt;em&gt;git clone, pull and push&lt;/em&gt;, I honestly didn&amp;rsquo;t know we made war in git!&lt;/p&gt;
+&lt;p&gt;In this series, I document my steps in re-creating and hopefully resolving my favorite conflicts.&lt;/p&gt;
+&lt;h2 id=&#34;keywords&#34;&gt;Keywords&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HEAD: normally the HEAD pointer, points to the latest commit on a branch you have currently checked out.&lt;/li&gt;
+&lt;li&gt;History: Git works by compiling information about details of commits of individual branches if you run the command &lt;code&gt;git log &lt;/code&gt; you get the history of a branch you have currently checked out.
+Then &lt;em&gt;git log &amp;ndash;oneline&lt;/em&gt; prints each commit on a single line, which is useful if you’re looking at a lot of commits.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;creating-the-conflict&#34;&gt;Creating the conflict&lt;/h2&gt;
+&lt;p&gt;To get started I created a repo on github initialized it with a README.md and cloned it on my machine.&lt;/p&gt;
+&lt;p&gt;Then on VS code, I opened
+Using the command, &lt;code&gt;git checkout -b create-bio&lt;/code&gt; I branched off &lt;em&gt;master&lt;/em&gt; and created a branch called &lt;em&gt;create-bio&lt;/em&gt; and then checked out &lt;em&gt;create-bio&lt;/em&gt;.&lt;br&gt;
+&lt;em&gt;create-bio&lt;/em&gt; is normally referred to as a feature branch. Its good practice to open a branch for every feature than work on your &lt;em&gt;master&lt;/em&gt;. This ensures you only merge to &lt;em&gt;master&lt;/em&gt; the code that works and your work is clean.&lt;/p&gt;
+&lt;p&gt;After that I then created a file called &lt;em&gt;bio.txt&lt;/em&gt; and added a simple unimaginative line of code to it:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/ribmlj9y7io89c1zucil.png&#34; alt=&#34;codeblock sceenshot&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A git environment can be broken down into two distinct parts. The remote repository is where you push the code you want to share with others which in my case is hosted by Github and your development environment. The development environment consists of the working directory, staging area, and local repository. So basically when using git workflow, when you clone your repo from the remote it comes with a .git folder. That folder is basically the local repository.
+In essence, Git is a clever piece of software that not only ensures that you can track your files it also allows you to share them as well. Under the hood, git works by persisting branches and commits.
+The working directory is just that, the stuff you work on. So as you work you have to naturally keep track of the files you are working on and to do that you add them to the staging area.&lt;/p&gt;
+&lt;p&gt;So to track &lt;em&gt;bio.txt&lt;/em&gt;. I add it to the staging area by running the command, &lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Using the command, &lt;code&gt;git commit -m &amp;quot;Adds bio.txt&amp;quot;&lt;/code&gt;
+I add &lt;em&gt;bio.txt&lt;/em&gt; to my local repository it&amp;rsquo;s official, the changes I was tracking have been committed to my local repo.&lt;/p&gt;
+&lt;p&gt;Remember when I started off I cloned my remote repository and it only had the &lt;em&gt;master&lt;/em&gt; branch now that I&amp;rsquo;ve created a new branch in my local. The local and the remote are out of sync so using the command, &lt;code&gt;git push --set-upstream origin create-bio&lt;/code&gt;
+I create the branch &lt;em&gt;create-bio&lt;/em&gt; in the origin/remote and simultaneously push the changes in that branch to the remote repo.&lt;/p&gt;
+&lt;p&gt;So far all things are fine and dandy, to introduce some chaos I then edit the file &lt;em&gt;bio.txt&lt;/em&gt; ever so slightly,
+![screenshot of code block on vs code]
+(&lt;a href=&#34;https://thepracticaldev.s3.amazonaws.com/i/4ru147jlq82pcnxhj33c.png&#34;&gt;https://thepracticaldev.s3.amazonaws.com/i/4ru147jlq82pcnxhj33c.png&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;If u run the command, &lt;code&gt;git status&lt;/code&gt;
+You will see that the &lt;em&gt;bio.txt&lt;/em&gt; has been modified. So to add the changes I made to &lt;em&gt;bio.txt&lt;/em&gt; to the staging area I run the command &lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This time to add my staged changes to my local I use the command, &lt;code&gt;git commit --amend --no-edit&lt;/code&gt;
+The command above allows me to combine staged changes with the previous commit instead of creating an entirely new commit. This git views as an entirely new commit, history has been re-written.&lt;/p&gt;
+&lt;p&gt;To verify that history has been altered, if I log my git history on the terminal, although the commit message is the same for the tip of the branch before and after running the command &lt;em&gt;git commit &amp;ndash;amend &amp;ndash;no-edit&lt;/em&gt; the commit hashes (i.e. the string that precedes the commit message) are different as shown below:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;f780b5d (HEAD -&amp;gt; create-bio, origin/create-bio) Adds bio.txt
+7619836 (origin/master, origin/HEAD, master) Initial commit
+PS C:\Users\\Desktop\git-tut-1&amp;gt; git commit --amend --no-edit
+[create-bio 1b61b25] Adds bio.txt
+ Date: Thu Oct 10 03:30:45 2019 +0200
+ 1 file changed, 3 insertions(+)
+ create mode 100644 bio.txt
+PS C:\Users\\Desktop\git-tut-1&amp;gt; git log --oneline
+1b61b25 (HEAD -&amp;gt; create-bio) Adds bio.txt
+7619836 (origin/master, origin/HEAD, master) Initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you run the command, &lt;code&gt;git status&lt;/code&gt;
+The message you get on the terminal is:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;On branch create-bio
+Your branch and &amp;#39;origin/create-bio&amp;#39; have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use &amp;#34;git pull&amp;#34; to merge the remote branch into yours)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I then attempt to sync my remote to my local, by running the command,&lt;code&gt;git push&lt;/code&gt;
+On the terminal I get the error:
+&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/eklp6fkudekdyka7m4zo.png&#34; alt=&#34;Screenshot of code block&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As advised in the error message, I then run the command, &lt;code&gt;git pull&lt;/code&gt;
+And voila the message on the terminal reads:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;CONFLICT (add/add): Merge conflict in bio.txt
+Auto-merging bio.txt
+Automatic merge failed; fix conflicts and then commit the result.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The conflict on VS Code:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://thepracticaldev.s3.amazonaws.com/i/kr8ezdjpwj7djjzmog8u.png&#34; alt=&#34;Alt Text&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resolving-the-conflict&#34;&gt;Resolving the Conflict&lt;/h2&gt;
+&lt;p&gt;Using VS Code editor it&amp;rsquo;s very easy to resolve the conflict I simply choose to &lt;em&gt;Accept Current Change&lt;/em&gt;, this option allows me to keep the changes in the HEAD.
+You can then play around with the other options to explore how they work. Just ensure when you are done resolving the conflict your code looks normal as in you have gotten rid of the arrows, commit hash, and equal signs.&lt;/p&gt;
+&lt;p&gt;I then run the command,  &lt;code&gt;git add .&lt;/code&gt;
+To add changes to the staging area, then proceed to commit them by running the command &lt;code&gt;git commit -m &amp;quot;Resolved&amp;quot;&lt;/code&gt; After which I run the command: &lt;code&gt;git push&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;So my local and remote are in sync.&lt;/p&gt;
+&lt;h4 id=&#34;the-result&#34;&gt;The result:&lt;/h4&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/JackieBinya/52ca912c1a73db46d5b2f9c1ed5649f1.js&#34;&gt;&lt;/script&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;This post was originally published on &lt;a class=&#34;article-link&#34; href=&#34;https://dev.to/jacqueline/and-then-a-conflict-2eli&#34;&gt;dev.to&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using Hugo Static Site Generator</title>
+      <link>https://jackiebinya.github.io/posts/using-hugo/</link>
+      <pubDate>Fri, 24 Apr 2020 18:42:01 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/using-hugo/</guid>
+      <description>&lt;p&gt;I recently started contributing to free and open-source software, but that&amp;rsquo;s a story for another day. So well I stumbled upon a bunch of projects with issues open which required help in either completely writing new documentation using &lt;a href=&#34;https://gohugo.io/&#34; class=&#34;article-link&#34;&gt;Hugo &lt;/a&gt; or migrating the existing documentation to Hugo. I was naturally curious why so many organizations were willing to make that shift. So I started my research and this is what I learned about Hugo.&lt;/p&gt;
+&lt;h2 id=&#34;why-hugo-&#34;&gt;Why Hugo ?&lt;/h2&gt;
+&lt;img src=&#34;https://media.giphy.com/media/5PSPV1ucLX31u/giphy.gif&#34; alt=&#34;Confused parrot gif&#34;&gt;
+&lt;p&gt;Jekyll, VuePress, Gatsby, Gridsome, Hugo !!! Where does one honestly start 🤷🏾‍♀️&lt;/p&gt;
+&lt;p&gt;Well Hugo, as well as the above-mentioned technologies are collectively known as static site generators. Static site generators are in layman&amp;rsquo;s terms applications which are used to create static HTML websites.&lt;/p&gt;
+&lt;p&gt;Static websites display web content in the user&amp;rsquo;s web browser exactly as it is stored in the server. Hence every user who visits a static site interacts with exactly the same content. Whereas conversely we have dynamic websites which serve content on a user&amp;rsquo;s browser as it is generated by web applications. Web applications make use complex server-side calls which in turn enable dynamic content to be served to each and every user who visit the site if need be.&lt;/p&gt;
+&lt;p&gt;Static site generators work by parsing content which is normally written in either &lt;a href=&#34;https://guides.github.com/features/mastering-markdown&#34; class=&#34;article-link&#34;&gt;Markdown&lt;/a&gt; and/or templating languages, layouts and other meta data and then converting all the source files into HTML. It&amp;rsquo;s important to appreciate that when ever there is a change in the source code, the static site generator re-builds the whole website all over again and uploads it to the server.&lt;/p&gt;
+&lt;p&gt;Advantages of using static site generators :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Better SEO: as all web content is served in simple HTML web scrapers can easily search the site.&lt;/li&gt;
+&lt;li&gt;Speed: there are no calls made to external databases, static sites are served pretty fast in comparison to dynamic websites.&lt;/li&gt;
+&lt;li&gt;Improved security since: static sites are independent of databases they are basically hacker-proof.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hugo, stands out because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Its open-source.&lt;/li&gt;
+&lt;li&gt;Its incredible fast 🚀, it is the fastest static site generator to date. Hugo is written using &lt;a href=&#34;https://golang.org/&#34;  class=&#34;article-link&#34;&gt;Golang &lt;/a&gt;, using Go makes Hugo build processes incredible fast!&lt;/li&gt;
+&lt;li&gt;It has a wide variety of themes which make it easy to create a static website, you don&amp;rsquo;t have to start from scratch.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So far the only cons I came across when using Hugo were that to fully harness its power you have to know Go. Knowing a little bit of Go gives you so much power in tweaking up themes, which is rather important if you want to give a unique feel to your site despite it being created from a theme. I also would love to express the fact that it took me time to warp my head around how Hugo works despite coming from a solid background in front-end development. So the learning curve is quite steep.&lt;/p&gt;
+&lt;h2 id=&#34;my-experiences-using-hugo&#34;&gt;My experiences using Hugo&lt;/h2&gt;
+&lt;p&gt;My preferred method of learning a new technology is through watching video tutorials.
+So for an intro to using Hugo for my personal blog I found the following video tutorials useful.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=gSiAcyTWU3c&amp;t=510s&#34; class=&#34;article-link&#34;&gt;Building a Serverless Blog with Hugo and Netlify&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3&#34; class=&#34;article-link&#34;&gt;Hugo - Static Site Generator | Tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After going through the tutorials I followed the Hugo official &lt;a href=&#34;https://gohugo.io/getting-started/&#34; class=&#34;article-link&#34;&gt;documentation&lt;/a&gt; on getting started. My theme of choice was &lt;a href=&#34;https://themes.gohugo.io/hugo-theme-anubis/&#34; class=&#34;article-link&#34;&gt;Anubis&lt;/a&gt;, I chose it because its styling is minimalist and clean and most importantly the styling wasn&amp;rsquo;t too opinionated I had lots of room to play around and tweak the styling without having to change a lot of the original styling.&lt;/p&gt;
+&lt;h2 id=&#34;other-technologies-used-in-creating-my-blog&#34;&gt;Other Technologies used in creating my blog&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://formspree.io/&#34; class=&#34;article-link&#34;&gt;FormSpree&lt;/a&gt;: is basically a delivery service, it collects form data and then sends email alerts when forms are submitted on static websites. Its integration into a static website is very easy and seamless.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pages.github.com/&#34; class=&#34;article-link&#34;&gt;Github Pages &lt;/a&gt;: my site was hosted on GitHub pages, to learn more about Github Pages site hosting service read &lt;a href=&#34;https://help.github.com/en/github/working-with-github-pages/about-github-pages#user--organization-pages&#34; class=&#34;article-link&#34;&gt;this&lt;/a&gt;. Hosting a Hugo site on Github pages isn&amp;rsquo;t a straight-forward task. I advise you to check out the official documentation &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages&#34; class=&#34;article-link&#34;&gt;here&lt;/a&gt; on how that can be done.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;making-it-even-better-for-non-techies--integrating-hugo-with-cmses&#34;&gt;Making it even better for non-techies | Integrating Hugo with CMSes&lt;/h2&gt;
+&lt;p&gt;Hugo can be bundled with headless content management systems like &lt;a href=&#34;https://www.datocms.com/&#34; class=&#34;article-link&#34;&gt;DatoCMS&lt;/a&gt; to enable it to be harnessed for use by users from non-technical background. Read DatoCMS official &lt;a href=&#34;https://www.datocms.com/docs/hugo&#34; class=&#34;article-link&#34;&gt;documentation&lt;/a&gt; to find out about how that can be achieved.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

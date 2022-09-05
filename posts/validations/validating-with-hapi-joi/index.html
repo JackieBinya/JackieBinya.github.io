@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Joi Tutorial-Using @hapi/joi version 16.1.7 to validate a request body in a RESTful API.  | Jacqueline Binya</title>
+<meta name="description" content="">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jackiebinya.github.io/rss/">
+
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
+<link rel="apple-touch-icon-precomposed" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
+
+<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1662359180" />
+
+<meta property="og:title" content="Joi Tutorial-Using @hapi/joi version 16.1.7 to validate a request body in a RESTful API." />
+<meta property="og:description" content="Intro Why validate? Before we even get started I know there is someone thinking, &quot; Why should I bother with validations in the backend? Validations should be done in the front end, after all, we have inbuilt HTML5 form validations, why must I validate twice? Well, it is good practice when designing your API to always design it in isolation never make any assumptions, cause, in all honesty, you never know who is going to consume your API." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jackiebinya.github.io/posts/validations/validating-with-hapi-joi/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-06-08T08:47:42+02:00" />
+<meta property="article:modified_time" content="2020-06-08T08:47:42+02:00" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Joi Tutorial-Using @hapi/joi version 16.1.7 to validate a request body in a RESTful API."/>
+<meta name="twitter:description" content="Intro Why validate? Before we even get started I know there is someone thinking, &quot; Why should I bother with validations in the backend? Validations should be done in the front end, after all, we have inbuilt HTML5 form validations, why must I validate twice? Well, it is good practice when designing your API to always design it in isolation never make any assumptions, cause, in all honesty, you never know who is going to consume your API."/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    
+    <a href="https://jackiebinya.github.io">
+        👩🏾‍🎤hello
+    </a>
+   
+</h1>
+<nav>
+    
+    
+    <a class="" href="/about/" title="">📖readme</a>
+    
+    <a class="" href="/posts/" title="">📰blog</a>
+    
+</nav>
+            
+        </header>
+        <main>
+            
+
+    <article class="post">
+        <header class="post-heading-wrapper">
+            <h1>Joi Tutorial-Using @hapi/joi version 16.1.7 to validate a request body in a RESTful API.</h1>
+        
+            <p class="post-pagination"><time>June 8, 2020</time> . ☕&nbsp;
+                    6  mins  read</p>
+
+        </header>
+        <div class="content">
+            <h2 id="intro">Intro</h2>
+<h3 id="why-validate">Why validate?</h3>
+<p>Before we even get started I know there is someone thinking, &quot; Why should I bother with validations in the backend? Validations should be done in the front end, after all, we have inbuilt <a src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" class="article-link">HTML5 form validations</a>, why must I validate twice?
+Well, it is good practice when designing your API to always design it in isolation never make any assumptions, cause, in all honesty, you never know who is going to consume your API.</p>
+<p>So in a RESTful  API, you typically have at least one  HTTP POST method that accepts a payload of user data in json format. Now the question arises how then do we ensure that the data we receive is of the desired type and in the correct format before we persist that data in our application&rsquo;s database?</p>
+<p>To do that we use middleware functions normally referred to as validators. The goal is to ensure that your application&rsquo;s validators cover all edge cases so as to protect the integrity of your database. And to do that you use either regular expressions or alternately handy modules like @hapi/joi which make input validations in Javascript easy, seamless and fast.</p>
+<h3 id="what-then-is-hapijoi">What then is @hapi/joi</h3>
+<p>From the official documentation from <a src="https://www.npmjs.com/package/@hapi/joi" class="article-link">npmjs</a>, @hapi/joi is defined as:&quot;
+<strong>The most powerful schema description language and data validator for JavaScript.</strong>
+joi is part of the hapi ecosystem and was designed to work seamlessly with the hapi web framework and its other components (but works great on its own or with other frameworks)&hellip;&quot;</p>
+<p>Well to break it down, @hapi/joi is a module that is used to define a schema or blueprint of Javascript objects. Once the schema is defined, you then can use Joi&rsquo;s handy methods that come bundled with it, to validate any other objects against the schema. It was designed for the hapi ecosystem but works well with other frameworks of which for our purposes we will use it in an <a src="https://expressjs.com/" class="article-link">express</a> server.</p>
+<h3 id="getting-started">Getting Started</h3>
+<p>In your project <a src="https://dev.to/nubian_geekess/setting-up-a-basic-express-server-in-e6-bootstrapped-with-eslint-and-airbnb-style-guide-1g6i" class="article-link">set up a basic express</a> server, and then install @hapi/joi by running the command <code>npm i @hapi/joi</code> on the terminal. This will install the current latest version of @hapi/joi of which at the time of publishing this article was version 16.1.7</p>
+<p>In the root of your project create files:</p>
+<ul>
+<li><strong>schema.js</strong></li>
+<li><strong>validators.js</strong></li>
+</ul>
+<p>In the file <em>schema.js</em> we will define our schema and in the file <em>validators.js</em> we will define our validator middleware functions.</p>
+<p>A schema can be defined as either a Joi type or a simple Javascript object whose keys are joi types.</p>
+<h3 id="what-are-joi-types">What are Joi types</h3>
+<p>Joi has inbuilt types e.g. Joi.object(), Joi.string(), Joi.array(), Joi.date() etc. More types are found listed in the official documentation.</p>
+<h3 id="defining-a-schema">Defining a schema</h3>
+<p>In practical applications, the schema is usually defined as a Joi object, whose keys have values which are Joi types and have optional constraints chained to them. Below are two ways I use to define a validation schema in <em>schema.js</em></p>
+<h4 id="method-one">Method One</h4>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/zz68fr9nkt1zm076kmwd.png" alt="Alt Text"></p>
+<h4 id="method-two">Method Two</h4>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/6r1opkiw96xqh6h86nvk.png" alt="Alt Text"></p>
+<p>The above schema definitions are equal whatever method you use totally depends on personal preference.</p>
+<h4 id="validating-a-request-body-payload">Validating a request body payload</h4>
+<p>Before we are able to perform any validations we should be able to communicate with our server, and to do that on <em>app.js</em> we add a route <em>localhost:5000/signup</em> as shown in the figure below:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/v7wl80fhnbpfaft9l0se.png" alt="Alt Text"></p>
+<p>When it comes to performing actual validations the Joi module provides various different methods we can use to validate our data as shown below:</p>
+<h5 id="synchronous-validations">Synchronous validations</h5>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/8fdj5mr2hi8ug8bjfsgi.png" alt="Alt Text"></p>
+<h5 id="async-validations">Async validations</h5>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/njeedj3dywzot4jl746p.png" alt="Alt Text"></p>
+<h5 id="validating-schema-by-using-_joiassert_">Validating schema by using <em>Joi.assert()</em></h5>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/k99njk5kkx5b9efy3nws.png" alt="Alt Text"></p>
+<p>When we run our server and send a payload via Postman as shown in the figure below using any of the above validators we get the same output. Joi by default aborts validations once the first rule is broken.
+<a href="https://thepracticaldev.s3.amazonaws.com/i/msep90upupi47klei48b.png">Alt Text</a></p>
+<p>Alternately if you want to list all the validation errors in the payload, you can pass an option of <code>{ abortEarly: false }</code>, to any of the above-listed Joi validator methods, this is usually handy for debugging purposes. For example:
+<img src="https://thepracticaldev.s3.amazonaws.com/i/h1tkqanmpdh6tot4afsv.png" alt="Alt Text"></p>
+<p>If we start the server and on Postman send the same payload as above to the endpoint <em>POST localhost:5000/signup</em>, as a response we get a detailed error message:</p>
+<pre tabindex="0"><code>{
+    &#34;error&#34;: {
+        &#34;_original&#34;: {
+            &#34;username&#34;: &#34;&#34;,
+            &#34;email&#34;: &#34;&#34;
+        },
+        &#34;details&#34;: [
+            {
+                &#34;message&#34;: &#34;\&#34;username\&#34; is not allowed to be empty&#34;,
+                &#34;path&#34;: [
+                    &#34;username&#34;
+                ],
+                &#34;type&#34;: &#34;string.empty&#34;,
+                &#34;context&#34;: {
+                    &#34;label&#34;: &#34;username&#34;,
+                    &#34;value&#34;: &#34;&#34;,
+                    &#34;key&#34;: &#34;username&#34;
+                }
+            },
+            {
+                &#34;message&#34;: &#34;\&#34;email\&#34; is not allowed to be empty&#34;,
+                &#34;path&#34;: [
+                    &#34;email&#34;
+                ],
+                &#34;type&#34;: &#34;string.empty&#34;,
+                &#34;context&#34;: {
+                    &#34;label&#34;: &#34;email&#34;,
+                    &#34;value&#34;: &#34;&#34;,
+                    &#34;key&#34;: &#34;email&#34;
+                }
+            }
+        ]
+    }
+}
+</code></pre><h3 id="custom-error-messages">Custom Error Messages</h3>
+<p>So far we have been sending default Joi error messages in the response object which look like:</p>
+<pre tabindex="0"><code>{
+    &#34;error&#34;: &#34;\&#34;username\&#34; is not allowed to be empty&#34;
+}
+</code></pre><p>The error message above is difficult to understand for the end-user. Error messages must be short and easy to understand. So to customize error messages on our schema definition in <em>schema.js</em></p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/3p6rmx38ty5dmjmvkzb8.png" alt="Alt Text"></p>
+<p>As you can see above in the schema we modified the value of the <em>username</em> key and added an extra rule/constraints <code>messages()</code>.
+<code>messages()</code> takes an object as an argument, whose keys are validation error types and their corresponding values are custom error messages.</p>
+<p>Now to view our customized error messages on the response object:</p>
+<p>We start our server then on Postman, in the payload we post an empty string as a <em>username</em>. The response:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/968kwglta9p0w514if1e.png" alt="Alt Text"></p>
+<p>And then, we intentionally post an invalid type as a <em>username</em> to test the other custom error message, which in this case is a number. The response:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/p8g810rl8ynfv10m0ane.png" alt="Alt Text"></p>
+<p>So our error messages have been successfully customized.</p>
+<h3 id="validating-strings">Validating strings</h3>
+<p>The Joi module provides several constraints we can use to increase validations on string data types which allow us to cover more edge cases. The most common ones I often use are in the example below:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/mpwg1u6j8mtvlnzhxab5.png" alt="Alt Text"></p>
+<p>In the example in the figure above:</p>
+<ul>
+<li><code>string.trim()</code> removes any whitespace before and after the <code>username</code></li>
+<li><code>string.min()</code> specifies the minimum number of characters for <code>username</code></li>
+<li><code>string.max()</code> specifies the maximum number of characters for <code>username</code></li>
+<li><code>string.regex()</code> specifies a regular expression the <code>username</code> must match against.</li>
+</ul>
+<h3 id="validating-numbers">Validating numbers</h3>
+<p>The important thing to note when validating numbers is to pass the option
+<code>{ convert: false }</code> to your default Joi validator functions. It&rsquo;s especially effective when validating decimals.</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/03gn1yqze9nun0r7v548.png" alt="Alt Text"></p>
+<p>In the example in the figure above:</p>
+<ul>
+<li><code>number.min()</code> specifies the minimum number for <code>age</code></li>
+<li><code>number.max()</code> specifies the maximum number for <code>age</code></li>
+<li><code>number.positive()</code> specifies that only positive numbers are accepted for the <code>price</code></li>
+<li><code>number.precision(limit)</code> specifies the maximum permissible number of decimal places for the <code>price</code>.</li>
+</ul>
+<p><em>Note</em> The purpose of this article was to hopefully get you started on using the Joi modules for validations, it does not in any way cover everything about performing validations using the module, to learn more, I encourage you to go over the <a src="https://hapi.dev/family/joi/?v=16.1.7#string" class="article-link">official documentation.</a>.</p>
+<blockquote>
+<p><em>This post was originally published on <a class="article-link" href="https://dev.to/jacqueline/using-hapi-joi-version-16-1-7-to-validate-a-request-body-in-a-restful-api-bje">dev.to</a></em></p>
+</blockquote>
+
+        </div>
+        <div class="article-info">
+    <div class="article-taxonomies">
+        
+            
+                <ul class="article-tags">
+                    
+                        <li><a href="https://jackiebinya.github.io/tags/hapi-joi">#hapi-joi</a></li>
+                    
+                        <li><a href="https://jackiebinya.github.io/tags/validations">#validations</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+    
+
+
+        </main>
+        <footer>
+            
+                <p>
+    Made with ❤️, piercing rays of the African sun 🌞 and the fresh scent of wild flowers of the savannah grasslands!
+</p>
+            
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>And then we resolve a merge conflict...  | Jacqueline Binya</title>
+<meta name="description" content="">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jackiebinya.github.io/rss/">
+
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
+<link rel="apple-touch-icon-precomposed" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
+
+<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1662359180" />
+
+<meta property="og:title" content="And then we resolve a merge conflict..." />
+<meta property="og:description" content="Since my introduction to the git workflow. I have resolved my own fair share of conflicts. Admittedly when I started using git, conflicts were frustrating and upsetting occurrence mainly because I didn&rsquo;t understand why and how they occurred.
+Unwittingly I actually thought they were something I could avoid, I thought there was a way I could outsmart git, hahaha! The word conflict has a negative connotation to it so don&rsquo;t blame my newbie response." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jackiebinya.github.io/posts/how-to-resolve-git-merge-conflicts/s1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-06-07T11:28:59+02:00" />
+<meta property="article:modified_time" content="2020-06-07T11:28:59+02:00" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="And then we resolve a merge conflict..."/>
+<meta name="twitter:description" content="Since my introduction to the git workflow. I have resolved my own fair share of conflicts. Admittedly when I started using git, conflicts were frustrating and upsetting occurrence mainly because I didn&rsquo;t understand why and how they occurred.
+Unwittingly I actually thought they were something I could avoid, I thought there was a way I could outsmart git, hahaha! The word conflict has a negative connotation to it so don&rsquo;t blame my newbie response."/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    
+    <a href="https://jackiebinya.github.io">
+        👩🏾‍🎤hello
+    </a>
+   
+</h1>
+<nav>
+    
+    
+    <a class="" href="/about/" title="">📖readme</a>
+    
+    <a class="" href="/posts/" title="">📰blog</a>
+    
+</nav>
+            
+        </header>
+        <main>
+            
+
+    <article class="post">
+        <header class="post-heading-wrapper">
+            <h1>And then we resolve a merge conflict...</h1>
+        
+            <p class="post-pagination"><time>June 7, 2020</time> . ☕&nbsp;
+                    6  mins  read</p>
+
+        </header>
+        <div class="content">
+            <p>Since my introduction to the git workflow. I have resolved my own fair share of conflicts. Admittedly when I started using git, conflicts were frustrating and upsetting occurrence mainly because I didn&rsquo;t understand why and how they occurred.</p>
+<p>Unwittingly I actually thought they were something I could avoid, I thought there was a way I could outsmart git, hahaha! The word conflict has a negative connotation to it so don&rsquo;t blame my newbie response.
+I remember during my BootCamp at Andela, we worked in such a way that you could only merge your pull request to the main develop branch if it had been reviewed and then approved.
+So my genius way of ensuring I totally avoided conflicts, was to wait and have my PRs approved and consequently merged to the develop branch one at a time and that impacted negatively on my overall output.
+The reason I feared conflicts was the first time I was ever brave enough to queue up my PRs I made a giant mess trying to resolve the conflicts and lost all my work.</p>
+<p>Anyways all the previous tutorials I had followed up to that point had only covered <em>git clone, pull and push</em>, I honestly didn&rsquo;t know we made war in git!</p>
+<p>In this series, I document my steps in re-creating and hopefully resolving my favorite conflicts.</p>
+<h2 id="keywords">Keywords</h2>
+<ul>
+<li>HEAD: normally the HEAD pointer, points to the latest commit on a branch you have currently checked out.</li>
+<li>History: Git works by compiling information about details of commits of individual branches if you run the command <code>git log </code> you get the history of a branch you have currently checked out.
+Then <em>git log &ndash;oneline</em> prints each commit on a single line, which is useful if you’re looking at a lot of commits.</li>
+</ul>
+<h2 id="creating-the-conflict">Creating the conflict</h2>
+<p>To get started I created a repo on github initialized it with a README.md and cloned it on my machine.</p>
+<p>Then on VS code, I opened
+Using the command, <code>git checkout -b create-bio</code> I branched off <em>master</em> and created a branch called <em>create-bio</em> and then checked out <em>create-bio</em>.<br>
+<em>create-bio</em> is normally referred to as a feature branch. Its good practice to open a branch for every feature than work on your <em>master</em>. This ensures you only merge to <em>master</em> the code that works and your work is clean.</p>
+<p>After that I then created a file called <em>bio.txt</em> and added a simple unimaginative line of code to it:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/ribmlj9y7io89c1zucil.png" alt="codeblock sceenshot"></p>
+<p>A git environment can be broken down into two distinct parts. The remote repository is where you push the code you want to share with others which in my case is hosted by Github and your development environment. The development environment consists of the working directory, staging area, and local repository. So basically when using git workflow, when you clone your repo from the remote it comes with a .git folder. That folder is basically the local repository.
+In essence, Git is a clever piece of software that not only ensures that you can track your files it also allows you to share them as well. Under the hood, git works by persisting branches and commits.
+The working directory is just that, the stuff you work on. So as you work you have to naturally keep track of the files you are working on and to do that you add them to the staging area.</p>
+<p>So to track <em>bio.txt</em>. I add it to the staging area by running the command, <code>git add .</code></p>
+<p>Using the command, <code>git commit -m &quot;Adds bio.txt&quot;</code>
+I add <em>bio.txt</em> to my local repository it&rsquo;s official, the changes I was tracking have been committed to my local repo.</p>
+<p>Remember when I started off I cloned my remote repository and it only had the <em>master</em> branch now that I&rsquo;ve created a new branch in my local. The local and the remote are out of sync so using the command, <code>git push --set-upstream origin create-bio</code>
+I create the branch <em>create-bio</em> in the origin/remote and simultaneously push the changes in that branch to the remote repo.</p>
+<p>So far all things are fine and dandy, to introduce some chaos I then edit the file <em>bio.txt</em> ever so slightly,
+![screenshot of code block on vs code]
+(<a href="https://thepracticaldev.s3.amazonaws.com/i/4ru147jlq82pcnxhj33c.png">https://thepracticaldev.s3.amazonaws.com/i/4ru147jlq82pcnxhj33c.png</a>)</p>
+<p>If u run the command, <code>git status</code>
+You will see that the <em>bio.txt</em> has been modified. So to add the changes I made to <em>bio.txt</em> to the staging area I run the command <code>git add .</code></p>
+<p>This time to add my staged changes to my local I use the command, <code>git commit --amend --no-edit</code>
+The command above allows me to combine staged changes with the previous commit instead of creating an entirely new commit. This git views as an entirely new commit, history has been re-written.</p>
+<p>To verify that history has been altered, if I log my git history on the terminal, although the commit message is the same for the tip of the branch before and after running the command <em>git commit &ndash;amend &ndash;no-edit</em> the commit hashes (i.e. the string that precedes the commit message) are different as shown below:</p>
+<pre tabindex="0"><code>f780b5d (HEAD -&gt; create-bio, origin/create-bio) Adds bio.txt
+7619836 (origin/master, origin/HEAD, master) Initial commit
+PS C:\Users\\Desktop\git-tut-1&gt; git commit --amend --no-edit
+[create-bio 1b61b25] Adds bio.txt
+ Date: Thu Oct 10 03:30:45 2019 +0200
+ 1 file changed, 3 insertions(+)
+ create mode 100644 bio.txt
+PS C:\Users\\Desktop\git-tut-1&gt; git log --oneline
+1b61b25 (HEAD -&gt; create-bio) Adds bio.txt
+7619836 (origin/master, origin/HEAD, master) Initial commit
+</code></pre><p>If you run the command, <code>git status</code>
+The message you get on the terminal is:</p>
+<pre tabindex="0"><code>On branch create-bio
+Your branch and &#39;origin/create-bio&#39; have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use &#34;git pull&#34; to merge the remote branch into yours)
+</code></pre><p>I then attempt to sync my remote to my local, by running the command,<code>git push</code>
+On the terminal I get the error:
+<img src="https://thepracticaldev.s3.amazonaws.com/i/eklp6fkudekdyka7m4zo.png" alt="Screenshot of code block"></p>
+<p>As advised in the error message, I then run the command, <code>git pull</code>
+And voila the message on the terminal reads:</p>
+<pre tabindex="0"><code>CONFLICT (add/add): Merge conflict in bio.txt
+Auto-merging bio.txt
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre><p>The conflict on VS Code:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/kr8ezdjpwj7djjzmog8u.png" alt="Alt Text"></p>
+<h2 id="resolving-the-conflict">Resolving the Conflict</h2>
+<p>Using VS Code editor it&rsquo;s very easy to resolve the conflict I simply choose to <em>Accept Current Change</em>, this option allows me to keep the changes in the HEAD.
+You can then play around with the other options to explore how they work. Just ensure when you are done resolving the conflict your code looks normal as in you have gotten rid of the arrows, commit hash, and equal signs.</p>
+<p>I then run the command,  <code>git add .</code>
+To add changes to the staging area, then proceed to commit them by running the command <code>git commit -m &quot;Resolved&quot;</code> After which I run the command: <code>git push</code></p>
+<p>So my local and remote are in sync.</p>
+<h4 id="the-result">The result:</h4>
+<script type="application/javascript" src="https://gist.github.com/JackieBinya/52ca912c1a73db46d5b2f9c1ed5649f1.js"></script>
+
+<blockquote>
+<p><em>This post was originally published on <a class="article-link" href="https://dev.to/jacqueline/and-then-a-conflict-2eli">dev.to</a></em></p>
+</blockquote>
+
+        </div>
+        <div class="article-info">
+    <div class="article-taxonomies">
+        
+            
+                <ul class="article-tags">
+                    
+                        <li><a href="https://jackiebinya.github.io/tags/git">#git</a></li>
+                    
+                        <li><a href="https://jackiebinya.github.io/tags/github">#github</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+    
+
+
+        </main>
+        <footer>
+            
+                <p>
+    Made with ❤️, piercing rays of the African sun 🌞 and the fresh scent of wild flowers of the savannah grasslands!
+</p>
+            
+        </footer>
+    </div>
+</body>
+</html>

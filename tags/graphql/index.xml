@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>graphql on Jacqueline Binya</title>
+    <link>https://jackiebinya.github.io/tags/graphql/</link>
+    <description>Jacqueline Binya (graphql)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Oct 2020 17:50:45 +0200</lastBuildDate>
+    
+    <atom:link href="https://jackiebinya.github.io/tags/graphql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GraphQL vs REST</title>
+      <link>https://jackiebinya.github.io/posts/lets-learn-graphql/lesson-2/</link>
+      <pubDate>Sat, 03 Oct 2020 17:50:45 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/lets-learn-graphql/lesson-2/</guid>
+      <description>&lt;p&gt;Historically REST is the accepted standard for designing web APIs.&lt;/p&gt;
+&lt;p&gt;The main advantages of using REST were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;REST is stateless meaning every server call is independent of any other network calls made to the server. The server will not persist any state about the queries it receives.&lt;/li&gt;
+&lt;li&gt;It provides a structured way to query resources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;The problem&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;REST was intended to be a strict specification used to design APIs but in reality, it was wildly interpreted: most APIs described as being Restful aren&amp;rsquo;t really Restful, they don’t adhere to the strict specification&lt;/li&gt;
+&lt;li&gt;REST APIs have shown to be too inflexible to keep up with the rapidly changing requirements on the client apps that access them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;The Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GraphQL was designed to cope with the need for increased flexibility and efficient client-server interaction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;demo-of--a-query-rest-vs-graphql&#34;&gt;Demo of  a query REST vs GraphQL&lt;/h2&gt;
+&lt;p&gt;Say we have a blogging application, such that for each blogger’s page:  we render the blogger’s name, titles of their posts, and their latest three followers. As shown below:
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1601742427/example-blogging-app_xorm3b.png&#34; alt=&#34;Example Blog&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;using-rest&#34;&gt;Using REST&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Typically several network calls are made by the client to the server at different endpoints:
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;/users/&amp;lt; id &amp;gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;/users/&amp;lt; id &amp;gt;/ posts&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;/users/&amp;lt; id &amp;gt;/ followers&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The client app is constantly downloading the resources which are not required, so the user’s data is wasted. For instance it fetches all the user data eg email, age, lastname, birthday, etc. when a network call is made to &lt;em&gt;/users/&amp;lt; id &amp;gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;The most simple and obvious solution would be to design our API such that it only exposes the data they required by the client. But the problem is that in modern app development, you need to iterate quickly, constantly redesigning your API can be a huge drawback time-wise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;using-graphql&#34;&gt;Using GraphQL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;In a graphql server you only have a single endpoint that can be used by different clients who want to retrieve data from the database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1601750016/typical-gql-post_huyn9z.png&#34; alt=&#34;Typical GraphQL Post Request&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it works:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You make a post request to the Graphql server&lt;/li&gt;
+&lt;li&gt;In the post request body, you include the query&lt;/li&gt;
+&lt;li&gt;The query contains all the data requirements of the client.&lt;/li&gt;
+&lt;li&gt;The graphql processes the request and manipulates the database and then sends a response which is JSON object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Differences between Rest and GraphQL&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Eliminate the problem of Overfetching and Underfetching:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Overfetching&lt;/em&gt;: Describes a scenario that happens when querying a Restful server and we end up downloading unnecessary data into our app.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Underfetching&lt;/em&gt;: The response to the query made to a specific endpoint returns insufficient data that the client has to make  (n+1) requests just to get sufficient data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Graphql allows for low-level monitoring of the requests made to the server. It uses resolver functions to resolve queries made by the client. These can be monitored so as to analyze the application.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GraphQL uses a strong type system once types are described in the schema the frontend developers can mock an API and continue working on the client-side whilst the backend engineers continue to build the backend.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All the images used in this blog article were part of the &lt;a href=&#34;https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS141x+3T2019/course/&#34; class=&#34;article-link&#34;&gt; Exploring GraphQL: A Query Language for APIs&lt;/a&gt; course.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Intro to GraphQL</title>
+      <link>https://jackiebinya.github.io/posts/lets-learn-graphql/lesson-1/</link>
+      <pubDate>Wed, 23 Sep 2020 16:32:17 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/lets-learn-graphql/lesson-1/</guid>
+      <description>&lt;p&gt;Well I have a huge announcement to make!
+Wait for it&amp;hellip;&lt;/p&gt;
+&lt;img src=&#34;https://media.giphy.com/media/xUA7b7pLM4w1edn0yI/giphy.gif&#34; alt=&#34;Woman making gestures&#34;&gt;
+&lt;p&gt;I am learning GraphQL 😱&lt;/p&gt;
+&lt;p&gt;I just finished my first tutorial on &lt;a href= &#34;&#34; class=&#34;article-link&#34;&gt;EDX&lt;/a&gt;. I am pretty stoked about it, its something I have been putting off for months mainly because of two reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I have been insanely busy and,&lt;/li&gt;
+&lt;li&gt;I have been feeling overwhelmed lately about the ton of stuff I have to learn as a developer. When you hear people say as that &lt;em&gt;As a developer the learning never stops&lt;/em&gt;, its definitely not a cliche.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But the good news is: I have since developed a strategy to deal with the anxiety associated with handling a lot of work responsibilities whilst trying to maintain a healthy life balance. I now keep a calender to manage and track my work. I set up weekly goals, which I then breakdown into small daily tasks which are achievable. Adjusting my attitude towards learning has been helpful as well, I have since reconciled with the fact that if I am serious about being a developer: consistently learning new things has to become part of my lifestyle.&lt;/p&gt;
+&lt;p&gt;Lastly, one more thing I feel is important to mention is that: I practice a kindness towards myself. If for any reason I fail to achieve a goal I journal the experience and give an account of how and where I struggled, then adjust my goal. I&amp;rsquo;m basically my own mentor. I also have a reward system in place. So, am really looking forward to that holiday in Capetown🧳🐳👙.&lt;/p&gt;
+&lt;p&gt;Well, &lt;a href= &#34;https://www.edx.org/&#34; class=&#34;article-link&#34;&gt;EDX&lt;/a&gt; is an online learning platform which offers a variety of university level courses. The EDX courses are free but if you want certification you have to pay a fee.&lt;/p&gt;
+&lt;p&gt;I decided to document my learning as I am going through the &lt;a href=&#34;https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS141x+3T2019/course/&#34; class=&#34;article-link&#34;&gt; Exploring GraphQL: A Query Language for APIs
+&lt;/a&gt; course and share them.&lt;/p&gt;
+&lt;p&gt;So here goes:&lt;/p&gt;
+&lt;h2 id=&#34;lets-discuss-how-modern-apps-work&#34;&gt;Lets discuss how modern apps work&lt;/h2&gt;
+ &lt;img  src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1600877965/client-server_bpqr51.png&#34; alt=&#34;Client server model&#34;&gt;
+&lt;p&gt;Modern apps are generally dynamic and robust. They make multiple network calls to fetch and display dynamic data. The data is usually stored in some remote database. The data stored within the databases is exposed through APIs. An API is an application programming interface, basically that means it allows computers to communicate over the client-server model. Now a server is a computer that is optimized to respond to queries.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-graphql-&#34;&gt;What is GraphQL ?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;It’s a query language for APIs&lt;/li&gt;
+&lt;li&gt;It was created as an alternative to REST in 2015 by Facebook&lt;/li&gt;
+&lt;li&gt;Enables declarative data fetching: client can explicitly specify what data they require from a server. The catch here is that the specification has to be in a hierarchical structure.&lt;/li&gt;
+&lt;li&gt;So essentially you set up a GraphQL server to handle queries, the graphql server exposes a single endpoint and that endpoint responds to all the queries&lt;/li&gt;
+&lt;li&gt;GraphQL is generally more performant than  REST&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-graphql-&#34;&gt;Why GraphQL ?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;As the data used in applications became more detailed and complex its become cumbersome to query data using REST, GraphQL provides a clean and effective solution to query complex data.&lt;/li&gt;
+&lt;li&gt;GraphQL drastically reduces the number of network calls when transferring data between the client and the server so that makes it a good fit for use in areas with poor internet connectivity it’s also suited for users who use low power devices (with poor batteries repeated network calls deplete power fast)&lt;/li&gt;
+&lt;li&gt;Increased mobile usage: GraphQL reduces the amount of data transferred over the network so applications running on mobile devices generally become more performant.&lt;/li&gt;
+&lt;li&gt;In modern software development, we have a wide array of frameworks and platforms that run client applications, GraphQL standardizes how they query data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;And we done, thank you for taking time to read my blog 🦥.&lt;/em&gt;
+&lt;em&gt;Sale kahle👋&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

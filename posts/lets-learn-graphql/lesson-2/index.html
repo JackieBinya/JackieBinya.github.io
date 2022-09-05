@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>GraphQL vs REST  | Jacqueline Binya</title>
+<meta name="description" content="">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jackiebinya.github.io/rss/">
+
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
+<link rel="apple-touch-icon-precomposed" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
+
+<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1662359180" />
+
+<meta property="og:title" content="GraphQL vs REST" />
+<meta property="og:description" content="Historically REST is the accepted standard for designing web APIs.
+The main advantages of using REST were:
+REST is stateless meaning every server call is independent of any other network calls made to the server. The server will not persist any state about the queries it receives. It provides a structured way to query resources. The problem
+REST was intended to be a strict specification used to design APIs but in reality, it was wildly interpreted: most APIs described as being Restful aren&rsquo;t really Restful, they don’t adhere to the strict specification REST APIs have shown to be too inflexible to keep up with the rapidly changing requirements on the client apps that access them." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jackiebinya.github.io/posts/lets-learn-graphql/lesson-2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-10-03T17:50:45+02:00" />
+<meta property="article:modified_time" content="2020-10-03T17:50:45+02:00" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GraphQL vs REST"/>
+<meta name="twitter:description" content="Historically REST is the accepted standard for designing web APIs.
+The main advantages of using REST were:
+REST is stateless meaning every server call is independent of any other network calls made to the server. The server will not persist any state about the queries it receives. It provides a structured way to query resources. The problem
+REST was intended to be a strict specification used to design APIs but in reality, it was wildly interpreted: most APIs described as being Restful aren&rsquo;t really Restful, they don’t adhere to the strict specification REST APIs have shown to be too inflexible to keep up with the rapidly changing requirements on the client apps that access them."/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    
+    <a href="https://jackiebinya.github.io">
+        👩🏾‍🎤hello
+    </a>
+   
+</h1>
+<nav>
+    
+    
+    <a class="" href="/about/" title="">📖readme</a>
+    
+    <a class="" href="/posts/" title="">📰blog</a>
+    
+</nav>
+            
+        </header>
+        <main>
+            
+
+    <article class="post">
+        <header class="post-heading-wrapper">
+            <h1>GraphQL vs REST</h1>
+        
+            <p class="post-pagination"><time>October 3, 2020</time> . ☕&nbsp;
+                    3  mins  read</p>
+
+        </header>
+        <div class="content">
+            <p>Historically REST is the accepted standard for designing web APIs.</p>
+<p>The main advantages of using REST were:</p>
+<ul>
+<li>REST is stateless meaning every server call is independent of any other network calls made to the server. The server will not persist any state about the queries it receives.</li>
+<li>It provides a structured way to query resources.</li>
+</ul>
+<p><strong>The problem</strong></p>
+<ul>
+<li>REST was intended to be a strict specification used to design APIs but in reality, it was wildly interpreted: most APIs described as being Restful aren&rsquo;t really Restful, they don’t adhere to the strict specification</li>
+<li>REST APIs have shown to be too inflexible to keep up with the rapidly changing requirements on the client apps that access them.</li>
+</ul>
+<p><strong>The Solution</strong></p>
+<ul>
+<li>GraphQL was designed to cope with the need for increased flexibility and efficient client-server interaction.</li>
+</ul>
+<h2 id="demo-of--a-query-rest-vs-graphql">Demo of  a query REST vs GraphQL</h2>
+<p>Say we have a blogging application, such that for each blogger’s page:  we render the blogger’s name, titles of their posts, and their latest three followers. As shown below:
+<img src="https://res.cloudinary.com/di70zcupa/image/upload/v1601742427/example-blogging-app_xorm3b.png" alt="Example Blog"></p>
+<h3 id="using-rest">Using REST</h3>
+<ul>
+<li>Typically several network calls are made by the client to the server at different endpoints:
+<ul>
+<li><em>/users/&lt; id &gt;</em></li>
+<li><em>/users/&lt; id &gt;/ posts</em></li>
+<li><em>/users/&lt; id &gt;/ followers</em></li>
+</ul>
+</li>
+<li>The client app is constantly downloading the resources which are not required, so the user’s data is wasted. For instance it fetches all the user data eg email, age, lastname, birthday, etc. when a network call is made to <em>/users/&lt; id &gt;</em>.</li>
+<li>The most simple and obvious solution would be to design our API such that it only exposes the data they required by the client. But the problem is that in modern app development, you need to iterate quickly, constantly redesigning your API can be a huge drawback time-wise.</li>
+</ul>
+<h3 id="using-graphql">Using GraphQL</h3>
+<ul>
+<li>In a graphql server you only have a single endpoint that can be used by different clients who want to retrieve data from the database.</li>
+</ul>
+<p><img src="https://res.cloudinary.com/di70zcupa/image/upload/v1601750016/typical-gql-post_huyn9z.png" alt="Typical GraphQL Post Request"></p>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>You make a post request to the Graphql server</li>
+<li>In the post request body, you include the query</li>
+<li>The query contains all the data requirements of the client.</li>
+<li>The graphql processes the request and manipulates the database and then sends a response which is JSON object.</li>
+</ul>
+<p><strong>Differences between Rest and GraphQL</strong></p>
+<ul>
+<li>
+<p>Eliminate the problem of Overfetching and Underfetching:</p>
+<ul>
+<li><em>Overfetching</em>: Describes a scenario that happens when querying a Restful server and we end up downloading unnecessary data into our app.</li>
+<li><em>Underfetching</em>: The response to the query made to a specific endpoint returns insufficient data that the client has to make  (n+1) requests just to get sufficient data.</li>
+</ul>
+</li>
+<li>
+<p>Graphql allows for low-level monitoring of the requests made to the server. It uses resolver functions to resolve queries made by the client. These can be monitored so as to analyze the application.</p>
+</li>
+<li>
+<p>GraphQL uses a strong type system once types are described in the schema the frontend developers can mock an API and continue working on the client-side whilst the backend engineers continue to build the backend.</p>
+</li>
+</ul>
+<blockquote>
+<p>All the images used in this blog article were part of the <a href="https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS141x+3T2019/course/" class="article-link"> Exploring GraphQL: A Query Language for APIs</a> course.</p>
+</blockquote>
+
+        </div>
+        <div class="article-info">
+    <div class="article-taxonomies">
+        
+            
+                <ul class="article-tags">
+                    
+                        <li><a href="https://jackiebinya.github.io/tags/graphql">#graphql</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+    
+
+
+        </main>
+        <footer>
+            
+                <p>
+    Made with ❤️, piercing rays of the African sun 🌞 and the fresh scent of wild flowers of the savannah grasslands!
+</p>
+            
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>interview-prep on Jacqueline Binya</title>
+    <link>https://jackiebinya.github.io/tags/interview-prep/</link>
+    <description>Jacqueline Binya (interview-prep)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Sep 2020 21:05:11 +0200</lastBuildDate>
+    
+    <atom:link href="https://jackiebinya.github.io/tags/interview-prep/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Closures, Scope and All the Good Stuff About Javascript</title>
+      <link>https://jackiebinya.github.io/posts/javascript/closures-scope-and-all-the-good-stuff-about-js/</link>
+      <pubDate>Sat, 05 Sep 2020 21:05:11 +0200</pubDate>
+      
+      <guid>https://jackiebinya.github.io/posts/javascript/closures-scope-and-all-the-good-stuff-about-js/</guid>
+      <description>&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;This article was written to help explain a topic which is an interview staple for Javascript developers.
+Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a src=&#34;https://nodejs.org/en/download/&#34; class=&#34;article-link&#34;&gt;Nodejs&lt;/a&gt; installed locally.&lt;/li&gt;
+&lt;li&gt;Text editor of your choice.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;key-concepts&#34;&gt;Key Concepts&lt;/h2&gt;
+&lt;h3 id=&#34;variable&#34;&gt;Variable&lt;/h3&gt;
+&lt;p&gt;A variable in Javascript is an entity that is used to refer to data stored in memory. You declare a variable in your script by giving it a name, which is preceded by a mandatory keyword which can either be &lt;em&gt;let&lt;/em&gt;, &lt;em&gt;const&lt;/em&gt; or &lt;em&gt;var&lt;/em&gt; and assigning it a value. Assigning an initial value is optional for any variable preceded by keyword &lt;em&gt;let&lt;/em&gt;. All &lt;em&gt;var&lt;/em&gt; and &lt;em&gt;let&lt;/em&gt; variables can be reassigned values whereas &lt;em&gt;const&lt;/em&gt; variables are immutable once declared and initialized.&lt;/p&gt;
+ &lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1599441833/js-closures-tut/Defining_variables_in_JS_1_uom50u.png&#34; alt=&#34;Defining variables in Javascript&#34;&gt;
+&lt;p&gt;&lt;em&gt;To learn more about variable declaration, initialization,  data types and hoisting check out this &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables&#34; class=&#34;article-link&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;. It contains resources published by &lt;a href=&#34;https://developer.mozilla.org/en-US/&#34; class=&#34;article-link&#34; target=&#34;_blank&#34;&gt;mozilla (MDN)&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;block&#34;&gt;Block&lt;/h3&gt;
+&lt;p&gt;A block (&lt;em&gt;or compound statement in other programming languages&lt;/em&gt;) is used to group statements in javascript. The boundaries of a block statement is a pair of curly brackets.&lt;/p&gt;
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1599461896/js-closures-tut/Block-Syntax_1_waqhf3.png&#34; alt=&#34;Block Syntax&#34;&gt;
+&lt;p&gt;On that basis of the given definition of a block, it follows that &lt;em&gt;functions&lt;/em&gt;, &lt;em&gt;if statements&lt;/em&gt;, &lt;em&gt;loops&lt;/em&gt; all have block statements.&lt;/p&gt;
+&lt;h3 id=&#34;local-and-global-variables&#34;&gt;Local and Global Variables&lt;/h3&gt;
+&lt;p&gt;In Javascript variables are either declared inside a block or independent of a block. When a variable is declared inside a block it is &lt;em&gt;local&lt;/em&gt; in reference to that block. A global variable is one whose scope is global.&lt;/p&gt;
+&lt;h2 id=&#34;what-then-is-scope-&#34;&gt;What then is scope ?&lt;/h2&gt;
+&lt;p&gt;In Javascript scope denotes the reach or range or accessibility of Javascript variables. So, whenever a javascript variable is declared it automatically has scope associated with it.&lt;/p&gt;
+&lt;p&gt;The scope of a variable is determined by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;where a variable is declared within a script and,&lt;/li&gt;
+&lt;li&gt;its type i.e &lt;em&gt;let&lt;/em&gt;, &lt;em&gt;const&lt;/em&gt; and &lt;em&gt;var&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;types-of-scope&#34;&gt;Types of scope&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Global scope: globally scoped variables are accessible throughout the window object or globally within your script.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Block scope: block scoped variables are variables that when declared inside of a block are only accessible within that block. The block referenced to, being a &lt;em&gt;generic block&lt;/em&gt; or a block which is part of a &lt;em&gt;loop&lt;/em&gt; or an &lt;em&gt;if statement&lt;/em&gt; or a &lt;em&gt;function&lt;/em&gt;. So essentially &lt;em&gt;const&lt;/em&gt; and &lt;em&gt;let&lt;/em&gt; variables can either be &lt;em&gt;globally scoped&lt;/em&gt; if declared outside of a block or &lt;em&gt;block scoped&lt;/em&gt; when declared inside of a block. When &lt;em&gt;var&lt;/em&gt; variables are declared in blocks which aren&amp;rsquo;t functions, their scope is global.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In the screenshot below I declared a couple of variables, I suggest you go to your text editor and create a &lt;em&gt;main.js&lt;/em&gt; file and copy the contents of the screenshot and modify them to your liking.
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1599466095/js-closures-tut/scope-example_ghtmaq.png&#34; alt=&#34;Illustrating scope in Javascript&#34;&gt;
+Now to execute &lt;em&gt;main.js&lt;/em&gt; file, type the command below in your terminal:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;node main.js
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The expected results are shown in the screenshot below:
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1599467585/js-closures-tut/scope-terminal_result_o3dz6n.png&#34; alt=&#34;Results on the terminal&#34;&gt;
+The variables &lt;em&gt;name&lt;/em&gt;, &lt;em&gt;lastName&lt;/em&gt; and &lt;em&gt;isSoftwareDeveloper&lt;/em&gt; are declared independent of a block. These are known as global variables and they have global scope.
+Variables &lt;em&gt;hobbies&lt;/em&gt; and &lt;em&gt;countryOfResidence&lt;/em&gt; are local to a block in which they were declared but, although &lt;em&gt;hobbies&lt;/em&gt; has global scope  &lt;em&gt;countryOfResidence&lt;/em&gt; is block scoped.&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Functional Scope: functionally scoped variables are variables that when declared inside of a function they are only accessible within that function, if the same variable was declared in any other block e.g. an &lt;em&gt;if statement&lt;/em&gt; and it was accessible only within that block as well. Its scope is then described as being block scoped. So essentially &lt;em&gt;functional scope&lt;/em&gt; is a special type of &lt;em&gt;block scope&lt;/em&gt; used to describe the scope of &lt;em&gt;var&lt;/em&gt; variables declared inside functions. A &lt;em&gt;var&lt;/em&gt; variable is always globally scoped otherwise it is &lt;em&gt;functionally scoped&lt;/em&gt; if declared inside of a function.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1600108316/js-closures-tut/functional_scope_wflflh.png&#34; alt=&#34;Functional scope examples&#34;&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Lexical Scope: given a scenario where we have a group of nested functions, lexical scope means that the inner functions have access to the variables and/or resources of the outer function even after the outer function is returned.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1600118955/js-closures-tut/lexical_scope_c8rcm4.png&#34; alt=&#34;Lexical scope example&#34;&gt;
+&lt;h2 id=&#34;finally-what-then-are-closures-&#34;&gt;Finally, what then are closures ?&lt;/h2&gt;
+&lt;p&gt;To truly understand closures we need to have a basic understanding of how the Javascript engine executes functions. So, whenever a function is invoked an execution context associated with the function is created. An execution context contains meta data about the function and all its associated variables. Upon execution of the function all the meta data associated with the function is then removed from the memory, what is often refereed to as garbage collection.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Closures are functions which have references to variables in their lexical environment.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Let&amp;rsquo;s reconsider the screenshot provided above, when the file is executed internally what happens is that, the javascript engine parses &lt;em&gt;main.js&lt;/em&gt; line by line. When it reaches the point in the script where the &lt;em&gt;outer&lt;/em&gt; function is invoked it creates a context associated with it. When the javascript engine eventually executes the &lt;em&gt;inner&lt;/em&gt; function is creates an execution context associated with it as well. Now as it was verified above, the variables of the &lt;em&gt;outer&lt;/em&gt; function are always accessible inside the &lt;em&gt;inner&lt;/em&gt; function, even when the outer function&amp;rsquo;s execution context has been removed from memory. Let&amp;rsquo;s see how that is possible:&lt;/p&gt;
+&lt;img src=&#34;https://res.cloudinary.com/di70zcupa/image/upload/v1600121543/js-closures-tut/closures_bdxhjn.png&#34; alt=&#34;Closures example&#34;&gt;
+&lt;p&gt;So, we have seen that when the &lt;em&gt;inner&lt;/em&gt; function (which is a closure) is invoked its execution context&amp;rsquo;s contains a reference to the &lt;em&gt;outer&lt;/em&gt; function&amp;rsquo;s variables, despite the fact that the &lt;em&gt;outer&lt;/em&gt; function has already been returned.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;It is my hope that this article has helped you understand closures in javascript.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Happy Coding  😉!!!&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

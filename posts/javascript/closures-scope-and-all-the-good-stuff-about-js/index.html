@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Closures, Scope and All the Good Stuff About Javascript  | Jacqueline Binya</title>
+<meta name="description" content="">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jackiebinya.github.io/rss/">
+
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
+<link rel="apple-touch-icon-precomposed" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
+
+<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1662359180" />
+
+<meta property="og:title" content="Closures, Scope and All the Good Stuff About Javascript" />
+<meta property="og:description" content="Objectives This article was written to help explain a topic which is an interview staple for Javascript developers. Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.
+Prerequisites Nodejs installed locally. Text editor of your choice. Key Concepts Variable A variable in Javascript is an entity that is used to refer to data stored in memory." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jackiebinya.github.io/posts/javascript/closures-scope-and-all-the-good-stuff-about-js/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-05T21:05:11+02:00" />
+<meta property="article:modified_time" content="2020-09-05T21:05:11+02:00" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Closures, Scope and All the Good Stuff About Javascript"/>
+<meta name="twitter:description" content="Objectives This article was written to help explain a topic which is an interview staple for Javascript developers. Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.
+Prerequisites Nodejs installed locally. Text editor of your choice. Key Concepts Variable A variable in Javascript is an entity that is used to refer to data stored in memory."/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    
+    <a href="https://jackiebinya.github.io">
+        👩🏾‍🎤hello
+    </a>
+   
+</h1>
+<nav>
+    
+    
+    <a class="" href="/about/" title="">📖readme</a>
+    
+    <a class="" href="/posts/" title="">📰blog</a>
+    
+</nav>
+            
+        </header>
+        <main>
+            
+
+    <article class="post">
+        <header class="post-heading-wrapper">
+            <h1>Closures, Scope and All the Good Stuff About Javascript</h1>
+        
+            <p class="post-pagination"><time>September 5, 2020</time> . ☕&nbsp;
+                    5  mins  read</p>
+
+        </header>
+        <div class="content">
+            <h2 id="objectives">Objectives</h2>
+<p>This article was written to help explain a topic which is an interview staple for Javascript developers.
+Based on the assumption that the reader is a total newbie to the topic, we will start from the very basics and incrementally build up on our knowledge. Hopefully by the end of this article you will have a solid understanding of closures.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><a src="https://nodejs.org/en/download/" class="article-link">Nodejs</a> installed locally.</li>
+<li>Text editor of your choice.</li>
+</ul>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="variable">Variable</h3>
+<p>A variable in Javascript is an entity that is used to refer to data stored in memory. You declare a variable in your script by giving it a name, which is preceded by a mandatory keyword which can either be <em>let</em>, <em>const</em> or <em>var</em> and assigning it a value. Assigning an initial value is optional for any variable preceded by keyword <em>let</em>. All <em>var</em> and <em>let</em> variables can be reassigned values whereas <em>const</em> variables are immutable once declared and initialized.</p>
+ <img src="https://res.cloudinary.com/di70zcupa/image/upload/v1599441833/js-closures-tut/Defining_variables_in_JS_1_uom50u.png" alt="Defining variables in Javascript">
+<p><em>To learn more about variable declaration, initialization,  data types and hoisting check out this <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables" class="article-link" target="_blank">link</a>. It contains resources published by <a href="https://developer.mozilla.org/en-US/" class="article-link" target="_blank">mozilla (MDN)</a>.</em></p>
+<h3 id="block">Block</h3>
+<p>A block (<em>or compound statement in other programming languages</em>) is used to group statements in javascript. The boundaries of a block statement is a pair of curly brackets.</p>
+<img src="https://res.cloudinary.com/di70zcupa/image/upload/v1599461896/js-closures-tut/Block-Syntax_1_waqhf3.png" alt="Block Syntax">
+<p>On that basis of the given definition of a block, it follows that <em>functions</em>, <em>if statements</em>, <em>loops</em> all have block statements.</p>
+<h3 id="local-and-global-variables">Local and Global Variables</h3>
+<p>In Javascript variables are either declared inside a block or independent of a block. When a variable is declared inside a block it is <em>local</em> in reference to that block. A global variable is one whose scope is global.</p>
+<h2 id="what-then-is-scope-">What then is scope ?</h2>
+<p>In Javascript scope denotes the reach or range or accessibility of Javascript variables. So, whenever a javascript variable is declared it automatically has scope associated with it.</p>
+<p>The scope of a variable is determined by:</p>
+<ul>
+<li>where a variable is declared within a script and,</li>
+<li>its type i.e <em>let</em>, <em>const</em> and <em>var</em>.</li>
+</ul>
+<h3 id="types-of-scope">Types of scope</h3>
+<ol>
+<li>
+<p>Global scope: globally scoped variables are accessible throughout the window object or globally within your script.</p>
+</li>
+<li>
+<p>Block scope: block scoped variables are variables that when declared inside of a block are only accessible within that block. The block referenced to, being a <em>generic block</em> or a block which is part of a <em>loop</em> or an <em>if statement</em> or a <em>function</em>. So essentially <em>const</em> and <em>let</em> variables can either be <em>globally scoped</em> if declared outside of a block or <em>block scoped</em> when declared inside of a block. When <em>var</em> variables are declared in blocks which aren&rsquo;t functions, their scope is global.</p>
+</li>
+</ol>
+<p>In the screenshot below I declared a couple of variables, I suggest you go to your text editor and create a <em>main.js</em> file and copy the contents of the screenshot and modify them to your liking.
+<img src="https://res.cloudinary.com/di70zcupa/image/upload/v1599466095/js-closures-tut/scope-example_ghtmaq.png" alt="Illustrating scope in Javascript">
+Now to execute <em>main.js</em> file, type the command below in your terminal:</p>
+<pre tabindex="0"><code>node main.js
+</code></pre><p>The expected results are shown in the screenshot below:
+<img src="https://res.cloudinary.com/di70zcupa/image/upload/v1599467585/js-closures-tut/scope-terminal_result_o3dz6n.png" alt="Results on the terminal">
+The variables <em>name</em>, <em>lastName</em> and <em>isSoftwareDeveloper</em> are declared independent of a block. These are known as global variables and they have global scope.
+Variables <em>hobbies</em> and <em>countryOfResidence</em> are local to a block in which they were declared but, although <em>hobbies</em> has global scope  <em>countryOfResidence</em> is block scoped.</p>
+<ol start="3">
+<li>Functional Scope: functionally scoped variables are variables that when declared inside of a function they are only accessible within that function, if the same variable was declared in any other block e.g. an <em>if statement</em> and it was accessible only within that block as well. Its scope is then described as being block scoped. So essentially <em>functional scope</em> is a special type of <em>block scope</em> used to describe the scope of <em>var</em> variables declared inside functions. A <em>var</em> variable is always globally scoped otherwise it is <em>functionally scoped</em> if declared inside of a function.</li>
+</ol>
+<img src="https://res.cloudinary.com/di70zcupa/image/upload/v1600108316/js-closures-tut/functional_scope_wflflh.png" alt="Functional scope examples">
+<ol start="4">
+<li>Lexical Scope: given a scenario where we have a group of nested functions, lexical scope means that the inner functions have access to the variables and/or resources of the outer function even after the outer function is returned.</li>
+</ol>
+<img src="https://res.cloudinary.com/di70zcupa/image/upload/v1600118955/js-closures-tut/lexical_scope_c8rcm4.png" alt="Lexical scope example">
+<h2 id="finally-what-then-are-closures-">Finally, what then are closures ?</h2>
+<p>To truly understand closures we need to have a basic understanding of how the Javascript engine executes functions. So, whenever a function is invoked an execution context associated with the function is created. An execution context contains meta data about the function and all its associated variables. Upon execution of the function all the meta data associated with the function is then removed from the memory, what is often refereed to as garbage collection.</p>
+<blockquote>
+<p>Closures are functions which have references to variables in their lexical environment.</p>
+</blockquote>
+<p>Let&rsquo;s reconsider the screenshot provided above, when the file is executed internally what happens is that, the javascript engine parses <em>main.js</em> line by line. When it reaches the point in the script where the <em>outer</em> function is invoked it creates a context associated with it. When the javascript engine eventually executes the <em>inner</em> function is creates an execution context associated with it as well. Now as it was verified above, the variables of the <em>outer</em> function are always accessible inside the <em>inner</em> function, even when the outer function&rsquo;s execution context has been removed from memory. Let&rsquo;s see how that is possible:</p>
+<img src="https://res.cloudinary.com/di70zcupa/image/upload/v1600121543/js-closures-tut/closures_bdxhjn.png" alt="Closures example">
+<p>So, we have seen that when the <em>inner</em> function (which is a closure) is invoked its execution context&rsquo;s contains a reference to the <em>outer</em> function&rsquo;s variables, despite the fact that the <em>outer</em> function has already been returned.</p>
+<p><em>It is my hope that this article has helped you understand closures in javascript.</em></p>
+<p><em>Happy Coding  😉!!!</em></p>
+
+        </div>
+        <div class="article-info">
+    <div class="article-taxonomies">
+        
+            
+                <ul class="article-tags">
+                    
+                        <li><a href="https://jackiebinya.github.io/tags/interview-prep">#interview-prep</a></li>
+                    
+                        <li><a href="https://jackiebinya.github.io/tags/javascript">#javascript</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+    
+
+
+        </main>
+        <footer>
+            
+                <p>
+    Made with ❤️, piercing rays of the African sun 🌞 and the fresh scent of wild flowers of the savannah grasslands!
+</p>
+            
+        </footer>
+    </div>
+</body>
+</html>

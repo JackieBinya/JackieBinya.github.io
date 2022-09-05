@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Another conflict: resolving conflicts in git that occur when using rebase.  | Jacqueline Binya</title>
+<meta name="description" content="">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jackiebinya.github.io/rss/">
+
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
+<link rel="apple-touch-icon-precomposed" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
+
+<link rel="stylesheet" href="https://jackiebinya.github.io/css/style.css?rnd=1662359180" />
+
+<meta property="og:title" content="Another conflict: resolving conflicts in git that occur when using rebase." />
+<meta property="og:description" content="This interactive tutorial about the resolution of conflicts in git is a continuation of my first blog in the series titled And then we resolve a merge conflict&hellip;. If you have not read it, please check it out here.
+The aim of this tutorial is to show how you can use rebasing as an alternative to merging so to combine to branches in git. It will demonstrate how you resolve conflicts that occur thereof." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jackiebinya.github.io/posts/how-to-resolve-git-merge-conflicts/s2./" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-06-07T11:48:59+02:00" />
+<meta property="article:modified_time" content="2020-06-07T11:48:59+02:00" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Another conflict: resolving conflicts in git that occur when using rebase."/>
+<meta name="twitter:description" content="This interactive tutorial about the resolution of conflicts in git is a continuation of my first blog in the series titled And then we resolve a merge conflict&hellip;. If you have not read it, please check it out here.
+The aim of this tutorial is to show how you can use rebasing as an alternative to merging so to combine to branches in git. It will demonstrate how you resolve conflicts that occur thereof."/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    
+    <a href="https://jackiebinya.github.io">
+        👩🏾‍🎤hello
+    </a>
+   
+</h1>
+<nav>
+    
+    
+    <a class="" href="/about/" title="">📖readme</a>
+    
+    <a class="" href="/posts/" title="">📰blog</a>
+    
+</nav>
+            
+        </header>
+        <main>
+            
+
+    <article class="post">
+        <header class="post-heading-wrapper">
+            <h1>Another conflict: resolving conflicts in git that occur when using rebase.</h1>
+        
+            <p class="post-pagination"><time>June 7, 2020</time> . ☕&nbsp;
+                    8  mins  read</p>
+
+        </header>
+        <div class="content">
+            <p>This interactive tutorial about the resolution of conflicts in git is a continuation of my first blog in the series titled <em>And then we resolve a merge conflict&hellip;</em>. If you have not read it, please check it out <a class="article-link" href="/posts/how-to-resolve-git-merge-conflicts/s1/">here</a>.</p>
+<p>The aim of this tutorial is to show how you can use rebasing as an alternative to merging so to combine to branches in git. It will demonstrate how you resolve conflicts that occur thereof.</p>
+<h2 id="intro-to-rebasing">Intro to rebasing</h2>
+<p>Every commit in github is based on its preceding commit. When you trace the history you realize that every commit has an ancestor.
+Practically this is shown by that whenever you log the history of a branch, all the commits are listed in chronological order. With first commit at the bottom and the most recent commit which is the HEAD at the top.
+Now, what rebasing does is it rewrites history of your current branch, through assigning a commit of your choice as the ancestor of the HEAD.</p>
+<h2 id="now-lets-get-started">Now, let&rsquo;s get started</h2>
+<p>As indicated in the first blog to get started, we create a repo on github and initialize it with a README. Then clone it locally on my machine. After that, I open the project on an editor. My editor of choice is Visual Studio Code.</p>
+<p>I  then create and check out a new branch called <em>list-interests</em>. And create <em>bio.txt</em>. In <em>bio.txt</em> I add a list of my personal interests. Then voila:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/0t8fdikm5m3rvxlr31dc.png" alt="code screenshot"></p>
+<p>To stage the changes, on the terminal I run the command,</p>
+<pre tabindex="0"><code>git add .
+</code></pre><p>Then to commit the changes to my local repo I run the command,</p>
+<pre tabindex="0"><code>git commit -m &#34;Adds interests to bio&#34;
+</code></pre><p>Then to look up the history of the <em>list-interests</em> branch, on the terminal I run the command;</p>
+<pre tabindex="0"><code>git log --oneline
+</code></pre><p>The result:</p>
+<pre tabindex="0"><code>5d944ac (HEAD -&gt; list-interests) Adds interest to bio
+305d937 (origin/master, origin/HEAD, master) Initial commit
+</code></pre><p>Now let&rsquo;s imagine that a bunch of devs was assigned to this project. One dev, in particular, was assigned to add an intro to the bio. The dev successfully created the intro and then proceed to merge it to master.</p>
+<p>To mimic that, on the terminal run the command,</p>
+<pre tabindex="0"><code>git checkout -
+</code></pre><p>The command above listed above allows you to navigate to the branch you were in before you checked out your current branch.</p>
+<p>On <em>master</em> I then create the file <em>bio.txt</em>. Then add a basic intro about myself.</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/20focxl3d59b2p1tsbrf.png" alt="screenshot of codeblock"></p>
+<p>I then add the changes to the staging area by running the command below on the terminal.</p>
+<pre tabindex="0"><code>git add .
+</code></pre><p>To add the changes to my  local repo,</p>
+<pre tabindex="0"><code>git commit -m &#34;Adds intro to bio&#34;
+</code></pre><p>Then I log the history by running the command;</p>
+<pre tabindex="0"><code>git log --oneline
+</code></pre><p>The output:</p>
+<pre tabindex="0"><code>4586948 (HEAD -&gt; master) Adds intro to bio
+305d937 (origin/master, origin/HEAD) Initial commit
+</code></pre><p>Then to sync <em>master</em> to my <em>origin/master</em> which is the  branch that corresponds to <em>master</em> on the remote repository;</p>
+<pre tabindex="0"><code>git push 
+</code></pre><p>I then check out the branch <em>list-interests</em> to continue.
+If you log the history of the branch <em>list-interests</em> you will realize that it was based on the old version of <em>master</em> that did not have the intro. I intend to rebase it to the new version of <em>master</em> so as to include the intro.</p>
+<p>To do that on the terminal I then run the command;</p>
+<pre tabindex="0"><code>git rebase master
+</code></pre><p>On the terminal I get the error message:</p>
+<pre tabindex="0"><code>First, rewinding head to replay your work on top of it...
+Applying: Adds interest to bio
+Using index info to reconstruct a base tree...
+Falling back to patching base and 3-way merge...
+CONFLICT (add/add): Merge conflict in bio.txt
+Auto-merging bio.txt
+error: Failed to merge in the changes.
+hint: Use &#39;git am --show-current-patch&#39; to see the failed patch
+Patch failed at 0001 Adds interest to bio
+&#34;git add/rm &lt;conflicted_files&gt;&#34;, then run &#34;git rebase --continue&#34;.        
+You can instead skip this commit: run &#34;git rebase --skip&#34;.
+To abort and get back to the state before &#34;git rebase&#34;, run &#34;git rebase --abort&#34;.
+</code></pre><p>The above message informs me that git failed to merge then provides me commands I can use to resolve the issue.</p>
+<p>On the editor, this is what is there:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/s140yydyfyxfgupma6ym.png" alt="screenshot of codeblock"></p>
+<p>Because I want to keep both the changes, I select the option <em>Accept Both Changes</em> on VS code.</p>
+<p>To continue I then add the change to the staging area, by running the command;</p>
+<pre tabindex="0"><code>git add .
+</code></pre><p>Then on the terminal, I  run the command;</p>
+<pre tabindex="0"><code>git rebase --continue
+</code></pre><p>Then get the message</p>
+<pre tabindex="0"><code>Applying: Adds interest to bio
+</code></pre><p>Under the hood when you rebase, git basically rewinds fetches the tip of <em>master</em>, places it in the position of the last commit of the branch you had checked out, then applies the tip of <em>list_interests</em> on <em>master</em>.</p>
+<p>To visualize it imagine your history was a deck of cards, a stack. You pop the topmost card which is the HEAD of your current branch, in its place you push the HEAD of <em>master</em> then finally you push the HEAD of the current branch in its rightful position.</p>
+<p>If you have conflicts you resolve them and then stage the changes. But instead of making a new merge commit when you run the command <em>git rebase &ndash;continue</em> the changes are applied to the HEAD, which in this case had the message <em>Adds interests to bio</em>. When you log the history you get:</p>
+<pre tabindex="0"><code>1a378f3 (HEAD -&gt; list-interests) Adds interest to bio
+4586948 (origin/master, origin/HEAD, master) Adds intro to bio
+305d937 Initial commit
+</code></pre><p>I have successfully made a rebase. Rebasing offers a clean way to combine diverging branches and its main advantage is the history is kept linear, unlike when you do merge commits.</p>
+<p>I then sync my local and remote. Make a pull request. Then merge my pull request to <em>origin/master</em>. On  my local I checkout <em>master</em> then on the terminal run the command;</p>
+<pre tabindex="0"><code>git pull
+</code></pre><p>So as to sync <em>master</em> to <em>origin/master</em>. Then voila:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/hkvzfhdgaz0ohexcvck5.png" alt="screenshot of codeblock"></p>
+<p>With that done, hopefully, you now have an understanding of how rebasing works in git. We now proceed to the main business of the day which is using rebasing to implement what we did on the <a href="https://dev.to/nubian_geekess/and-then-a-conflict-2eli">first blog</a> in the series.</p>
+<p>Well, I would love to add a new feature to my bio. This time I will add a list of programming languages I have worked on. To do that I create and check out a new branch called <em>list-languages</em>. On the terminal, I run the command,</p>
+<pre tabindex="0"><code>git checkout -b list-languages
+</code></pre><p>Then I edit <em>bio.txt</em> by adding a list of programming languages.</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/wpplvusgsy52k3wtpekd.png" alt="screenshot of codeblock"></p>
+<p>To proceed I then add the changes to the staging area by  running the command;</p>
+<pre tabindex="0"><code>git add .
+</code></pre><p>To commit the changes to my local repo, on the terminal I then run the command;</p>
+<pre tabindex="0"><code>git commit -m &#34;Adds programming languages to bio
+</code></pre><p>To create a branch on the remote corresponding to <em>list&ndash;languages</em> and push changes associated with it. On the terminal I then run the command;</p>
+<pre tabindex="0"><code>git push --set-upstream origin list-languages
+</code></pre><p>I just realized I made a blooper on my bio. Instead of adding C++, I meant to add C. But in the same regard, I want to keep my commit message.</p>
+<p>So back on my editor, I edit my bio.</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/7968tagpiwjffcfy92m2.png" alt="screenshot of code block"></p>
+<p>Now to stage the changes I run:</p>
+<pre tabindex="0"><code>git add .
+</code></pre><p>And to commit to my local, on my terminal I run the command:</p>
+<pre tabindex="0"><code>git commit --amend --no-edit
+</code></pre><p>As we know from the first tutorial <em>git commit &ndash;amend &ndash;no-edit</em>, alters the history of the branch. We end up with a scenario whereby the local and remote diverge from each other with the remote branch always leading.</p>
+<p>When I attempt to sync my local and remote using:</p>
+<pre tabindex="0"><code>git push
+</code></pre><p>I  get this message as a response:</p>
+<pre tabindex="0"><code>To github.com:JackieBinya/git-tut-2.git
+! [rejected]        list-languages -&gt; list-languages (non-fast-forward)
+error: failed to push some refs to &#39;git@github.com:JackieBinya/git-tut-2.git&#39;
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: &#39;git pull ...&#39;) before pushing again.
+hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.
+</code></pre><p>Before we proceed let&rsquo;s take a quick look at the history of the branch <em>list-languages</em>, using the command:</p>
+<pre tabindex="0"><code>git log --oneline
+</code></pre><p>The output:</p>
+<pre tabindex="0"><code>c0fa933 (HEAD -&gt; list-languages) Adds programming languages to bio
+d2c5e0f (origin/master, origin/HEAD, master) Merge pull request #1 from JackieBinya/list-interests
+1a378f3 (origin/list-interests, list-interests) Adds interest to bio
+4586948 Adds intro to bio
+305d937 Initial commit
+</code></pre><p>Basically when I run the command <em>git push</em>. Under the hood git attempts to sync my local <em>list-languages</em> to the corresponding branch on the remote <em>origin/list-languages</em>. Git is clever enough to realize that the branches have diverged, the remote is ahead of the local branch so it suggests I pull changes on the remote to my local, resolve any conflicts and push again.</p>
+<p>To resolve the issue highlighted I run the command:</p>
+<pre tabindex="0"><code>git pull --rebase
+</code></pre><p>I added the flag <em>&ndash;rebase</em> to the <em>git pull</em> command so as to rebase the HEAD of my local on the tip of <em>origin/list-laguages</em>. This offers an alternative to merging branches.</p>
+<p>On my editor this is what my file looks like:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/dljclocd8wl0h84y05ex.png" alt="screenshot of codeblock"></p>
+<p>To resolve the conflict, on VS Code I select the option to keep incoming changes. I then add the changes to the staging area then run the command;</p>
+<pre tabindex="0"><code>git rebase --continue
+</code></pre><p>This is what <em>bio.txt</em> looks like on my editor:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/p1814pamnh50jvbd6915.png" alt="screenshot of codeblock"></p>
+<p>When I log the history on the terminal I get the output below:</p>
+<pre tabindex="0"><code>b584e1c (HEAD -&gt; list-languages) Adds programming languages to bio
+7b06700 (origin/list-languages) Adds programming languages to bio
+d2c5e0f (origin/master, origin/HEAD, master) Merge pull request #1 from JackieBinya/list-interests
+1a378f3 (origin/list-interests, list-interests) Adds interest to bio
+4586948 Adds intro to bio
+305d937 Initial commit
+</code></pre><p>I then sync my local and remote. Make a PR then merge it to <em>master</em>.</p>
+<p>Finally my bio:
+<script type="application/javascript" src="https://gist.github.com/JackieBinya/e308108940e959157448c517aee21b71.js"></script>
+</p>
+<blockquote>
+<p><em>This post was originally published on <a class="article-link" href="https://dev.to/jacqueline/another-conflict-resolving-conflicts-in-git-that-occur-when-using-rebase-3dho">dev.to</a></em></p>
+</blockquote>
+<p><em>Thank you for reading my article.</em></p>
+
+        </div>
+        <div class="article-info">
+    <div class="article-taxonomies">
+        
+            
+                <ul class="article-tags">
+                    
+                        <li><a href="https://jackiebinya.github.io/tags/git">#git</a></li>
+                    
+                        <li><a href="https://jackiebinya.github.io/tags/github">#github</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+    
+
+
+        </main>
+        <footer>
+            
+                <p>
+    Made with ❤️, piercing rays of the African sun 🌞 and the fresh scent of wild flowers of the savannah grasslands!
+</p>
+            
+        </footer>
+    </div>
+</body>
+</html>
